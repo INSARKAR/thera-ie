@@ -38,7 +38,7 @@ using Dates
 
 # Configuration
 # Toggle between demonstration and production modes
-const DEMO_MODE = true  # Set to true for demonstration, false for full production run
+const DEMO_MODE = false  # Set to true for demonstration, false for full production run
 
 # Demonstration limits (used when DEMO_MODE = true)
 const DEMO_MAX_DRUGS = 10
@@ -177,7 +177,7 @@ function fetch_publication_details(pmids)
         "id" => pmid_string,
         "retmode" => "xml",
         "tool" => "julia_pubmed_drug_indications",
-        "email" => "researcher@example.com"
+        "email" => "neil_sarkar@brown.edu"
     )
     
     try
