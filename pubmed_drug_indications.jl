@@ -46,9 +46,9 @@ const DEMO_MAX_RESULTS_PER_DRUG = 50
 const DEMO_MAX_PMIDS_TO_ANALYZE = 10
 
 # Production settings (used when DEMO_MODE = false)
-const PROD_MAX_DRUGS = typemax(Int)
-const PROD_MAX_RESULTS_PER_DRUG = typemax(Int)
-const PROD_MAX_PMIDS_TO_ANALYZE = typemax(Int)
+const PROD_MAX_DRUGS =  1_000_000 #  Effectively unlimited
+const PROD_MAX_RESULTS_PER_DRUG = 1_000_000  # Effectively unlimited
+const PROD_MAX_PMIDS_TO_ANALYZE = 1_000_000   # Effectively unlimited
 
 # Set active configuration based on mode
 const MAX_DRUGS = DEMO_MODE ? DEMO_MAX_DRUGS : PROD_MAX_DRUGS
@@ -159,6 +159,7 @@ end
     fetch_publication_details(pmids) -> Dict
 
 Fetch detailed publication information including MeSH descriptors.
+Uses batching to avoid HTTP 414 (Request-URI Too Large) errors.
 """
 function fetch_publication_details(pmids)
     if isempty(pmids)
@@ -168,40 +169,74 @@ function fetch_publication_details(pmids)
     # Convert to regular array and limit PMIDs for analysis
     pmid_array = collect(pmids)
     limited_pmids = pmid_array[1:min(MAX_PMIDS_TO_ANALYZE, length(pmid_array))]
-    pmid_string = join(limited_pmids, ",")
     
-    base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+    # Batch size to avoid HTTP 414 errors (conservative limit)
+    batch_size = 200  # Reduced from previous higher limits to be safe
     
-    params = Dict(
-        "db" => "pubmed",
-        "id" => pmid_string,
-        "retmode" => "xml",
-        "tool" => "julia_pubmed_drug_indications",
-        "email" => "neil_sarkar@brown.edu"
-    )
+    all_xml_data = []
+    all_fetched_pmids = []
+    total_batches = ceil(Int, length(limited_pmids) / batch_size)
+    successful_batches = 0
     
-    try
-        response = HTTP.get(base_url, query=params)
+    println("📦 Processing $(length(limited_pmids)) PMIDs in $total_batches batches of up to $batch_size...")
+    
+    for (batch_idx, batch_start) in enumerate(1:batch_size:length(limited_pmids))
+        batch_end = min(batch_start + batch_size - 1, length(limited_pmids))
+        batch_pmids = limited_pmids[batch_start:batch_end]
+        pmid_string = join(batch_pmids, ",")
         
-        if response.status == 200
-            return Dict(
-                "status" => "success",
-                "xml_data" => String(response.body),
-                "pmids_fetched" => limited_pmids,
-                "fetch_time" => now()
-            )
-        else
-            return Dict(
-                "status" => "error",
-                "error" => "HTTP $(response.status)",
-                "fetch_time" => now()
-            )
+        print("  📥 Fetching batch $batch_idx/$total_batches ($(length(batch_pmids)) PMIDs)... ")
+        
+        base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+        
+        params = Dict(
+            "db" => "pubmed",
+            "id" => pmid_string,
+            "retmode" => "xml",
+            "tool" => "julia_pubmed_drug_indications",
+            "email" => "neil_sarkar@brown.edu"
+        )
+        
+        try
+            response = HTTP.get(base_url, query=params)
+            
+            if response.status == 200
+                push!(all_xml_data, String(response.body))
+                append!(all_fetched_pmids, batch_pmids)
+                successful_batches += 1
+                println("✅ Success")
+            else
+                println("❌ HTTP $(response.status)")
+            end
+            
+        catch e
+            println("❌ Error: $(string(e))")
         end
         
-    catch e
+        # Brief pause between requests to be respectful to NCBI servers
+        sleep(0.1)
+    end
+    
+    if successful_batches > 0
+        # Combine all XML data
+        combined_xml = join(all_xml_data, "\n")
+        
+        println("  📊 Successfully fetched $successful_batches/$total_batches batches ($(length(all_fetched_pmids)) total PMIDs)")
+        
+        return Dict(
+            "status" => "success",
+            "xml_data" => combined_xml,
+            "pmids_fetched" => all_fetched_pmids,
+            "batches_processed" => successful_batches,
+            "total_batches" => total_batches,
+            "fetch_time" => now()
+        )
+    else
         return Dict(
             "status" => "error",
-            "error" => string(e),
+            "error" => "All batches failed",
+            "batches_processed" => 0,
+            "total_batches" => total_batches,
             "fetch_time" => now()
         )
     end
@@ -713,15 +748,15 @@ function main()
         save_drug_disease_publications(all_drug_disease_publications, publications_json)
         
         # Final summary
-        successful_searches = sum(1 for r in results if get(r, "search_status", "") == "success")
+        successful_searches = sum(1 for r in results if get(r, "search_status", "") == "success"; init=0)
         successful_analyses = sum(1 for r in results if haskey(r, "disease_analysis") && 
-                                haskey(r["disease_analysis"], "summary"))
+                                haskey(r["disease_analysis"], "summary"); init=0)
         total_diseases = sum(r["disease_analysis"]["summary"]["unique_diseases_found"] 
                            for r in results if haskey(r, "disease_analysis") && 
-                           haskey(r["disease_analysis"], "summary"))
+                           haskey(r["disease_analysis"], "summary"); init=0)
         total_pubs_analyzed = sum(r["disease_analysis"]["summary"]["total_publications_analyzed"] 
                                 for r in results if haskey(r, "disease_analysis") && 
-                                haskey(r["disease_analysis"], "summary"))
+                                haskey(r["disease_analysis"], "summary"); init=0)
         
         println()
         println("ANALYSIS COMPLETED!")
