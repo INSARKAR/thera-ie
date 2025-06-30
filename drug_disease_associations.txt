@@ -1,142 +1,150 @@
 Drug-Disease Association Analysis
-Generated on: 2025-06-29T09:32:25.976
+Generated on: 2025-06-30T16:26:30.785
 Total drugs analyzed: 10
 ==================================================
 
 DRUG-DISEASE ASSOCIATIONS
 =========================
 
-1. 1-Palmitoyl-2-oleoyl-sn-glycero-3-(phospho-rac-(1-glycerol))
-   FDA Indication: Palmitoyloleoyl-phosphatidylglycerol was a component of Surfaxin which was indicated for the prevent...
-   Publications found: 28
+1. Acenocoumarol
+   FDA Indication: For the treatment and prevention of thromboembolic diseases. More specifically, it is indicated for ...
+   Publications found: 1845
+   Publications analyzed: 10
+   Disease associations found: 0
+   No disease associations found.
+
+2. Ethiodized oil
+   FDA Indication: For use as a radio-opaque medium for hysterosalpingography and lymphography, and as an antineoplasti...
+   Publications found: 1481
    Publications analyzed: 10
    Disease associations found: 1
 
    Associated diseases (MeSH T047):
-   - Respiratory Distress Syndrome, Newborn (1 publications)
-     Example: [10600889] SP-B refining of pulmonary surfactant phospholipid films.
+   - Chylous Ascites (1 publications)
+     Example: [40514211] Percutaneous lymphatic duct embolisation in postnephrectomy ...
 
-2. 2,2'-Dibenzothiazyl disulfide
-   FDA Indication: 2,2'-Dibenzothiazyl disulfide is approved for use within allergenic epicutaneous patch tests which a...
-   Publications found: 1
-   Publications analyzed: 1
+3. Sulfathiazole
+   FDA Indication: Sulfathiazole is effective against a wide range of gram positive and gram negative pathogenic microo...
+   Publications found: 1258
+   Publications analyzed: 10
    Disease associations found: 0
    No disease associations found.
 
-3. 4-(Isopropylamino)diphenylamine
-   FDA Indication: 4-(Isopropylamino)diphenylamine is approved for use within allergenic epicutaneous patch tests which...
-   Publications found: 1
-   Publications analyzed: 1
-   Disease associations found: 2
-
-   Associated diseases (MeSH T047):
-   - Dermatitis, Allergic Contact (1 publications)
-     Example: [37015229] N-isopropyl-N'-phenylenediamine (IPPD): An unusual case of p...
-   - Dermatitis, Occupational (1 publications)
-     Example: [37015229] N-isopropyl-N'-phenylenediamine (IPPD): An unusual case of p...
-
-4. Abacavir
-   FDA Indication: Abacavir is indicated in combination with other anti-retroviral agents for the treatment of HIV-1 in...
-   Publications found: 2532
-   Publications analyzed: 6
-   Disease associations found: 5
-
-   Associated diseases (MeSH T047):
-   - HIV Infections (4 publications)
-     Example: [18536095] Abacavir hypersensitivity.
-   - Drug Hypersensitivity (2 publications)
-     Example: [18536095] Abacavir hypersensitivity.
-   - Cardiovascular Diseases (1 publications)
-     Example: [27260856] Abacavir and cardiovascular disease: A critical look at the ...
-   - Myocardial Infarction (1 publications)
-     Example: [27260856] Abacavir and cardiovascular disease: A critical look at the ...
-   - Chemical and Drug Induced Liver Injury (1 publications)
-     Example: [27054757] Abacavir-induced liver toxicity.
-
-5. Abaloparatide
-   FDA Indication: Abaloparatide is indicated for the treatment of postmenopausal women with osteoporosis at high risk ...
-   Publications found: 328
-   Publications analyzed: 9
-   Disease associations found: 3
-
-   Associated diseases (MeSH T047):
-   - Osteoporosis, Postmenopausal (7 publications)
-     Example: [35478046] The clinician's guide to prevention and treatment of osteopo...
-   - Osteoporosis (7 publications)
-     Example: [35478046] The clinician's guide to prevention and treatment of osteopo...
-   - Hypercalcemia (1 publications)
-     Example: [27533157] Effect of Abaloparatide vs Placebo on New Vertebral Fracture...
-
-6. Abametapir
-   FDA Indication: Abametapir is indicated, in the context of an overall lice management program, for the topical treat...
+4. Cycrimine
+   FDA Indication: For treatment and management of Parkinson's disease....
    Publications found: 10
    Publications analyzed: 10
    Disease associations found: 3
 
    Associated diseases (MeSH T047):
-   - Lice Infestations (6 publications)
-     Example: [38905531] Drugs for head lice.
-   - Scalp Dermatoses (2 publications)
-     Example: [38905531] Drugs for head lice.
-   - Scabies (1 publications)
-     Example: [34074914] Common pediatric infestations: update on diagnosis and treat...
+   - Parkinson Disease (3 publications)
+     Example: [13477721] [Cycrimine, a new drug in the treatment of Parkinson's disea...
+   - Parkinsonian Disorders (1 publications)
+     Example: [14371520] [Symptomatic therapeutic effect of cycrimine HCl in parkinso...
+   - Nervous System Diseases (1 publications)
+     Example: [13477721] [Cycrimine, a new drug in the treatment of Parkinson's disea...
 
-7. Abarelix
-   FDA Indication: For palliative treatment of advanced prostate cancer....
-   Publications found: 55
+5. Flumethasone
+   FDA Indication: For the treatment of contact dermatitis, atopic dermatitis, exczema, psoriasis, diaper rash and othe...
+   Publications found: 383
+   Publications analyzed: 10
+   Disease associations found: 1
+
+   Associated diseases (MeSH T047):
+   - Epidermolysis Bullosa Dystrophica (1 publications)
+     Example: [38968458] Epidermolysis Bullosa Pruriginosa treated with baricitinib: ...
+
+6. Deucravacitinib
+   FDA Indication: Deucravacitinib is a tyrosine kinase 2 (TYK2) inhibitor indicated for the treatment of adults with m...
+   Publications found: 256
+   Publications analyzed: 10
+   Disease associations found: 4
+
+   Associated diseases (MeSH T047):
+   - Psoriasis (4 publications)
+     Example: [40571687] Psoriasis.
+   - Arthritis, Psoriatic (1 publications)
+     Example: [40571687] Psoriasis.
+   - Chronic Urticaria (1 publications)
+     Example: [40490621] Deucravacitinib as a monotherapy for concurrent management o...
+   - Osteomyelitis (1 publications)
+     Example: [40475785] Case Report: Effectiveness of deucravacitinib in chronic rec...
+
+7. Ubidecarenone
+   FDA Indication: The diet supplements containing ubidecarenone are indicated, as stated in the product label, to assi...
+   Publications found: 75
+   Publications analyzed: 10
+   Disease associations found: 15
+
+   Associated diseases (MeSH T047):
+   - Optic Neuropathy, Ischemic (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - COVID-19 (1 publications)
+     Example: [34314511] DrugWAS: Drug-wide Association Studies for COVID-19 Drug Rep...
+   - Vision Disorders (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - Diabetes Mellitus (1 publications)
+     Example: [33866314] Diabetes, Age, and Duration of Supplementation Subgroup Anal...
+   - Hearing Loss, Sensorineural (1 publications)
+     Example: [38457558] Chronological change of left ventricular global longitudinal...
+   - Mitochondrial Diseases (1 publications)
+     Example: [38457558] Chronological change of left ventricular global longitudinal...
+   - Deafness (1 publications)
+     Example: [38457558] Chronological change of left ventricular global longitudinal...
+   - Optic Atrophy, Hereditary, Leber (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - Cardiomyopathies (1 publications)
+     Example: [38457558] Chronological change of left ventricular global longitudinal...
+   - Stroke (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - Optic Nerve Diseases (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - Alopecia Areata (1 publications)
+     Example: [36645365] Oral supplementation in female telogen effluvium: a clinical...
+   - MELAS Syndrome (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - Acidosis, Lactic (1 publications)
+     Example: [37095452] Ischemic optic neuropathy as first presentation in patient w...
+   - Diabetes Mellitus, Type 2 (1 publications)
+     Example: [38457558] Chronological change of left ventricular global longitudinal...
+
+8. Sulconazole
+   FDA Indication: Sulconazole solution 1.0% is indicated for the treatment of tinea cruris and tinea corporis caused b...
+   Publications found: 103
+   Publications analyzed: 9
+   Disease associations found: 2
+
+   Associated diseases (MeSH T047):
+   - Klebsiella Infections (1 publications)
+     Example: [39671810] Antimicrobial effect of sulconazole in combination with gluc...
+   - Mycoses (1 publications)
+     Example: [38005230] Sulconazole-Loaded Solid Lipid Nanoparticles for Enhanced An...
+
+9. Iophendylate
+   FDA Indication: Iophendylate is used as a contrast agent to locate spinal tumors....
+   Publications found: 320
    Publications analyzed: 10
    Disease associations found: 2
 
    Associated diseases (MeSH T047):
-   - Drug-Related Side Effects and Adverse Reactions (1 publications)
-     Example: [17155895] Abarelix for injectable suspension: first-in-class gonadotro...
-   - Endometriosis (1 publications)
-     Example: [12757402] Abarelix: abarelix-depot-F, abarelix-depot-M, abarelix-L, PP...
+   - Chronic Disease (1 publications)
+     Example: [28639826] Imaging Appearance of Advanced Chronic Adhesive Arachnoiditi...
+   - Arachnoiditis (1 publications)
+     Example: [28639826] Imaging Appearance of Advanced Chronic Adhesive Arachnoiditi...
 
-8. Abatacept
-   FDA Indication: Abatacept is indicated in adult patients for the treatment of moderately-to-severely active rheumato...
-   Publications found: 4830
+10. Efmoroctocog alfa
+   FDA Indication: Indicated for the treatment and prophylaxis of bleeding in patients with haemophilia A (congenital f...
+   Publications found: 46
    Publications analyzed: 10
-   Disease associations found: 6
+   Disease associations found: 1
 
    Associated diseases (MeSH T047):
-   - Arthritis, Rheumatoid (7 publications)
-     Example: [33053283] Trial of Upadacitinib or Abatacept in Rheumatoid Arthritis.
-   - Lung Diseases, Interstitial (2 publications)
-     Example: [35121155] Pathogenesis, clinical features, and treatment strategy for ...
-   - Myocarditis (1 publications)
-     Example: [36815259] Abatacept/Ruxolitinib and Screening for Concomitant Respirat...
-   - Synovitis (1 publications)
-     Example: [38364839] Abatacept in individuals at high risk of rheumatoid arthriti...
-   - Myositis (1 publications)
-     Example: [36815259] Abatacept/Ruxolitinib and Screening for Concomitant Respirat...
-   - Diabetes Mellitus, Type 1 (1 publications)
-     Example: [36920087] Abatacept for Delay of Type 1 Diabetes Progression in Stage ...
-
-9. Abciximab
-   FDA Indication: Abciximab is indicated as an adjunct to percutaneous coronary intervention for the prevention of car...
-   Publications found: 2778
-   Publications analyzed: 10
-   Disease associations found: 3
-
-   Associated diseases (MeSH T047):
-   - Coronary Disease (2 publications)
-     Example: [15987622] Direct thrombin inhibitors.
-   - Thrombocytopenia (2 publications)
-     Example: [29371038] Reply.
-   - Acute Coronary Syndrome (2 publications)
-     Example: [19755402] Tirofiban as adjunctive therapy for acute coronary syndromes...
-
-10. Abemaciclib
-   FDA Indication: * Indicated in combination with fulvestrant for the treatment of women with hormone receptor (HR)-po...
-   Publications found: 1125
-   Publications analyzed: 10
-   Disease associations found: 0
-   No disease associations found.
+   - Hemophilia A (4 publications)
+     Example: [39937791] In vitro combined haemostatic efficacy of emicizumab and ext...
 
 
 OVERALL STATISTICS:
 --------------------
-Total publications analyzed: 77
-Total unique disease associations: 25
-Average disease associations per drug: 2.5
+Total publications analyzed: 99
+Total unique disease associations: 29
+Average disease associations per drug: 2.9
