@@ -49,6 +49,31 @@ The pipeline is focused, efficient, and produces evidence-based drug-disease ass
 - **Progress Tracking**: Real-time progress reporting for large datasets
 - **Error Handling**: Robust error recovery and validation
 
+## Configuration
+
+### Demo vs Production Mode
+
+The pipeline includes an easy toggle between demonstration and production modes:
+
+**Demonstration Mode (Default)**
+- Set `DEMO_MODE = true` in `pubmed_drug_indications.jl`
+- Processes 10 drugs maximum
+- Retrieves 50 results per drug
+- Analyzes 10 PMIDs per drug
+- Perfect for testing and validation
+
+**Production Mode** 
+- Set `DEMO_MODE = false` in `pubmed_drug_indications.jl`
+- Processes all 2915+ approved drugs
+- No limits on results or PMIDs
+- Full-scale analysis for research use
+
+Simply edit line 41 in `pubmed_drug_indications.jl`:
+```julia
+const DEMO_MODE = true   # Demonstration mode
+const DEMO_MODE = false  # Production mode
+```
+
 ## Requirements
 
 ### System Requirements
