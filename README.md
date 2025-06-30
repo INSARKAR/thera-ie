@@ -118,7 +118,12 @@ julia approved_drugs_extractor.jl drugbank.xml
 # 2. Extract disease terms  
 julia mesh_t047_extractor.jl d2025.bin
 
-# 3. Analyze drug-disease associations (unified pipeline)
+# 3. Configure mode (optional - defaults to demo mode)
+# Edit pubmed_drug_indications.jl line 41:
+# const DEMO_MODE = true   # For demonstration (10 drugs)
+# const DEMO_MODE = false  # For production (all drugs)
+
+# 4. Analyze drug-disease associations (unified pipeline)
 julia pubmed_drug_indications.jl
 ```
 
