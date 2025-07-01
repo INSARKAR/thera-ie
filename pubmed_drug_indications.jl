@@ -46,7 +46,7 @@ end
 
 # Configuration
 # Toggle between demonstration and production modes
-const DEMO_MODE = true  # Set to true for demonstration, false for full production run
+const DEMO_MODE = false  # Set to true for demonstration, false for full production run
 
 # Demonstration limits (used when DEMO_MODE = true)
 const DEMO_MAX_DRUGS = 10
@@ -55,8 +55,8 @@ const DEMO_MAX_PMIDS_TO_ANALYZE = 10
 
 # Production settings (used when DEMO_MODE = false)
 const PROD_MAX_DRUGS =  1_000_000 #  Effectively unlimited
-const PROD_MAX_RESULTS_PER_DRUG = 1_000_000  # Effectively unlimited
-const PROD_MAX_PMIDS_TO_ANALYZE = 1_000_000   # Effectively unlimited
+const PROD_MAX_RESULTS_PER_DRUG = 1_000_000  # Allow very large result sets with pagination
+const PROD_MAX_PMIDS_TO_ANALYZE = 1_000_000   # Effectively unlimited for comprehensive analysis
 
 # Set active configuration based on mode
 const MAX_DRUGS = DEMO_MODE ? DEMO_MAX_DRUGS : PROD_MAX_DRUGS
@@ -431,6 +431,125 @@ function search_pubmed_cached(drug_name::String; retmax::Int=50, use_cache::Bool
             "cache_hit" => false
         )
     end
+end
+
+"""
+    search_pubmed_paginated(drug_name::String; max_results::Int=9999, use_cache::Bool=true) -> Dict
+
+Enhanced PubMed search with pagination support to retrieve more than 9,999 results.
+The PubMed API limits retmax to 9,999 per request, so this function makes multiple
+requests with retstart parameter to get larger result sets.
+"""
+function search_pubmed_paginated(drug_name::String; max_results::Int=9999, use_cache::Bool=true)
+    # Check cache first
+    cache_key = "search_paginated_$(drug_name)_$(max_results)"
+    if use_cache && haskey(GLOBAL_CACHE, cache_key)
+        cached_result = GLOBAL_CACHE[cache_key]
+        cached_result["cache_hit"] = true
+        return cached_result
+    end
+    
+    # Build simple search query for drug name
+    query = "\"$drug_name\"[All Fields]"
+    
+    # PubMed API maximum per request
+    api_max_per_request = 9999
+    
+    all_pmids = String[]
+    total_count = 0
+    requests_made = 0
+    
+    # Calculate how many requests we need
+    num_requests = ceil(Int, max_results / api_max_per_request)
+    
+    println("  📡 Retrieving up to $max_results results (may require $num_requests API calls)...")
+    
+    for request_idx in 1:num_requests
+        retstart = (request_idx - 1) * api_max_per_request
+        retmax = min(api_max_per_request, max_results - length(all_pmids))
+        
+        if retmax <= 0
+            break  # We've got enough results
+        end
+        
+        # Build the esearch URL for this batch
+        base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
+        params = [
+            "db=pubmed",
+            "term=" * HTTP.escapeuri(query),
+            "retmode=json",
+            "retmax=$retmax",
+            "retstart=$retstart"
+        ]
+        
+        url = base_url * "?" * join(params, "&")
+        
+        try
+            # Make the API request with timeout
+            response = HTTP.get(url, readtimeout=30, connect_timeout=10)
+            
+            if response.status == 200
+                data = JSON3.read(String(response.body))
+                
+                # Extract results
+                esearch_result = data.esearchresult
+                count = parse(Int, esearch_result.count)
+                ids = haskey(esearch_result, :idlist) ? esearch_result.idlist : String[]
+                
+                # Store total count from first request
+                if request_idx == 1
+                    total_count = count
+                    println("    📊 Total publications in PubMed: $total_count")
+                end
+                
+                # Add PMIDs to our collection
+                append!(all_pmids, collect(String, ids))
+                requests_made += 1
+                
+                print("    📥 Batch $request_idx: retrieved $(length(ids)) PMIDs ")
+                print("(total so far: $(length(all_pmids)))")
+                println()
+                
+                # If we got fewer results than expected, we've reached the end
+                if length(ids) < retmax
+                    println("    ✅ Reached end of available results")
+                    break
+                end
+                
+            else
+                println("    ❌ HTTP $(response.status) on request $request_idx")
+                break
+            end
+            
+        catch e
+            println("    ❌ Error on request $request_idx: $(string(e))")
+            break
+        end
+        
+        # Small delay between paginated requests
+        if request_idx < num_requests
+            sleep(0.1)
+        end
+    end
+    
+    result = Dict(
+        "status" => "success",
+        "count" => total_count,
+        "pmids" => all_pmids,
+        "query" => query,
+        "cache_hit" => false,
+        "requests_made" => requests_made,
+        "pmids_retrieved" => length(all_pmids)
+    )
+    
+    # Cache successful results
+    if use_cache && result["status"] == "success"
+        GLOBAL_CACHE[cache_key] = copy(result)
+    end
+    
+    println("    ✅ Paginated search complete: $(length(all_pmids))/$(min(max_results, total_count)) PMIDs retrieved")
+    
+    return result
 end
 
 """
@@ -816,8 +935,14 @@ Memory-efficient processing pipeline for a single drug that immediately saves re
 function process_drug_memory_efficient(drug_name::String, indication::String, disease_headings::Set{String}, output_dir::String)
     println("  Searching PubMed...")
     
-    # Step 1: Search PubMed with caching
-    search_result = search_pubmed_cached(drug_name; retmax=MAX_RESULTS_PER_DRUG)
+    # Step 1: Search PubMed with caching and pagination support
+    if MAX_RESULTS_PER_DRUG > 9999
+        # Use paginated search for large result sets
+        search_result = search_pubmed_paginated(drug_name; max_results=MAX_RESULTS_PER_DRUG)
+    else
+        # Use standard cached search for smaller result sets
+        search_result = search_pubmed_cached(drug_name; retmax=MAX_RESULTS_PER_DRUG)
+    end
     
     if search_result["status"] != "success"
         # Create minimal error result
@@ -1335,8 +1460,6 @@ function get_processing_status(drugs_dict::Dict, output_dir::String)
         "completion_percentage" => round(length(already_processed) / total_drugs * 100, digits=1)
     )
 end
-
-# ...existing code...
 
 """
     main()
