@@ -1,0 +1,40 @@
+# PubMed Drug Analysis Output Directory
+# Contains individual drug analysis files and can become very large
+drug_pubmed_refs/
+
+# Generated analysis output files
+drug_disease_associations.json
+drug_disease_associations.txt
+drug_disease_publications.json
+drug_disease_publications_index.txt
+
+# Julia specific files
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/deps.jl
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
