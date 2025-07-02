@@ -1,25 +1,91 @@
+# =============================================================================
+# Thera Drug-Indication Analysis Project .gitignore
+# =============================================================================
+
+# Large Data Directories
+# ====================
 # PubMed Drug Analysis Output Directory
 # Contains individual drug analysis files and can become very large
 drug_pubmed_refs/
 
-# Generated analysis output files
+# Generated Analysis Files
+# =======================
 drug_disease_associations.json
 drug_disease_associations.txt
 drug_disease_publications.json
 drug_disease_publications_index.txt
 
-# Julia specific files
+# Extraction Results (potentially large)
+# =====================================
+llama_pubmed_extracted_indications/
+llama_extracted_indications/
+*_extracted_indications/
+extraction_summary.json
+
+# SLURM and HPC Files
+# ==================
+logs/
+slurm_outputs/
+slurm_orchestrator_logs/
+test_slurm_outputs/
+*.out
+*.err
+
+# Temporary and Test Files
+# =======================
+temp/
+test_output*.log
+*.tmp
+*.temp
+*~
+debug_*.jl
+test_*.log
+
+# Julia Specific
+# =============
 *.jl.cov
 *.jl.*.cov
 *.jl.mem
 deps/deps.jl
 
-# Temporary files
-*.tmp
-*.temp
-*~
+# Package manager files (keep Manifest.toml for reproducibility)
+# Manifest.toml
 
-# OS generated files
+# Compiled Julia files
+*.so
+*.dylib
+*.dll
+
+# Python (if any Python scripts are added)
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# OS Generated Files
+# =================
 .DS_Store
 .DS_Store?
 ._*
@@ -28,13 +94,103 @@ deps/deps.jl
 ehthumbs.db
 Thumbs.db
 
-# Editor files
+# Windows
+$RECYCLE.BIN/
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Editor and IDE Files
+# ===================
+# VSCode
 .vscode/settings.json
 .vscode/launch.json
 .vscode/tasks.json
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch/
+
+# Vim
 *.swp
 *.swo
 *~
+.netrwhist
 
-# Logs
-*.log
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Archive and Backup Files
+# ========================
+archive/
+backup/
+*_backup*
+*_old*
+*_v[0-9]*
+*.bak
+*.orig
+
+# Configuration Files with Sensitive Data
+# =======================================
+*config.env
+*secret*
+*password*
+*token*
+.env
+
+# Large Model Files
+# ================
+*.bin
+*.model
+*.pkl
+*.pickle
+models/
+ollama_models/
+
+# Documentation Build Files
+# =========================
+docs/build/
+docs/_build/
+site/
+
+# Lock Files
+# ==========
+package-lock.json
+yarn.lock
+Pipfile.lock
+
+# Testing
+# =======
+.coverage
+.pytest_cache/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Cleanup and Maintenance Scripts
+cleanup_directory.sh
+cleanup_minimal.sh
+backup_*/
+*.backup
+*.old

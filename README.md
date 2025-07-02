@@ -1,33 +1,65 @@
-# Biomedical Drug-Disease Association Pipeline
+# Thera Drug-Indication Analysis Project
 
-A streamlined Julia pipeline for extracting approved FDA drugs from DrugBank, identifying disease-related MeSH descriptors, and querying PubMed for drug-disease associations.
+A comprehensive Julia-based pipeline for extracting drug-indication pairings from PubMed publications using Llama 3.2 via Ollama on HPC/SLURM environments.
 
-## Core Functions
+## 🚀 Quick Start
 
-This pipeline performs three essential functions:
+1. **Run the complete analysis**:
+   ```bash
+   julia quick_start.jl
+   ```
 
-1. **Extract approved FDA drugs from DrugBank XML files**
-2. **Extract MeSH descriptors of Disease semantic type (T047)**  
-3. **Query PubMed for articles containing approved drugs indexed with disease-relevant MeSH descriptors**
+2. **For HPC/SLURM environments**:
+   ```bash
+   cd scripts/slurm
+   ./submit_fresh_job.sh        # Submit Llama extraction job
+   ./monitor_fresh_extraction.sh # Monitor progress
+   ```
 
-## Summary
+## 📁 Project Structure
 
-This streamlined pipeline performs the three core functions:
+```
+thera/
+├── 📊 **Core Analysis Scripts**
+│   ├── quick_start.jl                    # Main entry point
+│   ├── pubmed_drug_indications.jl        # Core PubMed analysis
+│   └── slurm_pubmed_drug_indications.jl  # SLURM-compatible version
+│
+├── 🧠 **Llama/AI Extraction**
+│   ├── scripts/extraction/              # Llama extraction scripts
+│   │   ├── intelligent_drug_extractor.jl # Efficient drug-disease extraction
+│   │   ├── test_intelligent_extractor.jl # Test script for the intelligent extractor
+│   │   ├── intelligent_extraction.slurm # SLURM job for intelligent extraction
+│   │   └── submit_intelligent_extractions.sh # Multi-drug submission helper
+│   ├── scripts/slurm/                  # SLURM job scripts
+│   └── scripts/monitoring/             # Progress monitoring tools
+│
+├── 🔧 **Configuration & Setup**
+│   ├── config/                         # Configuration files
+│   ├── scripts/setup/                  # Environment setup scripts
+│   └── Project.toml                    # Julia project dependencies
+│
+├── 📚 **Data Directories**
+│   ├── drug_pubmed_refs/               # Drug publication data
+│   ├── llama_pubmed_extracted_indications/ # AI extraction results
+│   └── logs/                           # Execution logs
+│
+├── 🧪 **Testing**
+│   ├── tests/unit/                     # Unit tests
+│   ├── tests/integration/              # Integration tests
+│   └── tests/debug/                    # Debugging scripts
+│
+├── 📖 **Documentation**
+│   ├── docs/usage/                     # User guides
+│   ├── docs/implementation/            # Technical details
+│   └── docs/summaries/                 # Project summaries
+│
+└── 🗄️ **Archive**
+    ├── archive/old_versions/           # Previous versions
+    └── archive/deprecated/             # Deprecated code
+```
 
-✅ **Extract FDA-approved drugs** from DrugBank XML files  
-✅ **Extract disease-type MeSH descriptors** (semantic type T047)  
-✅ **Query PubMed for drug-disease associations** through publication analysis
-
-The pipeline is focused, efficient, and produces evidence-based drug-disease association data suitable for biomedical research and pharmaceutical analysis.
-
-## Pipeline Components
-
-### 1. Drug Extraction (`approved_drugs_extractor.jl`)
-- Extracts approved drugs from DrugBank XML files
-- Filters for FDA-approved drugs with valid indications
-- Outputs curated drug datasets in multiple formats
-
-### 2. Disease Classification (`mesh_t047_extractor.jl`)
+## 🎯 Main Features
 - Extracts MeSH descriptors with semantic type T047 (Disease or Syndrome)
 - Processes MeSH descriptor binary files
 - Creates disease classification datasets
@@ -177,3 +209,275 @@ Ensure compliance with DrugBank and PubMed usage policies.
 ## Core Features
 
 - **FDA-Approved Drugs Only**: Filters DrugBank for approved drugs with valid indications
+
+## Advanced Features
+
+### 1. Traditional PubMed Analysis
+- **Script**: `pubmed_drug_indications.jl`
+- **Description**: Extracts drug-disease associations from MeSH terms
+- **Output**: Structured JSON files with drug-indication mappings
+
+### 2. AI-Powered Extraction (Llama 3.2)
+- **Script**: `scripts/extraction/fresh_levothyroxine_extractor.jl`
+- **Description**: Uses Llama 3.2 to extract indications from publication text
+- **Features**: 
+  - GPU-accelerated processing
+  - SLURM job management
+  - Batch processing with checkpointing
+  - Error handling and recovery
+
+### 3. HPC/SLURM Integration
+- **Location**: `scripts/slurm/`
+- **Features**:
+  - Automated GPU allocation
+  - Ollama server management
+  - Job monitoring and logging
+  - Batch processing capabilities
+
+## 🧠 Intelligent Drug-Disease Extraction
+
+The intelligent drug-disease extractor implements a more efficient approach to identify and confirm drug indications:
+
+### Two-Phase Approach
+1. **Identification Phase**: First scans a sample of publications to identify all potential drug-disease pairs
+2. **Verification Phase**: For each identified pair, processes only enough publications to confirm the indication
+
+### Advantages
+- **Efficiency**: Avoids processing all publications when indications are already confirmed
+- **Precision**: Focuses on verifying specific drug-disease relationships
+- **Confidence**: Provides confidence scores for each verified indication
+- **Scalability**: Can process multiple drugs in parallel on HPC/SLURM
+
+### Usage
+
+#### Local Testing
+```bash
+# Test the intelligent extractor locally
+julia scripts/extraction/test_intelligent_extractor.jl
+```
+
+#### SLURM Execution
+```bash
+# Run for a single drug
+sbatch scripts/extraction/intelligent_extraction.slurm Levothyroxine
+
+# Run for multiple drugs
+scripts/extraction/submit_intelligent_extractions.sh Levothyroxine Ibuprofen Metformin
+
+# Run for drugs listed in a file
+scripts/extraction/submit_intelligent_extractions.sh --list drug_list.txt
+```
+
+### Intelligent Extraction Output
+```json
+{
+  "metadata": {
+    "drug_name": "Levothyroxine",
+    "total_publications": 5847,
+    "processed_publications": 482,
+    "total_disease_pairs": 16,
+    "confirmed_disease_pairs": 7,
+    "total_indications": 28,
+    "confirmation_rate_percent": 43.75,
+    "model_used": "llama3.2"
+  },
+  "disease_pairs": [
+    {
+      "drug": "Levothyroxine",
+      "disease": "Hypothyroidism",
+      "confidence": 0.92,
+      "confirmed": true,
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "pmid": "12345678",
+          "confidence": 0.92,
+          "title": "Treatment of hypothyroidism...",
+          "extracted_at": "2025-07-01T21:00:00",
+          "confirmed": true
+        }
+      ]
+    }
+  ]
+}
+```
+
+## 🚀 Usage Examples
+
+### Basic Drug Analysis
+```julia
+# Analyze all approved drugs
+julia quick_start.jl
+
+# Analyze specific drug
+julia -e 'include("pubmed_drug_indications.jl"); analyze_drug("Levothyroxine")'
+```
+
+### AI-Powered Extraction
+```bash
+# Submit Llama extraction job
+cd scripts/slurm
+./submit_fresh_job.sh
+
+# Monitor progress
+./monitor_fresh_extraction.sh
+
+# Check results
+ls ../../llama_pubmed_extracted_indications/
+```
+
+### SLURM Job Management
+```bash
+# Check job status
+squeue -u $USER
+
+# View logs
+tail -f logs/fresh_extraction_*.out
+
+# Cancel job if needed
+scancel <job_id>
+```
+
+## 🔧 Dependencies
+
+### Core Dependencies
+- **Julia** ≥ 1.8
+- **HTTP.jl** - API communication
+- **JSON3.jl** - JSON processing
+- **CSV.jl** - Data export
+- **Dates.jl** - Timestamp handling
+
+### HPC Dependencies
+- **SLURM** - Job scheduling
+- **Ollama** - Llama model hosting
+- **CUDA** - GPU acceleration (for Llama)
+
+### Install Dependencies
+```bash
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
+```
+
+## 📊 Output Formats
+
+### Traditional Analysis Output
+```json
+{
+  "drug_name": "Levothyroxine",
+  "total_publications": 5847,
+  "disease_associations": [
+    {
+      "disease": "Hypothyroidism",
+      "mesh_term": "D007037",
+      "publication_count": 2834,
+      "confidence": 0.95
+    }
+  ]
+}
+```
+
+### AI Extraction Output
+```json
+{
+  "metadata": {
+    "drug_name": "Levothyroxine",
+    "total_publications": 5847,
+    "successful_extractions": 2156,
+    "total_indications": 24,
+    "model_used": "llama3.2"
+  },
+  "indications": [
+    {
+      "indication": "Hypothyroidism",
+      "confidence": 0.9,
+      "pmid": "12345678",
+      "title": "Treatment of hypothyroidism...",
+      "extracted_at": "2025-07-01T21:00:00"
+    }
+  ]
+}
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Julia Package Errors**
+   ```bash
+   julia --project=. -e 'using Pkg; Pkg.resolve(); Pkg.instantiate()'
+   ```
+
+2. **SLURM Job Failures**
+   - Check logs in `logs/` directory
+   - Verify GPU availability: `sinfo -p gpu`
+   - Ensure Ollama module is loaded
+
+3. **Ollama Connection Issues**
+   ```bash
+   module load ollama
+   ollama serve &
+   ollama pull llama3.2
+   ```
+
+4. **Large File Handling**
+   - Use `.gitignore` to exclude large data files
+   - Consider using `git lfs` for large model files
+
+### Performance Optimization
+
+1. **For Large Datasets**
+   - Use batch processing (`BATCH_SIZE` parameter)
+   - Enable checkpointing for long-running jobs
+   - Monitor memory usage with `scripts/monitoring/`
+
+2. **For Faster Processing**
+   - Increase parallel workers
+   - Use SSD storage for temporary files
+   - Optimize Ollama model settings
+
+## 📈 Monitoring & Logging
+
+### Real-time Monitoring
+```bash
+# Monitor job progress
+watch -n 30 'squeue -u $USER'
+
+# Monitor extraction progress
+tail -f logs/fresh_extraction_*.out
+
+# Check resource usage
+watch -n 5 'nvidia-smi'
+```
+
+### Log Analysis
+- **Job logs**: `logs/` directory
+- **Error logs**: `*.err` files
+- **Progress logs**: Look for progress indicators in output logs
+
+## 🤝 Contributing
+
+1. **Adding New Features**
+   - Place scripts in appropriate `scripts/` subdirectory
+   - Update documentation in `docs/`
+   - Add tests in `tests/`
+
+2. **Code Organization**
+   - Core functionality: Root directory
+   - Utilities: `scripts/` subdirectories  
+   - Configuration: `config/` directory
+   - Archives: `archive/` directory
+
+## 📄 License
+
+This project is licensed under the terms specified in the `LICENSE` file.
+
+## 🆘 Support
+
+For issues and questions:
+1. Check the documentation in `docs/`
+2. Review common issues in this README
+3. Check existing logs for error messages
+4. Review the archived solutions in `archive/`
+
+---
+
+**Note**: This project is optimized for HPC environments with SLURM job scheduling and GPU acceleration capabilities.
