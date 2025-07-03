@@ -373,7 +373,7 @@ generate_summary() {
     log_both "INFO" "Generating final analysis summary"
     
     # Run the original program to generate comprehensive summary
-    if julia pubmed_drug_indications.jl 2>&1 | tee -a "$ORCHESTRATOR_LOG"; then
+    if julia scripts/extraction/pubmed_drug_indications.jl 2>&1 | tee -a "$ORCHESTRATOR_LOG"; then
         log_both "SUCCESS" "Final summary generation completed"
         
         # Display summary files

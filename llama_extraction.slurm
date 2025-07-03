@@ -131,8 +131,8 @@ if [ ! -f "Project.toml" ]; then
     exit 1
 fi
 
-if [ ! -f "llama_drug_indication_extractor.jl" ]; then
-    echo "❌ llama_drug_indication_extractor.jl not found"
+if [ ! -f "scripts/extraction/llama_drug_extractor.jl" ]; then
+    echo "❌ scripts/extraction/llama_drug_extractor.jl not found"
     exit 1
 fi
 
@@ -168,8 +168,8 @@ if [ "$LLAMA_TEST_MODE" = "true" ]; then
 else
     echo "=== Running Full Drug Indication Extraction ==="
     echo "Processing drug: $LLAMA_SINGLE_DRUG"
-    echo "Running: julia --project=. scripts/extraction/intelligent_drug_extractor.jl \"$LLAMA_SINGLE_DRUG\""
-    julia --project=. scripts/extraction/intelligent_drug_extractor.jl "$LLAMA_SINGLE_DRUG"
+    echo "Running: julia --project=. scripts/extraction/llama_drug_extractor.jl \"$LLAMA_SINGLE_DRUG\""
+    julia --project=. scripts/extraction/llama_drug_extractor.jl "$LLAMA_SINGLE_DRUG"
 fi
 
 EXTRACTION_EXIT_CODE=$?

@@ -156,7 +156,7 @@ julia mesh_t047_extractor.jl d2025.bin
 # const DEMO_MODE = false  # For production (all drugs)
 
 # 4. Analyze drug-disease associations (unified pipeline)
-julia pubmed_drug_indications.jl
+julia scripts/extraction/pubmed_drug_indications.jl
 ```
 
 ## License

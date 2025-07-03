@@ -26,23 +26,17 @@ julia hpc_setup_and_run.jl
 ### Core Analysis Commands
 ```bash
 # Traditional MeSH-based analysis
-julia pubmed_drug_indications.jl
+julia scripts/extraction/pubmed_drug_indications.jl
 
 # SLURM-compatible version
-julia slurm_pubmed_drug_indications.jl
+julia scripts/extraction/slurm_pubmed_drug_indications.jl
 
 # AI-powered extraction (requires Ollama/Llama 3.2)
-julia scripts/extraction/fresh_levothyroxine_extractor.jl
+julia scripts/extraction/llama_drug_extractor.jl
 ```
 
 ### Testing
 ```bash
-# Test intelligent extractor locally
-julia scripts/extraction/test_intelligent_extractor.jl
-
-# Test levothyroxine extraction
-julia scripts/extraction/test_levothyroxine_extractor.jl
-
 # Validate HPC setup
 julia validate_hpc_setup.jl
 
@@ -52,17 +46,18 @@ julia validate_setup.jl
 
 ### SLURM Job Management
 ```bash
-# Submit AI extraction job
-cd scripts/slurm && ./submit_fresh_job.sh
+# Submit single drug AI extraction job
+sbatch llama_extraction.slurm
 
-# Monitor job progress
-./scripts/monitoring/monitor_fresh_extraction.sh
+# Submit dual GPU extraction job (2 drugs simultaneously)
+./submit_dual_gpu_job.sh [drug1] [drug2]
 
 # Check job status
 squeue -u $USER
 
 # View logs
-tail -f logs/fresh_extraction_*.out
+tail -f logs/llama_extraction_*.out
+tail -f logs/dual_gpu_llama_extraction_*.out
 ```
 
 ## Architecture Overview
@@ -70,18 +65,17 @@ tail -f logs/fresh_extraction_*.out
 ### Core Components
 
 1. **Traditional Analysis Pipeline**
-   - `pubmed_drug_indications.jl`: Main MeSH-based drug-disease analysis
-   - `slurm_pubmed_drug_indications.jl`: SLURM-compatible version
+   - `scripts/extraction/pubmed_drug_indications.jl`: Main MeSH-based drug-disease analysis
+   - `scripts/extraction/slurm_pubmed_drug_indications.jl`: SLURM-compatible version
    - Uses MeSH semantic type T047 (Disease or Syndrome) for classification
 
 2. **AI-Powered Extraction Pipeline**
    - `scripts/extraction/`: Llama 3.2 based extraction scripts
-   - `fresh_levothyroxine_extractor.jl`: Core AI extraction implementation
-   - `intelligent_drug_extractor.jl`: Two-phase efficient extraction approach
+   - `llama_drug_extractor.jl`: Optimized disease-parallel extraction approach
 
 3. **HPC/SLURM Integration**
    - `scripts/slurm/`: SLURM job scripts with GPU allocation
-   - `fresh_extraction.slurm`: Main SLURM job template
+   - `llama_extraction.slurm`: Main SLURM job template
    - Automated Ollama server management and model loading
 
 ### Data Flow
@@ -90,7 +84,7 @@ tail -f logs/fresh_extraction_*.out
 DrugBank XML → approved_drugs_extractor.jl → Approved Drugs Dict
 MeSH Descriptors → mesh_t047_extractor.jl → Disease Classifications
                           ↓
-     PubMed API ← pubmed_drug_indications.jl ← Both Inputs
+     PubMed API ← scripts/extraction/pubmed_drug_indications.jl ← Both Inputs
                           ↓
                Drug-Disease Associations
                           ↓

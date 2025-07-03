@@ -12,7 +12,7 @@ CONFIGURATION:
     Set DEMO_MODE = false for full production run (all drugs, no limits)
 
 Usage:
-    julia pubmed_drug_indications.jl
+    julia scripts/extraction/pubmed_drug_indications.jl
 
 Input:
     - approved_drugs_dict.jl (Dictionary of approved drugs and indications)
