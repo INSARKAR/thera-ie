@@ -31,8 +31,11 @@ julia scripts/extraction/pubmed_drug_indications.jl
 # SLURM-compatible version
 julia scripts/extraction/slurm_pubmed_drug_indications.jl
 
-# AI-powered extraction (requires Ollama/Llama 3.2)
+# AI-powered PubMed extraction (requires Ollama/Llama 3.2)
 julia scripts/extraction/llama_drug_extractor.jl
+
+# DrugBank indication text extraction (requires Ollama/Llama 3.2)
+julia scripts/extraction/drugbank_llama_extractor.jl
 ```
 
 ### Testing
@@ -51,6 +54,9 @@ sbatch llama_extraction.slurm
 
 # Submit dual GPU extraction job (2 drugs simultaneously)
 ./submit_dual_gpu_job.sh [drug1] [drug2]
+
+# Submit DrugBank indication extraction job
+./submit_drugbank_job.sh [drug_name]
 
 # Check job status
 squeue -u $USER

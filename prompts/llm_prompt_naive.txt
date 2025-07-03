@@ -1,0 +1,96 @@
+LLama Prompt Template for Knowledge-Based Drug Indication Analysis
+==================================================================
+
+Source: Thera drug indication extraction system
+Files: knowledge_based_extractor.jl (hypothetical)
+Model: Llama 3.2
+Purpose: Extract therapeutic indications based on LLM's pre-trained medical knowledge
+
+PROMPT TEMPLATE:
+================
+
+You are a medical expert with comprehensive knowledge of pharmaceuticals and their therapeutic applications.
+
+DRUG: {DRUG_NAME}
+
+Task: Based on your medical knowledge, identify all known therapeutic indications for {DRUG_NAME}. Consider both FDA-approved uses and well-established off-label applications supported by clinical evidence.
+
+Rules:
+1. List specific medical conditions, diseases, or therapeutic indications that {DRUG_NAME} is used to treat, prevent, or manage
+2. Focus on therapeutic uses, not side effects or contraindications
+3. Use standard medical terminology
+4. Rate confidence 0.1-1.0 based on regulatory approval and evidence strength
+5. A confidence of 0.6+ means established therapeutic use with strong evidence
+
+Format your response for each therapeutic indication exactly as:
+Indication 1:
+EVIDENCE: [YES or NO]
+CONFIDENCE: [0.1-1.0]
+REASONING: [condition/disease name - Brief clinical description]
+
+Indication 2:
+EVIDENCE: [YES or NO]
+CONFIDENCE: [0.1-1.0]
+REASONING: [condition/disease name - Brief clinical description]
+
+Continue for all therapeutic indications...
+
+INPUT DATA FORMAT:
+==================
+
+Simple drug name substitution:
+
+{DRUG_NAME} - The specific drug being analyzed (e.g., "Levothyroxine")
+
+CONFIGURATION PARAMETERS:
+=========================
+
+- Model: llama3.2
+- Confidence Threshold: 0.6 (for established therapeutic use)
+- Processing Approach: Direct knowledge extraction (single query per drug)
+- Knowledge Source: LLM's pre-trained pharmaceutical knowledge
+- Output Format: Structured evidence-confidence-reasoning triplets
+
+EXAMPLE VARIABLES:
+==================
+
+{DRUG_NAME} - The specific drug being analyzed
+
+Example: "Levothyroxine"
+
+Expected Output Format:
+Indication 1:
+EVIDENCE: YES
+CONFIDENCE: 1.0
+REASONING: Hypothyroidism - Primary treatment for thyroid hormone deficiency
+
+Indication 2:
+EVIDENCE: YES
+CONFIDENCE: 0.9
+REASONING: Thyroid suppression therapy - Post-thyroidectomy hormone replacement and TSH suppression
+
+Indication 3:
+EVIDENCE: YES
+CONFIDENCE: 0.8
+REASONING: Myxedema coma - Emergency treatment for severe hypothyroidism
+
+QUALITY ASSURANCE:
+==================
+
+- Knowledge-based approach using LLM's pre-trained training data
+- Confidence scoring reflects regulatory approval status and evidence strength
+- Focus on therapeutic applications only
+- Standard medical terminology required
+- Structured output format enables automated parsing and validation
+- EVIDENCE field typically "YES" for known therapeutic indications
+
+OPTIMIZATION FEATURES:
+======================
+
+- Single-query efficiency per drug
+- No external data dependencies required
+- Immediate results generation
+- Built-in confidence assessment based on approval status
+- Standardized medical terminology
+- Automated parsing compatibility
+- Minimal computational requirements

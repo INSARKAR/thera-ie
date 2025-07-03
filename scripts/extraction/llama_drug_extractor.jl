@@ -25,6 +25,9 @@ const MAX_PUBLICATIONS_PER_PAIR = 10
 const BATCH_SIZE = 20
 const REQUIRE_DRUG_THERAPY_QUALIFIER = true
 
+# File paths
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_pubmed.txt"
+
 # Data structures
 struct Indication
     confidence::Float64
@@ -132,6 +135,43 @@ function parse_disease_batch_response(response::String, disease_pub_pairs::Vecto
     end
     
     return results
+end
+
+function load_prompt_template()
+    """Load the prompt template from file"""
+    try
+        prompt_content = read(PROMPT_FILE, String)
+        
+        # Extract just the prompt template section
+        lines = split(prompt_content, '\n')
+        in_template = false
+        template_lines = String[]
+        
+        for line in lines
+            if contains(line, "PROMPT TEMPLATE:")
+                in_template = true
+                continue
+            elseif in_template && contains(line, "INPUT DATA FORMAT:")
+                break
+            elseif in_template && !contains(line, "================")
+                push!(template_lines, line)
+            end
+        end
+        
+        # Find the actual prompt text (skip empty lines and headers)
+        prompt_start = 1
+        for (i, line) in enumerate(template_lines)
+            if startswith(strip(line), "You are a medical expert")
+                prompt_start = i
+                break
+            end
+        end
+        
+        return join(template_lines[prompt_start:end], '\n')
+    catch e
+        println("❌ Failed to load prompt template: $e")
+        return nothing
+    end
 end
 
 function test_ollama_connection()
@@ -313,36 +353,18 @@ function process_drug_optimal(drug_name::String)
         unique_diseases = length(unique([pair[1] for pair in batch_pairs]))
         println("  - Batch $batch_num: Processing $(length(batch_pairs)) publications from $unique_diseases diseases")
         
-        # Create batch prompt
-        batch_prompt = """
-You are a medical expert analyzing research publications about $drug_name and its potential therapeutic uses.
-
-Analyze these $(length(batch_pairs)) disease-publication pairs:
-
-$(join([format_disease_publication_for_batch(pair[1], pair[2], i) for (i, pair) in enumerate(batch_pairs)], "\n\n"))
-
-Task: For each disease-publication pair, determine if the publication provides evidence that $drug_name is used to treat that specific disease.
-
-Rules:
-1. Focus ONLY on the specified disease for each pair
-2. Look for clear statements that $drug_name treats the disease
-3. Rate confidence 0.1-1.0 based on how clearly the indication is stated
-4. A confidence of 0.6+ means clear evidence of therapeutic use
-5. Consider MeSH qualifiers - "drug therapy" suggests therapeutic use
-
-Format your response for each disease-publication pair exactly as:
-Disease-Publication 1:
-EVIDENCE: [YES or NO]
-CONFIDENCE: [0.1-1.0]
-REASONING: [Brief explanation]
-
-Disease-Publication 2:
-EVIDENCE: [YES or NO]
-CONFIDENCE: [0.1-1.0]
-REASONING: [Brief explanation]
-
-Continue for all disease-publication pairs...
-"""
+        # Load and create batch prompt from template
+        prompt_template = load_prompt_template()
+        if prompt_template === nothing
+            println("  - Batch $batch_num: Failed to load prompt template")
+            continue
+        end
+        
+        # Format the prompt with actual values
+        batch_prompt = replace(prompt_template, "{DRUG_NAME}" => drug_name)
+        batch_prompt = replace(batch_prompt, "{NUMBER_OF_PAIRS}" => string(length(batch_pairs)))
+        batch_prompt = replace(batch_prompt, "{FORMATTED_DISEASE_PUBLICATION_PAIRS}" => 
+            join([format_disease_publication_for_batch(pair[1], pair[2], i) for (i, pair) in enumerate(batch_pairs)], "\n\n"))
         
         response = query_llama(batch_prompt)
         
