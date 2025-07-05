@@ -22,7 +22,7 @@ const CONFIDENCE_THRESHOLD = 0.6
 const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_naive.txt"
 
 # Ollama configuration
-const OLLAMA_HOST = get(ENV, "OLLAMA_HOST", "http://localhost:11434")
+# Note: OLLAMA_HOST will be read from environment when needed, not as a constant
 
 # Data structures
 struct NaiveIndication
@@ -83,17 +83,19 @@ end
 
 function test_ollama_connection()
     """Test if Ollama server is accessible"""
+    ollama_host = get(ENV, "OLLAMA_HOST", "http://localhost:11434")
     try
-        response = HTTP.get("$OLLAMA_HOST/api/tags"; connect_timeout=5, readtimeout=10)
+        response = HTTP.get("$ollama_host/api/tags"; connect_timeout=5, readtimeout=10)
         return response.status == 200
     catch e
-        println("❌ Cannot connect to Ollama at $OLLAMA_HOST: $e")
+        println("❌ Cannot connect to Ollama at $ollama_host: $e")
         return false
     end
 end
 
 function query_llama(prompt::String; temperature=0.3, max_tokens=1000)
     """Query the Llama model with the given prompt"""
+    ollama_host = get(ENV, "OLLAMA_HOST", "http://localhost:11434")
     try
         payload = Dict(
             "model" => MODEL_NAME,
@@ -106,7 +108,7 @@ function query_llama(prompt::String; temperature=0.3, max_tokens=1000)
         )
         
         response = HTTP.post(
-            "$OLLAMA_HOST/api/generate",
+            "$ollama_host/api/generate",
             ["Content-Type" => "application/json"],
             JSON3.write(payload);
             connect_timeout=10,
