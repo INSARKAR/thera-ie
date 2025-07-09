@@ -1,0 +1,644 @@
+{
+    "umls_mappings": {
+        "extraction2": {
+            "Fetal Diseases": {
+                "cui": "C0015934",
+                "method": "known",
+                "preferred_name": "fetal diseases",
+                "icd10_chapter": "P96",
+                "icd10_code": "P96.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Growth Disorders": {
+                "cui": "C0018273",
+                "method": "known",
+                "preferred_name": "growth disorders",
+                "icd10_chapter": "E34",
+                "icd10_code": "E34.3",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Autoimmune Diseases": {
+                "cui": "C0004364",
+                "method": "known",
+                "preferred_name": "autoimmune diseases",
+                "icd10_chapter": "D89",
+                "icd10_code": "D89.89",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hyperprolactinemia": {
+                "cui": "C0020514",
+                "method": "known",
+                "preferred_name": "hyperprolactinemia",
+                "icd10_chapter": "E22",
+                "icd10_code": "E22.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Fatigue": {
+                "cui": "C0015672",
+                "method": "known",
+                "preferred_name": "fatigue",
+                "icd10_chapter": "R53",
+                "icd10_code": "R53",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Tuberculosis": {
+                "cui": "C0041296",
+                "method": "known",
+                "preferred_name": "tuberculosis",
+                "icd10_chapter": "A15",
+                "icd10_code": "A15.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Neoplasms": {
+                "cui": "C0027651",
+                "method": "known",
+                "preferred_name": "neoplasms",
+                "icd10_chapter": "C80",
+                "icd10_code": "C80.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Lymphoma, T-Cell, Cutaneous": {
+                "cui": "C0079744",
+                "method": "known",
+                "preferred_name": "lymphoma, t-cell, cutaneous",
+                "icd10_chapter": "C84",
+                "icd10_code": "C84.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Breast Neoplasms": {
+                "cui": "C0006142",
+                "method": "known",
+                "preferred_name": "breast neoplasms",
+                "icd10_chapter": "C50",
+                "icd10_code": "C50.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Polyendocrinopathies, Autoimmune": {
+                "cui": "C0085859",
+                "method": "known",
+                "preferred_name": "polyendocrinopathies, autoimmune",
+                "icd10_chapter": "E31",
+                "icd10_code": "E31.0",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Skin Neoplasms": {
+                "cui": "C0037286",
+                "method": "known",
+                "preferred_name": "skin neoplasms",
+                "icd10_chapter": "C44",
+                "icd10_code": "C44.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Adrenal Insufficiency": {
+                "cui": "C0001623",
+                "method": "known",
+                "preferred_name": "adrenal insufficiency",
+                "icd10_chapter": "E27",
+                "icd10_code": "E27.4",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Brain Diseases": {
+                "cui": "C0006111",
+                "method": "known",
+                "preferred_name": "brain diseases",
+                "icd10_chapter": "G93",
+                "icd10_code": "G93.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypoparathyroidism": {
+                "cui": "C0020626",
+                "method": "known",
+                "preferred_name": "hypoparathyroidism",
+                "icd10_chapter": "E20",
+                "icd10_code": "E20.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Chemical and Drug Induced Liver Injury": {
+                "cui": "C0860207",
+                "method": "known",
+                "preferred_name": "chemical and drug induced liver injury",
+                "icd10_chapter": "K71",
+                "icd10_code": "K71.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hemangioma": {
+                "cui": "C0018916",
+                "method": "known",
+                "preferred_name": "hemangioma",
+                "icd10_chapter": "D18",
+                "icd10_code": "D18.00",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Goiter": {
+                "cui": "C0018021",
+                "method": "known",
+                "preferred_name": "goiter",
+                "icd10_chapter": "E04",
+                "icd10_code": "E04.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Adenocarcinoma": {
+                "cui": "C0001418",
+                "method": "known",
+                "preferred_name": "adenocarcinoma",
+                "icd10_chapter": "C78",
+                "icd10_code": "C78.00",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Coma": {
+                "cui": "C0009421",
+                "method": "known",
+                "preferred_name": "coma",
+                "icd10_chapter": "R40",
+                "icd10_code": "R40.20",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Carcinoma": {
+                "cui": "C0006826",
+                "method": "known",
+                "preferred_name": "carcinoma",
+                "icd10_chapter": "C80",
+                "icd10_code": "C80.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hyperthyroidism": {
+                "cui": "C0020550",
+                "method": "known",
+                "preferred_name": "hyperthyroidism",
+                "icd10_chapter": "E05",
+                "icd10_code": "E05.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Pregnancy Complications": {
+                "cui": "C0032962",
+                "method": "known",
+                "preferred_name": "pregnancy complications",
+                "icd10_chapter": "O99",
+                "icd10_code": "O99.89",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Tetany": {
+                "cui": "C0039621",
+                "method": "known",
+                "preferred_name": "tetany",
+                "icd10_chapter": "R29",
+                "icd10_code": "R29.0",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Inflammation": {
+                "cui": "C0021368",
+                "method": "known",
+                "preferred_name": "inflammation",
+                "icd10_chapter": "R50",
+                "icd10_code": "R50.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Infertility, Female": {
+                "cui": "C0021359",
+                "method": "known",
+                "preferred_name": "infertility, female",
+                "icd10_chapter": "N97",
+                "icd10_code": "N97.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Diabetes Mellitus, Type 1": {
+                "cui": "C0011854",
+                "method": "known",
+                "preferred_name": "diabetes mellitus, type 1",
+                "icd10_chapter": "E10",
+                "icd10_code": "E10.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hashimoto Disease": {
+                "cui": "C0040147",
+                "method": "known",
+                "preferred_name": "hashimoto disease",
+                "icd10_chapter": "E06",
+                "icd10_code": "E06.3",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypopituitarism": {
+                "cui": "C0020635",
+                "method": "known",
+                "preferred_name": "hypopituitarism",
+                "icd10_chapter": "E23",
+                "icd10_code": "E23.0",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Dyslipidemias": {
+                "cui": "C0242339",
+                "method": "known",
+                "preferred_name": "dyslipidemias",
+                "icd10_chapter": "E78",
+                "icd10_code": "E78.5",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroiditis, Autoimmune": {
+                "cui": "C0040147",
+                "method": "known",
+                "preferred_name": "thyroiditis, autoimmune",
+                "icd10_chapter": "E06",
+                "icd10_code": "E06.3",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroid Dysgenesis": {
+                "cui": "C0749420",
+                "method": "known",
+                "preferred_name": "thyroid dysgenesis",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Helicobacter Infections": {
+                "cui": "C0850666",
+                "method": "known",
+                "preferred_name": "helicobacter infections",
+                "icd10_chapter": "B98",
+                "icd10_code": "B98.0",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroiditis": {
+                "cui": "C0040147",
+                "method": "known",
+                "preferred_name": "thyroiditis",
+                "icd10_chapter": "E06",
+                "icd10_code": "E06.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Depression": {
+                "cui": "C0011570",
+                "method": "known",
+                "preferred_name": "depression",
+                "icd10_chapter": "F32",
+                "icd10_code": "F32.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Adenoma": {
+                "cui": "C0001430",
+                "method": "known",
+                "preferred_name": "adenoma",
+                "icd10_chapter": "D12",
+                "icd10_code": "D12.6",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Heart Failure": {
+                "cui": "C0018801",
+                "method": "known",
+                "preferred_name": "heart failure",
+                "icd10_chapter": "I50",
+                "icd10_code": "I50",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Carcinoma, Papillary": {
+                "cui": "C0007131",
+                "method": "known",
+                "preferred_name": "carcinoma, papillary",
+                "icd10_chapter": "C78",
+                "icd10_code": "C78.00",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroid Neoplasms": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "thyroid neoplasms",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Congenital Hypothyroidism": {
+                "cui": "C0010308",
+                "method": "known",
+                "preferred_name": "congenital hypothyroidism",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypothyroidism": {
+                "cui": "C0020676",
+                "method": "known",
+                "preferred_name": "hypothyroidism",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Congenital Hyperinsulinism": {
+                "cui": "C0020507",
+                "method": "known",
+                "preferred_name": "congenital hyperinsulinism",
+                "icd10_chapter": "E16",
+                "icd10_code": "E16.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Obesity": {
+                "cui": "C0028754",
+                "method": "known",
+                "preferred_name": "obesity",
+                "icd10_chapter": "E66",
+                "icd10_code": "E66.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Myxedema": {
+                "cui": "C0027145",
+                "method": "known",
+                "preferred_name": "myxedema",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Triple Negative Breast Neoplasms": {
+                "cui": "C0006142",
+                "method": "known",
+                "preferred_name": "triple negative breast neoplasms",
+                "icd10_chapter": "C50",
+                "icd10_code": "C50.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroid Diseases": {
+                "cui": "C0040128",
+                "method": "known",
+                "preferred_name": "thyroid diseases",
+                "icd10_chapter": "E07",
+                "icd10_code": "E07.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Cysts": {
+                "cui": "C0010709",
+                "method": "known",
+                "preferred_name": "cysts",
+                "icd10_chapter": "K09",
+                "icd10_code": "K09.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroid Nodule": {
+                "cui": "C0040137",
+                "method": "known",
+                "preferred_name": "thyroid nodule",
+                "icd10_chapter": "E04",
+                "icd10_code": "E04.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Chronic Disease": {
+                "cui": "C0008679",
+                "method": "known",
+                "preferred_name": "chronic disease",
+                "icd10_chapter": "Z87",
+                "icd10_code": "Z87.891",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Melanoma": {
+                "cui": "C0025202",
+                "method": "known",
+                "preferred_name": "melanoma",
+                "icd10_chapter": "C43",
+                "icd10_code": "C43.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Psychotic Disorders": {
+                "cui": "C0033975",
+                "method": "known",
+                "preferred_name": "psychotic disorders",
+                "icd10_chapter": "F29",
+                "icd10_code": "F29",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Lung Neoplasms": {
+                "cui": "C0024121",
+                "method": "known",
+                "preferred_name": "lung neoplasms",
+                "icd10_chapter": "C78",
+                "icd10_code": "C78.00",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypertension": {
+                "cui": "C0020538",
+                "method": "known",
+                "preferred_name": "hypertension",
+                "icd10_chapter": "I10",
+                "icd10_code": "I10",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Graves Disease": {
+                "cui": "C0018213",
+                "method": "known",
+                "preferred_name": "graves disease",
+                "icd10_chapter": "E05",
+                "icd10_code": "E05.0",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Carcinoma, Non-Small-Cell Lung": {
+                "cui": "C0007131",
+                "method": "known",
+                "preferred_name": "carcinoma, non-small-cell lung",
+                "icd10_chapter": "C78",
+                "icd10_code": "C78.00",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroid Hormone Resistance Syndrome": {
+                "cui": "C0872218",
+                "method": "known",
+                "preferred_name": "thyroid hormone resistance syndrome",
+                "icd10_chapter": "E07",
+                "icd10_code": "E07.8",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hepatitis C, Chronic": {
+                "cui": "C0524909",
+                "method": "known",
+                "preferred_name": "hepatitis c, chronic",
+                "icd10_chapter": "B18",
+                "icd10_code": "B18.2",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Cardiomegaly": {
+                "cui": "C0018800",
+                "method": "known",
+                "preferred_name": "cardiomegaly",
+                "icd10_chapter": "I51",
+                "icd10_code": "I51.7",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Goiter, Endemic": {
+                "cui": "C0018021",
+                "method": "known",
+                "preferred_name": "goiter, endemic",
+                "icd10_chapter": "E01",
+                "icd10_code": "E01.2",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Adenocarcinoma, Follicular": {
+                "cui": "C0001418",
+                "method": "known",
+                "preferred_name": "adenocarcinoma, follicular",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Bipolar Disorder": {
+                "cui": "C0005586",
+                "method": "known",
+                "preferred_name": "bipolar disorder",
+                "icd10_chapter": "F31",
+                "icd10_code": "F31.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Postoperative Complications": {
+                "cui": "C0032787",
+                "method": "known",
+                "preferred_name": "postoperative complications",
+                "icd10_chapter": "T81",
+                "icd10_code": "T81.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyrotoxicosis": {
+                "cui": "C0040156",
+                "method": "known",
+                "preferred_name": "thyrotoxicosis",
+                "icd10_chapter": "E05",
+                "icd10_code": "E05.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            }
+        },
+        "extraction1": {
+            "Well-differentiated thyroid cancer (management)": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "well-differentiated thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypothyroidism (primary, secondary, tertiary congenital or acquired)": {
+                "cui": "C0020676",
+                "method": "known",
+                "preferred_name": "hypothyroidism",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Pituitary cancer (adjunctive therapy)": {
+                "cui": "C0032000",
+                "method": "known",
+                "preferred_name": "pituitary cancer",
+                "icd10_chapter": "C75",
+                "icd10_code": "C75.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyrotropin-dependent well-differentiated thyroid cancer": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "thyrotropin-dependent well-differentiated thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroidal cancer (adjunctive therapy)": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            }
+        }
+    },
+    "matches": {
+        "chapter_matches": [
+            "C73",
+            "E03"
+        ],
+        "cui_matches": [
+            "C0020676",
+            "C0549473"
+        ],
+        "icd10_matches": [
+            "C73",
+            "E03.9"
+        ]
+    },
+    "metadata": {
+        "icd10_improvement_percent": 2.3076923076923075,
+        "drug_name": "Levothyroxine",
+        "cui_overlap_percent": 3.571428571428571,
+        "extraction2_type": "pubmed",
+        "chapter_matches": 2,
+        "analysis_timestamp": "2025-07-07T20:47:10.667",
+        "extraction2_mapped": 62,
+        "extraction1_type": "drugbank",
+        "cui_improvement_percent": 2.032967032967033,
+        "analysis_type": "umls_icd10_overlap",
+        "cui_matches": 2,
+        "chapter_improvement_percent": 2.716857610474632,
+        "text_overlap_percent": 1.5384615384615385,
+        "extraction1_mapped": 5,
+        "icd10_overlap_percent": 3.8461538461538463,
+        "chapter_overlap_percent": 4.25531914893617,
+        "icd10_matches": 2
+    }
+}

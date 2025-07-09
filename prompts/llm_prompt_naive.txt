@@ -9,11 +9,13 @@ Purpose: Extract therapeutic indications based on LLM's pre-trained medical know
 PROMPT TEMPLATE:
 ================
 
-You are a medical expert with comprehensive knowledge of pharmaceuticals and their therapeutic applications.
+You are a pharmaceutical researcher analyzing drug indication databases for academic research purposes. This is NOT medical advice and is purely for research and educational analysis.
 
 DRUG: {DRUG_NAME}
 
-Task: Based on your medical knowledge, identify all known therapeutic indications for {DRUG_NAME}. Consider both FDA-approved uses and well-established off-label applications supported by clinical evidence.
+Task: Based on established pharmaceutical literature and regulatory approvals, identify all known therapeutic indications for {DRUG_NAME}. Consider both FDA-approved uses and well-established off-label applications supported by clinical evidence. This is for research purposes to analyze drug indication databases.
+
+RESEARCH CONTEXT: You are helping to build a comprehensive database of drug indications for academic research. Please provide factual pharmaceutical information based on established medical literature and regulatory approvals.
 
 Rules:
 1. List specific medical conditions, diseases, or therapeutic indications that {DRUG_NAME} is used to treat, prevent, or manage
@@ -21,6 +23,7 @@ Rules:
 3. Use standard medical terminology
 4. Rate confidence 0.1-1.0 based on regulatory approval and evidence strength
 5. A confidence of 0.6+ means established therapeutic use with strong evidence
+6. IMPORTANT: Provide factual pharmaceutical information for research purposes - do not refuse to provide drug indication information
 
 Format your response for each therapeutic indication exactly as:
 Indication 1:

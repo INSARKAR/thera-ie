@@ -1,0 +1,237 @@
+{
+    "matches": {
+        "direct": [
+            "C80.1",
+            "E07.9"
+        ],
+        "hierarchical": [
+            "C80.1",
+            "E07.9",
+            "B99"
+        ]
+    },
+    "icd10_mappings": {
+        "extraction2": {
+            "Well-differentiated thyroid cancer (management)": {
+                "method": "partial_match",
+                "icd10_code": "C73",
+                "description": "Malignant neoplasm of thyroid gland",
+                "confidence": 0.5787234042553192
+            },
+            "Hypothyroidism (primary, secondary, tertiary congenital or acquired)": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Pituitary cancer (adjunctive therapy)": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Thyrotropin-dependent well-differentiated thyroid cancer": {
+                "method": "direct",
+                "icd10_code": "C73",
+                "description": "Malignant neoplasm of thyroid gland",
+                "confidence": 1
+            },
+            "Thyroidal cancer (adjunctive therapy)": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            }
+        },
+        "extraction1": {
+            "Thyroiditis, Autoimmune": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Hypoparathyroidism": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Thyroid Dysgenesis": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Lung Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Hypertension": {
+                "method": "direct",
+                "icd10_code": "I10",
+                "description": "Essential (primary) hypertension",
+                "confidence": 1
+            },
+            "Helicobacter Infections": {
+                "method": "parent_fallback",
+                "icd10_code": "B99",
+                "description": "Other and unspecified infectious diseases",
+                "confidence": 0.5
+            },
+            "Thyroiditis": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Adenocarcinoma": {
+                "method": "partial_match",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5142857142857143
+            },
+            "Fatigue": {
+                "method": "direct",
+                "icd10_code": "R53",
+                "description": "Malaise and fatigue",
+                "confidence": 1
+            },
+            "Tuberculosis": {
+                "method": "direct",
+                "icd10_code": "A15.9",
+                "description": "Respiratory tuberculosis unspecified",
+                "confidence": 1
+            },
+            "Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Heart Failure": {
+                "method": "direct",
+                "icd10_code": "I50.9",
+                "description": "Heart failure, unspecified",
+                "confidence": 1
+            },
+            "Carcinoma": {
+                "method": "direct",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 1
+            },
+            "Carcinoma, Papillary": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Hyperthyroidism": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Breast Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Tetany": {
+                "method": "direct",
+                "icd10_code": "R29.0",
+                "description": "Tetany",
+                "confidence": 1
+            },
+            "Thyroid Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Carcinoma, Non-Small-Cell Lung": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Thyroid Hormone Resistance Syndrome": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Neoplasm Recurrence, Local": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Congenital Hypothyroidism": {
+                "method": "direct",
+                "icd10_code": "E03.1",
+                "description": "Congenital hypothyroidism without goiter",
+                "confidence": 1
+            },
+            "Diabetes Mellitus, Type 1": {
+                "method": "direct",
+                "icd10_code": "E10.9",
+                "description": "Type 1 diabetes mellitus without complications",
+                "confidence": 1
+            },
+            "Hypothyroidism": {
+                "method": "direct",
+                "icd10_code": "E03.9",
+                "description": "Hypothyroidism, unspecified",
+                "confidence": 1
+            },
+            "Adenocarcinoma, Follicular": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Triple Negative Breast Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Thyroid Diseases": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            },
+            "Skin Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Thyroid Nodule": {
+                "method": "parent_fallback",
+                "icd10_code": "E07.9",
+                "description": "Disorder of thyroid, unspecified",
+                "confidence": 0.5
+            }
+        }
+    },
+    "metadata": {
+        "drug_name": "Levothyroxine",
+        "direct_overlap_percent": 66.66666666666666,
+        "extraction2_type": "drugbank",
+        "improvement_percent": 33.33333333333334,
+        "analysis_timestamp": "2025-07-07T17:36:18.382",
+        "extraction2_mapped": 5,
+        "extraction1_type": "pubmed",
+        "direct_matches": 2,
+        "hierarchical_overlap_percent": 100,
+        "analysis_type": "icd10_overlap",
+        "hierarchical_matches": 3,
+        "extraction1_mapped": 29
+    }
+}

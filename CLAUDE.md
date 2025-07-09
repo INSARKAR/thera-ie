@@ -36,6 +36,15 @@ julia scripts/extraction/llama_drug_extractor.jl
 
 # DrugBank indication text extraction (requires Ollama/Llama 3.2)
 julia scripts/extraction/drugbank_llama_extractor.jl
+
+# Enhanced naive extraction (single drug with raw response preservation)
+julia scripts/extraction/enhanced_naive_llama_extractor.jl [drug_name]
+
+# Batch enhanced naive extraction (multiple drugs efficiently)
+julia scripts/extraction/batch_enhanced_naive_extractor.jl [start_index] [batch_size]
+
+# Dual GPU batch enhanced naive extraction (maximum efficiency)
+julia scripts/extraction/dual_gpu_batch_enhanced_naive.jl [start_index] [total_batch_size]
 ```
 
 ### Testing
@@ -58,12 +67,24 @@ sbatch llama_extraction.slurm
 # Submit DrugBank indication extraction job
 ./submit_drugbank_job.sh [drug_name]
 
+# Submit batch enhanced naive extraction jobs
+./submit_batch_enhanced_naive.sh                    # Submit single batch (1-200)
+./submit_batch_enhanced_naive.sh 201 200            # Submit specific batch
+./submit_batch_enhanced_naive.sh --multiple         # Submit multiple batches
+./submit_batch_enhanced_naive.sh --status           # Show processing status
+
+# Submit dual GPU batch enhanced naive extraction jobs
+./submit_all_dual_gpu_batches.sh                    # Queue all remaining drugs (400 per job)
+./submit_all_dual_gpu_batches.sh --status           # Show processing status
+
 # Check job status
 squeue -u $USER
 
 # View logs
 tail -f logs/llama_extraction_*.out
 tail -f logs/dual_gpu_llama_extraction_*.out
+tail -f logs/batch_enhanced_naive_*.out
+tail -f logs/dual_gpu_batch_enhanced_*.out
 ```
 
 ## Architecture Overview

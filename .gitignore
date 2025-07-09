@@ -19,8 +19,18 @@ drug_disease_publications_index.txt
 # =====================================
 llama_pubmed_extracted_indications/
 llama_extracted_indications/
+llama_drugbank_extracted_indications/
+llama_naive_extracted_indications/
 *_extracted_indications/
 extraction_summary.json
+
+# Analysis Output Directories
+# ===========================
+indication_overlap_analysis/
+naive_drugbank_overlap_analysis/
+enhanced_overlap_analysis/
+umls_overlap_analysis/
+umls_cache/
 
 # SLURM and HPC Files
 # ==================
@@ -158,6 +168,7 @@ backup/
 *password*
 *token*
 .env
+config/umls_config.json
 
 # Large Model Files
 # ================

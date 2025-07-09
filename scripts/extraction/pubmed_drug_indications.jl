@@ -258,19 +258,35 @@ end
 Load approved drugs dictionary from the generated file.
 """
 function load_approved_drugs()
+    # Define possible paths (current dir and parent directories)
+    possible_paths = [
+        ".",
+        "..",
+        "../..",
+        "/oscar/home/isarkar/sarkarcode/thera"
+    ]
+    
     # Try to load from Julia file first
-    if isfile("approved_drugs_dict.jl")
-        include("approved_drugs_dict.jl")
-        if @isdefined(APPROVED_DRUGS_DICT)
-            return APPROVED_DRUGS_DICT
+    for base_path in possible_paths
+        jl_file = joinpath(base_path, "approved_drugs_dict.jl")
+        if isfile(jl_file)
+            include(jl_file)
+            if @isdefined(APPROVED_DRUGS_DICT)
+                println("✅ Loaded approved drugs from: $jl_file")
+                return APPROVED_DRUGS_DICT
+            end
         end
     end
     
     # Try to load from JSON file
-    if isfile("approved_drugs_dict.json")
-        json_data = JSON3.read(read("approved_drugs_dict.json", String))
-        if haskey(json_data, "drugs")
-            return json_data.drugs
+    for base_path in possible_paths
+        json_file = joinpath(base_path, "approved_drugs_dict.json")
+        if isfile(json_file)
+            json_data = JSON3.read(read(json_file, String))
+            if haskey(json_data, "drugs")
+                println("✅ Loaded approved drugs from: $json_file")
+                return json_data.drugs
+            end
         end
     end
     
@@ -1481,7 +1497,18 @@ function main()
         println("✓ Loaded $(length(drugs_dict)) approved drugs")
         
         # Load MeSH disease headings
-        mesh_file = "mesh_t047_headings.jl"
+        possible_paths = [".", "..", "../..", "/oscar/home/isarkar/sarkarcode/thera"]
+        mesh_file = nothing
+        for base_path in possible_paths
+            candidate = joinpath(base_path, "mesh_t047_headings.jl")
+            if isfile(candidate)
+                mesh_file = candidate
+                break
+            end
+        end
+        if mesh_file === nothing
+            error("mesh_t047_headings.jl not found! Run mesh_t047_extractor.jl first.")
+        end
         disease_headings = load_mesh_disease_headings(mesh_file)
         println("✓ Loaded $(length(disease_headings)) MeSH T047 disease headings")
         

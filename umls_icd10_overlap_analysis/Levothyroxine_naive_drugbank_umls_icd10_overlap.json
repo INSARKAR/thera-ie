@@ -1,0 +1,122 @@
+{
+    "umls_mappings": {
+        "extraction2": {
+            "Well-differentiated thyroid cancer (management)": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "well-differentiated thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypothyroidism (primary, secondary, tertiary congenital or acquired)": {
+                "cui": "C0020676",
+                "method": "known",
+                "preferred_name": "hypothyroidism",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Pituitary cancer (adjunctive therapy)": {
+                "cui": "C0032000",
+                "method": "known",
+                "preferred_name": "pituitary cancer",
+                "icd10_chapter": "C75",
+                "icd10_code": "C75.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyrotropin-dependent well-differentiated thyroid cancer": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "thyrotropin-dependent well-differentiated thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroidal cancer (adjunctive therapy)": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            }
+        },
+        "extraction1": {
+            "Congenital hypothyroidism": {
+                "cui": "C0010308",
+                "method": "known",
+                "preferred_name": "congenital hypothyroidism",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.1",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroiditis (subacute or chronic)": {
+                "cui": "C0040147",
+                "method": "known",
+                "preferred_name": "thyroiditis",
+                "icd10_chapter": "E06",
+                "icd10_code": "E06.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Hypothyroidism": {
+                "cui": "C0020676",
+                "method": "known",
+                "preferred_name": "hypothyroidism",
+                "icd10_chapter": "E03",
+                "icd10_code": "E03.9",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            },
+            "Thyroid cancer (preoperative or postoperative)": {
+                "cui": "C0549473",
+                "method": "known",
+                "preferred_name": "thyroid cancer",
+                "icd10_chapter": "C73",
+                "icd10_code": "C73",
+                "confidence": 1,
+                "icd10_source": "ICD10CM"
+            }
+        }
+    },
+    "matches": {
+        "chapter_matches": [
+            "C73",
+            "E03"
+        ],
+        "cui_matches": [
+            "C0020676",
+            "C0549473"
+        ],
+        "icd10_matches": [
+            "C73",
+            "E03.9"
+        ]
+    },
+    "metadata": {
+        "icd10_improvement_percent": 6.666666666666657,
+        "drug_name": "Levothyroxine",
+        "cui_overlap_percent": 66.66666666666666,
+        "extraction2_type": "drugbank",
+        "chapter_matches": 2,
+        "analysis_timestamp": "2025-07-08T10:22:13.938",
+        "extraction2_mapped": 5,
+        "extraction1_type": "naive",
+        "cui_improvement_percent": 6.666666666666657,
+        "analysis_type": "umls_icd10_overlap",
+        "cui_matches": 2,
+        "chapter_improvement_percent": 6.666666666666657,
+        "text_overlap_percent": 60,
+        "extraction1_mapped": 4,
+        "icd10_overlap_percent": 66.66666666666666,
+        "chapter_overlap_percent": 66.66666666666666,
+        "icd10_matches": 2
+    }
+}

@@ -1,0 +1,184 @@
+{
+    "matches": {
+        "direct": [
+        ],
+        "hierarchical": [
+        ]
+    },
+    "icd10_mappings": {
+        "extraction2": {
+            "Type 2 diabetes mellitus": {
+                "method": "partial_match",
+                "icd10_code": "E11.9",
+                "description": "Type 2 diabetes mellitus without complications",
+                "confidence": 0.5
+            }
+        },
+        "extraction1": {
+            "Prostatic Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Pregnancy in Diabetics": {
+                "method": "parent_fallback",
+                "icd10_code": "E14",
+                "description": "Unspecified diabetes mellitus",
+                "confidence": 0.5
+            },
+            "Carcinoma, Hepatocellular": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Diabetes, Gestational": {
+                "method": "direct",
+                "icd10_code": "O24.4",
+                "description": "Diabetes mellitus in pregnancy",
+                "confidence": 1
+            },
+            "Carcinoma, Squamous Cell": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Mouth Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Neuroendocrine Tumors": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Tuberculosis": {
+                "method": "direct",
+                "icd10_code": "A15.9",
+                "description": "Respiratory tuberculosis unspecified",
+                "confidence": 1
+            },
+            "Heart Failure": {
+                "method": "direct",
+                "icd10_code": "I50.9",
+                "description": "Heart failure, unspecified",
+                "confidence": 1
+            },
+            "Prediabetic State": {
+                "method": "parent_fallback",
+                "icd10_code": "E14",
+                "description": "Unspecified diabetes mellitus",
+                "confidence": 0.5
+            },
+            "Breast Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Head and Neck Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Diabetes Complications": {
+                "method": "direct",
+                "icd10_code": "E14.9",
+                "description": "Unknown condition",
+                "confidence": 1
+            },
+            "Ovarian Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Neoplasm Recurrence, Local": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Diabetes Mellitus, Type 1": {
+                "method": "direct",
+                "icd10_code": "E10.9",
+                "description": "Type 1 diabetes mellitus without complications",
+                "confidence": 1
+            },
+            "Uterine Cervical Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Stomach Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Triple Negative Breast Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Adenocarcinoma of Lung": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Urinary Bladder Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Skin Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Brain Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Pancreatic Neoplasms": {
+                "method": "parent_fallback",
+                "icd10_code": "C80.1",
+                "description": "Malignant neoplasm, unspecified",
+                "confidence": 0.5
+            },
+            "Diabetic Retinopathy": {
+                "method": "parent_fallback",
+                "icd10_code": "E14",
+                "description": "Unspecified diabetes mellitus",
+                "confidence": 0.5
+            }
+        }
+    },
+    "metadata": {
+        "drug_name": "Metformin",
+        "direct_overlap_percent": 0,
+        "extraction2_type": "drugbank",
+        "improvement_percent": 0,
+        "analysis_timestamp": "2025-07-07T17:36:33.589",
+        "extraction2_mapped": 1,
+        "extraction1_type": "pubmed",
+        "direct_matches": 0,
+        "hierarchical_overlap_percent": 0,
+        "analysis_type": "icd10_overlap",
+        "hierarchical_matches": 0,
+        "extraction1_mapped": 25
+    }
+}
