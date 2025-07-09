@@ -3,7 +3,7 @@
 using SQLite
 using JSON3
 
-const DB_PATH = "../../umls_medical.db"
+const DB_PATH = "/oscar/data/ursa/umls/2025AA/umls_medical.db"
 
 function test_sqlite_database()
     println("🧪 Testing SQLite database with Levothyroxine")

@@ -4,8 +4,8 @@
 #SBATCH --time=6:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
 #SBATCH --output=logs/umls_database_build_%j.out
 #SBATCH --error=logs/umls_database_build_%j.err
 
@@ -20,9 +20,9 @@ echo "Start time: $(date)"
 # Navigate to project directory
 cd /oscar/home/isarkar/sarkarcode/thera
 
-# Run database builder
-echo "📚 Building UMLS SQLite database..."
-julia scripts/analysis/build_umls_sqlite.jl
+# Run database builder with parallel processing
+echo "📚 Building UMLS SQLite database with $(nproc) CPUs..."
+julia -t 8 scripts/analysis/parallel_build_umls_sqlite.jl
 
 echo "✅ UMLS database build completed at $(date)"
 
