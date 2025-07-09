@@ -378,7 +378,7 @@ function load_hierarchy_parallel(db)
     
     # Get relevant CUIs (all medical concepts in database)
     relevant_cuis = Set{String}()
-    for row in SQLite.Query(db, "SELECT cui FROM concepts")
+    for row in SQLite.DBInterface.execute(db, "SELECT cui FROM concepts")
         push!(relevant_cuis, row.cui)
     end
     

@@ -59,10 +59,11 @@ function search_umls_sqlite(term::String, db)
     
     # Try exact match first
     exact_query = """
-        SELECT t.cui, c.preferred_name, c.icd10_source, c.icd10_code 
+        SELECT t.cui, c.preferred_name, m.icd10_source, m.icd10_code 
         FROM terms t 
         JOIN concepts c ON t.cui = c.cui 
-        WHERE t.term_lower = ?
+        LEFT JOIN icd10_mappings m ON c.cui = m.cui
+        WHERE t.term_lower = ? AND c.has_icd10 = 1
         ORDER BY t.is_preferred DESC
         LIMIT 5
     """
@@ -85,10 +86,11 @@ function search_umls_sqlite(term::String, db)
     # If no exact match, try partial match
     if isempty(results)
         partial_query = """
-            SELECT t.cui, c.preferred_name, c.icd10_source, c.icd10_code 
+            SELECT t.cui, c.preferred_name, m.icd10_source, m.icd10_code 
             FROM terms t 
             JOIN concepts c ON t.cui = c.cui 
-            WHERE t.term_lower LIKE ?
+            LEFT JOIN icd10_mappings m ON c.cui = m.cui
+            WHERE t.term_lower LIKE ? AND c.has_icd10 = 1
             ORDER BY t.is_preferred DESC
             LIMIT 5
         """
@@ -109,12 +111,12 @@ function search_umls_sqlite(term::String, db)
     
     # If still no results, try hierarchy traversal
     if isempty(results)
-        # Find CUIs without ICD-10 codes that match the term
+        # Find CUIs without direct ICD-10 codes that match the term
         cui_query = """
             SELECT DISTINCT t.cui, t.term_original
             FROM terms t 
-            WHERE t.term_lower LIKE ?
-            AND t.cui NOT IN (SELECT DISTINCT cui FROM concepts)
+            JOIN concepts c ON t.cui = c.cui
+            WHERE t.term_lower LIKE ? AND c.has_icd10 = 0
             LIMIT 3
         """
         
@@ -145,9 +147,10 @@ function search_hierarchy_sqlite(cui::String, db, max_depth::Int=3)
         
         # Check if current CUI has ICD-10 codes
         concept_query = """
-            SELECT preferred_name, icd10_source, icd10_code 
-            FROM concepts 
-            WHERE cui = ?
+            SELECT c.preferred_name, m.icd10_source, m.icd10_code 
+            FROM concepts c
+            LEFT JOIN icd10_mappings m ON c.cui = m.cui
+            WHERE c.cui = ? AND c.has_icd10 = 1
             LIMIT 3
         """
         
@@ -192,7 +195,7 @@ end
 
 function load_drugbank_llm_icd10_mappings_sqlite(drug_name::String, db)
     """Load DrugBank LLM extracted indications and convert to ICD-10 (ground truth)"""
-    drugbank_file = "../../llama_drugbank_extracted_indications/$(replace(drug_name, " " => "_"))_drugbank_extracted_indications.json"
+    drugbank_file = "/oscar/home/isarkar/sarkarcode/thera/llama_drugbank_extracted_indications/$(replace(drug_name, " " => "_"))_drugbank_extracted_indications.json"
     
     if !isfile(drugbank_file)
         return Set{String}(), Set{String}()
@@ -235,7 +238,7 @@ end
 
 function load_mesh_icd10_mappings_sqlite(drug_name::String, db)
     """Load MeSH mappings and convert to ICD-10 using SQLite"""
-    mesh_file = "../../drug_pubmed_refs/$(drug_name).json"
+    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/drug_pubmed_refs/$(drug_name).json"
     
     if !isfile(mesh_file)
         return Set{String}(), Set{String}()
@@ -243,7 +246,7 @@ function load_mesh_icd10_mappings_sqlite(drug_name::String, db)
     
     try
         if !@isdefined(MESH_T047_HEADINGS)
-            include("../../mesh_t047_headings.jl")
+            include("/oscar/home/isarkar/sarkarcode/thera/mesh_t047_headings.jl")
         end
         
         data = JSON3.read(read(mesh_file, String))
@@ -298,7 +301,7 @@ end
 
 function load_naive_llm_icd10_mappings_sqlite(drug_name::String, db)
     """Load Naive LLM mappings and convert to ICD-10 using SQLite"""
-    naive_file = "../../llama_naive_extracted_indications/$(replace(drug_name, " " => "_"))_naive_extracted_indications.json"
+    naive_file = "/oscar/home/isarkar/sarkarcode/thera/llama_naive_extracted_indications/$(replace(drug_name, " " => "_"))_naive_extracted_indications.json"
     
     if !isfile(naive_file)
         return Set{String}(), Set{String}()
@@ -341,7 +344,7 @@ end
 
 function load_pubmed_llm_icd10_mappings_sqlite(drug_name::String, db)
     """Load PubMed LLM mappings and convert to ICD-10 using SQLite"""
-    pubmed_file = "../../llama_pubmed_extracted_indications/$(replace(drug_name, " " => "_"))_llama_extracted_indications.json"
+    pubmed_file = "/oscar/home/isarkar/sarkarcode/thera/llama_pubmed_extracted_indications/$(replace(drug_name, " " => "_"))_llama_extracted_indications.json"
     
     if !isfile(pubmed_file)
         return Set{String}(), Set{String}()
@@ -411,11 +414,11 @@ function main()
     db = SQLite.DB(DB_PATH)
     
     # Test database
-    test_query = SQLite.DBInterface.execute(db, "SELECT COUNT(*) as count FROM concepts") |> first
+    test_query = SQLite.DBInterface.execute(db, "SELECT COUNT(*) as count FROM icd10_mappings") |> first
     println("✅ Database loaded: $(test_query.count) ICD-10 mappings available")
     
     # Load approved drugs
-    include("../../approved_drugs_dict.jl")
+    include("/oscar/home/isarkar/sarkarcode/thera/approved_drugs_dict.jl")
     
     results = []
     processed_count = 0
@@ -510,7 +513,7 @@ function main()
     end
     
     # Save results
-    output_file = "../../sqlite_umls_icd10_recovery_analysis.csv"
+    output_file = "/oscar/home/isarkar/sarkarcode/thera/sqlite_umls_icd10_recovery_analysis.csv"
     CSV.write(output_file, display_df)
     
     println("\n✅ SQLite UMLS Recovery Analysis Complete!")
