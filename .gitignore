@@ -31,6 +31,7 @@ naive_drugbank_overlap_analysis/
 enhanced_overlap_analysis/
 umls_overlap_analysis/
 umls_cache/
+results_phase1/
 
 # SLURM and HPC Files
 # ==================
