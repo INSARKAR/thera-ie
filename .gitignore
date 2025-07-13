@@ -41,6 +41,11 @@ results_phase1/
 # =======================
 unique_naive_indications.json
 
+# Phase2 Analysis Outputs
+# =======================
+phase2_drug_pubmed_refs/
+*_phase2_drug_indication_analysis.json
+
 # SLURM and HPC Files
 # ==================
 logs/
