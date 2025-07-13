@@ -70,7 +70,7 @@ show_logs() {
 
 show_results() {
     echo "=== Results Summary ==="
-    local results_dir="$SCRIPT_DIR/llama_pubmed_extracted_indications"
+    local results_dir="$SCRIPT_DIR/phase1_llama_pubmed_extracted_indications"
     
     if [ ! -d "$results_dir" ]; then
         echo "Results directory not found: $results_dir"

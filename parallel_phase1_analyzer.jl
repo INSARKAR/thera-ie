@@ -10,7 +10,7 @@ using Dates
 using Base.Threads
 
 const DB_PATH = "/oscar/data/ursa/umls/2025AA/umls_medical.db"
-const RESULTS_DIR = "/oscar/home/isarkar/sarkarcode/thera/results_phase1"
+const RESULTS_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase1_results"
 
 # Thread-local database connections
 const thread_dbs = Vector{SQLite.DB}(undef, nthreads())
@@ -227,7 +227,7 @@ function parallel_analyze_drug(drug_name::String)
     
     # DrugBank task
     push!(tasks, @spawn begin
-        drugbank_file = "/oscar/home/isarkar/sarkarcode/thera/llama_drugbank_extracted_indications/$(drug_name)_drugbank_extracted_indications.json"
+        drugbank_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_drugbank_extracted_indications/$(drug_name)_drugbank_extracted_indications.json"
         if isfile(drugbank_file)
             data = JSON3.read(read(drugbank_file, String))
             if haskey(data, "indications")
@@ -242,7 +242,7 @@ function parallel_analyze_drug(drug_name::String)
     
     # Naive LLM task
     push!(tasks, @spawn begin
-        naive_file = "/oscar/home/isarkar/sarkarcode/thera/llama_naive_extracted_indications/$(drug_name)_enhanced_naive_extracted_indications.json"
+        naive_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_naive_extracted_indications/$(drug_name)_enhanced_naive_extracted_indications.json"
         if isfile(naive_file)
             data = JSON3.read(read(naive_file, String))
             if haskey(data, "indications")
@@ -257,7 +257,7 @@ function parallel_analyze_drug(drug_name::String)
     
     # PubMed LLM task
     push!(tasks, @spawn begin
-        pubmed_file = "/oscar/home/isarkar/sarkarcode/thera/llama_pubmed_extracted_indications/$(drug_name)_llama_extracted_indications.json"
+        pubmed_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_pubmed_extracted_indications/$(drug_name)_llama_extracted_indications.json"
         if isfile(pubmed_file)
             data = JSON3.read(read(pubmed_file, String))
             if haskey(data, "disease_pairs")

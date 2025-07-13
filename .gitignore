@@ -17,6 +17,9 @@ drug_disease_publications_index.txt
 
 # Extraction Results (potentially large)
 # =====================================
+phase1_llama_pubmed_extracted_indications/
+phase1_llama_drugbank_extracted_indications/
+phase1_llama_naive_extracted_indications/
 llama_pubmed_extracted_indications/
 llama_extracted_indications/
 llama_drugbank_extracted_indications/
@@ -31,7 +34,12 @@ naive_drugbank_overlap_analysis/
 enhanced_overlap_analysis/
 umls_overlap_analysis/
 umls_cache/
+phase1_results/
 results_phase1/
+
+# Phase1 Analysis Outputs
+# =======================
+unique_naive_indications.json
 
 # SLURM and HPC Files
 # ==================
