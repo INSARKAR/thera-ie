@@ -1,10 +1,12 @@
-# Thera: Comprehensive Drug-Indication Analysis Pipeline
+# THERA-IE: A System for Knowledge Based Drug Indication Extraction
 
-A sophisticated Julia-based pipeline for extracting therapeutic drug-indication relationships from biomedical literature using hybrid AI-powered and traditional MeSH-based approaches, optimized for HPC/SLURM environments.
+**THERA** (Therapeutic Hypothesis Extraction and Relationship Analytics) **- IE** (Indication Extraction)
+
+A sophisticated Julia-based system for extracting therapeutic drug-indication relationships from biomedical literature using hybrid AI-powered and traditional MeSH-based approaches, optimized for HPC/SLURM environments.
 
 ## 🎯 Project Overview
 
-Thera integrates multiple methodological approaches to create the most comprehensive drug-indication dataset possible:
+THERA-IE integrates multiple methodological approaches to create the most comprehensive drug-indication dataset possible:
 
 - **📚 Literature-Based**: Extracts indications from 5M+ PubMed publications
 - **🧠 AI-Powered**: Uses Llama 3.2 for intelligent text analysis and extraction  
@@ -264,4 +266,4 @@ This project is designed for academic research and educational purposes. Please 
 
 ---
 
-**🔬 Built for Biomedical Research**: Optimized for comprehensive drug-indication analysis with state-of-the-art AI and traditional literature mining approaches.
+**🔬 THERA-IE**: Therapeutic Hypothesis Extraction and Relationship Analytics for comprehensive drug-indication analysis with state-of-the-art AI and traditional literature mining approaches.
