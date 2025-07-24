@@ -238,7 +238,7 @@ end
 
 function load_mesh_icd10_mappings_sqlite(drug_name::String, db)
     """Load MeSH mappings and convert to ICD-10 using SQLite"""
-    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/drug_pubmed_refs/$(drug_name).json"
+    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs/$(drug_name).json"
     
     if !isfile(mesh_file)
         return Set{String}(), Set{String}()

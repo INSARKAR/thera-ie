@@ -386,11 +386,11 @@ generate_summary() {
             fi
         done
         
-        # Check drug_pubmed_refs directory
-        if [[ -d "drug_pubmed_refs" ]]; then
+        # Check phase1_drug_pubmed_refs directory
+        if [[ -d "phase1_drug_pubmed_refs" ]]; then
             local drug_files
-            drug_files=$(find drug_pubmed_refs -name "*.json" | wc -l)
-            log_both "INFO" "  - drug_pubmed_refs/ ($drug_files individual drug files)"
+            drug_files=$(find phase1_drug_pubmed_refs -name "*.json" | wc -l)
+            log_both "INFO" "  - phase1_drug_pubmed_refs/ ($drug_files individual drug files)"
         fi
         
     else

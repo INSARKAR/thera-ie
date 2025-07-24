@@ -110,7 +110,7 @@ This SLURM system seamlessly integrates with your existing drug analysis pipelin
 
 2. **SLURM-based PubMed Analysis** (newly implemented)
    - Uses `slurm_pubmed_drug_indications.jl` for comprehensive literature mining
-   - Output: `drug_pubmed_refs/`
+   - Output: `phase1_drug_pubmed_refs/`
 
 3. **Combined Analysis**
    - Both systems can run independently or in parallel

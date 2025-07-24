@@ -225,7 +225,7 @@ function submit_remaining_drugs_to_slurm(config::SlurmConfig=SLURM_CONFIG)
     
     # Load drug data
     drugs_dict = load_approved_drugs()
-    output_dir = "drug_pubmed_refs"
+    output_dir = "phase1_drug_pubmed_refs"
     
     # Get processing status
     status = get_processing_status(drugs_dict, output_dir)
@@ -347,7 +347,7 @@ function process_drug_chunk_from_environment()
         disease_headings = load_mesh_disease_headings(mesh_file)
         
         # Get list of remaining drugs (those not yet processed)
-        output_dir = "drug_pubmed_refs"
+        output_dir = "phase1_drug_pubmed_refs"
         status = get_processing_status(drugs_dict, output_dir)
         remaining_drugs = collect(status["remaining_drugs"])
         
@@ -509,7 +509,7 @@ function monitor_slurm_jobs()
     # Check overall processing status
     try
         drugs_dict = load_approved_drugs()
-        output_dir = "drug_pubmed_refs"
+        output_dir = "phase1_drug_pubmed_refs"
         processing_status = get_processing_status(drugs_dict, output_dir)
         
         println("📊 Overall Processing Status:")
@@ -635,7 +635,7 @@ function main_slurm()
         # Show processing status
         try
             drugs_dict = load_approved_drugs()
-            output_dir = "drug_pubmed_refs"
+            output_dir = "phase1_drug_pubmed_refs"
             status = get_processing_status(drugs_dict, output_dir)
             
             println("📊 PubMed Drug Processing Status")

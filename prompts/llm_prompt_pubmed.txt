@@ -1,90 +1,21 @@
-LLama Prompt Template for Drug-Disease Indication Analysis
-========================================================
+Based on these research abstracts, what medical conditions does {DRUG_NAME} treat?
 
-Source: Thera drug indication extraction system
-Files: llama_drug_extractor.jl, dual_gpu_llama_coordinator.jl
-Model: Llama 3.2
-Purpose: Analyze PubMed publications to identify therapeutic drug-disease relationships
+{FORMATTED_ABSTRACTS}
 
-PROMPT TEMPLATE:
-================
+Answer in this exact format (no other text):
 
-You are a medical expert analyzing research publications about {DRUG_NAME} and its potential therapeutic uses.
-
-Analyze these {NUMBER_OF_PAIRS} disease-publication pairs:
-
-{FORMATTED_DISEASE_PUBLICATION_PAIRS}
-
-Task: For each disease-publication pair, determine if the publication provides evidence that {DRUG_NAME} is used to treat that specific disease.
-
-Rules:
-1. Focus ONLY on the specified disease for each pair
-2. Look for clear statements that {DRUG_NAME} treats the disease
-3. Rate confidence 0.1-1.0 based on how clearly the indication is stated
-4. A confidence of 0.6+ means clear evidence of therapeutic use
-5. Consider MeSH qualifiers - "drug therapy" suggests therapeutic use
-
-Format your response for each disease-publication pair exactly as:
-Disease-Publication 1:
-EVIDENCE: [YES or NO]
+Indication 1:
+INDICATION: [condition name]
 CONFIDENCE: [0.1-1.0]
-REASONING: [Brief explanation]
+EVIDENCE: YES
+PMIDS: [comma-separated list of PMIDs that support this indication]
+REASONING: [brief explanation]
 
-Disease-Publication 2:
-EVIDENCE: [YES or NO]
+Indication 2:
+INDICATION: [condition name] 
 CONFIDENCE: [0.1-1.0]
-REASONING: [Brief explanation]
+EVIDENCE: YES
+PMIDS: [comma-separated list of PMIDs that support this indication]
+REASONING: [brief explanation]
 
-Continue for all disease-publication pairs...
-
-INPUT DATA FORMAT:
-==================
-
-Each disease-publication pair is formatted as:
-
-Disease-Publication {INDEX}:
-Disease: {DISEASE_NAME}
-PMID: {PUBMED_ID}
-Title: {PUBLICATION_TITLE}
-Abstract: {PUBLICATION_ABSTRACT}
-MeSH Qualifiers: {COMMA_SEPARATED_QUALIFIERS}
-
-CONFIGURATION PARAMETERS:
-=========================
-
-- Model: llama3.2
-- Confidence Threshold: 0.6 (for confirmed therapeutic use)
-- Batch Size: Up to 20 disease-publication pairs per prompt
-- Drug Therapy Filter: Only publications with "drug therapy" MeSH qualifier
-- Processing Approach: Disease-parallel batching (1 publication per disease per batch)
-
-EXAMPLE VARIABLES:
-==================
-
-{DRUG_NAME} - The specific drug being analyzed (e.g., "Levothyroxine")
-{NUMBER_OF_PAIRS} - Number of disease-publication pairs in current batch
-{FORMATTED_DISEASE_PUBLICATION_PAIRS} - Formatted list of all pairs
-{INDEX} - Sequential number for each disease-publication pair
-{DISEASE_NAME} - Specific disease/condition from MeSH descriptors
-{PUBMED_ID} - PubMed publication identifier
-{PUBLICATION_TITLE} - Title of the research publication
-{PUBLICATION_ABSTRACT} - Abstract text of the publication
-{COMMA_SEPARATED_QUALIFIERS} - MeSH qualifiers (e.g., "drug therapy, prevention & control")
-
-QUALITY ASSURANCE:
-==================
-
-- Only publications with "drug therapy" MeSH qualifiers are processed
-- Confidence scores ≥0.6 indicate clear evidence of therapeutic use
-- Two-phase verification: initial identification + confirmation batches
-- Disease-parallel processing ensures focused analysis per condition
-- Structured output format enables automated parsing and validation
-
-OPTIMIZATION FEATURES:
-======================
-
-- Dual GPU processing capability for parallel drug analysis
-- Batch processing for efficient LLM utilization
-- Disease-parallel approach for targeted therapeutic evidence
-- Automatic retry and error handling
-- Progress tracking and checkpoint functionality
+Only list medical conditions that {DRUG_NAME} is used to treat. Include the PMID numbers from the abstracts that support each indication.

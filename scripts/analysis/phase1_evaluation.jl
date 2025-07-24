@@ -194,7 +194,7 @@ end
 function load_mesh_descriptors(drug_name::String, db)
     """Load and map MeSH descriptors"""
     
-    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/drug_pubmed_refs/$(drug_name).json"
+    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs/$(drug_name).json"
     
     if !isfile(mesh_file)
         return []

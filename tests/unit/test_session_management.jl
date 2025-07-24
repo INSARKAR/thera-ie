@@ -52,7 +52,7 @@ function test_gpu_session_check()
     
     # Test file paths
     OUTPUT_DIR = "/users/isarkar/sarkarcode/thera/llama_pubmed_extracted_indications"
-    DRUG_FILES_DIR = "/users/isarkar/sarkarcode/thera/drug_pubmed_refs"
+    DRUG_FILES_DIR = "/users/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs"
     
     println("\nDirectory Tests:")
     println("Drug files dir exists: $(isdir(DRUG_FILES_DIR))")

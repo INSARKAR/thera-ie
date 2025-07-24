@@ -23,7 +23,7 @@ run_slurm_pubmed_analysis.sh (Orchestrator)
 │   ├── Chunk 2: Drugs 51-100
 │   └── ... (N chunks based on configuration)
 └── Result Aggregation
-    ├── Individual drug files (drug_pubmed_refs/)
+    ├── Individual drug files (phase1_drug_pubmed_refs/)
     ├── Comprehensive summaries
     └── Publication databases
 ```
@@ -163,7 +163,7 @@ slurm_orchestrator_logs/      # Orchestrator logs
 
 ### Results
 ```
-drug_pubmed_refs/             # Individual drug analysis files
+phase1_drug_pubmed_refs/             # Individual drug analysis files
 ├── Aspirin.json
 ├── Acetaminophen.json
 └── ... (one file per drug)
@@ -204,7 +204,7 @@ grep -r "ERROR\|Failed\|Exception" slurm_outputs/
 
 ```bash
 # Check how many drugs have been processed
-ls drug_pubmed_refs/*.json | wc -l
+ls phase1_drug_pubmed_refs/*.json | wc -l
 
 # View orchestrator logs
 tail -f slurm_orchestrator_logs/orchestrator_*.log
@@ -265,7 +265,7 @@ ls slurm_scripts/pubmed_chunk_*.sh
 rm slurm_outputs/*_FAILED_*
 
 # Archive completed work
-tar -czf pubmed_analysis_$(date +%Y%m%d).tar.gz drug_pubmed_refs/ *.json *.txt
+tar -czf pubmed_analysis_$(date +%Y%m%d).tar.gz phase1_drug_pubmed_refs/ *.json *.txt
 ```
 
 ## Performance Tuning

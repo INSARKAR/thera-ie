@@ -136,8 +136,8 @@ if [ ! -f "llama_drug_indication_extractor.jl" ]; then
     exit 1
 fi
 
-if [ ! -d "drug_pubmed_refs" ]; then
-    echo "❌ drug_pubmed_refs directory not found"
+if [ ! -d "phase1_drug_pubmed_refs" ]; then
+    echo "❌ phase1_drug_pubmed_refs directory not found"
     exit 1
 fi
 

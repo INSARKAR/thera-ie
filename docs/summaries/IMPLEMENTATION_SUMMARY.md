@@ -52,7 +52,7 @@ The HPC script now fully supports SSH to allocated GPU nodes with comprehensive 
 ├── llama_drug_indication_extractor.jl # Core analysis logic
 ├── test_ssh_setup.jl                 # SSH connectivity testing
 ├── SSH_HPC_WORKFLOW.md               # Comprehensive documentation
-├── drug_pubmed_refs/                 # Input data directory
+├── phase1_drug_pubmed_refs/                 # Input data directory
 └── llama_pubmed_extracted_indications/           # Output results directory
 ```
 

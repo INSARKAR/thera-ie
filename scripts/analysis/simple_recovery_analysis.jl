@@ -148,7 +148,7 @@ function main()
         successful_mappings += 1
         
         # Load other method extractions
-        mesh_file = "drug_pubmed_refs/$(drug_name).json"
+        mesh_file = "phase1_drug_pubmed_refs/$(drug_name).json"
         mesh_conditions = extract_conditions_from_file(mesh_file, "mesh")
         
         naive_file = "llama_naive_extracted_indications/$(replace(drug_name, " " => "_"))_naive_extracted_indications.json"

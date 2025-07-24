@@ -65,7 +65,7 @@ This system uses Llama 3.2 via Ollama to extract drug-indication pairings from P
 ├── monitor_llama_jobs.sh               # Job monitoring helper
 ├── llama_drug_indication_extractor.jl  # Main extractor
 ├── quick_test_levothyroxine.jl         # Quick test script
-├── drug_pubmed_refs/                   # Input drug files
+├── phase1_drug_pubmed_refs/                   # Input drug files
 ├── llama_pubmed_extracted_indications/ # Output results
 └── logs/                               # SLURM job logs
 ```
@@ -99,7 +99,7 @@ This system uses Llama 3.2 via Ollama to extract drug-indication pairings from P
 2. **Drug not found**:
    ```bash
    # List available drugs
-   ls drug_pubmed_refs/ | head -20
+   ls phase1_drug_pubmed_refs/ | head -20
    ```
 
 3. **Ollama connection issues**:

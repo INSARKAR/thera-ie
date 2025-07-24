@@ -4,9 +4,10 @@
 
 # Large Data Directories
 # ====================
-# PubMed Drug Analysis Output Directory
-# Contains individual drug analysis files and can become very large
-drug_pubmed_refs/
+# Phase 1 PubMed Data Extraction Results
+# Contains individual drug analysis files and can become very large (18+ GB total)
+phase1_drug_pubmed_refs/                     # Raw PubMed references (7.9GB)
+phase1_drug_pubmed_mesh/                     # MeSH-organized publications (10GB)
 
 # Generated Analysis Files
 # =======================
@@ -37,14 +38,30 @@ umls_cache/
 phase1_results/
 results_phase1/
 
-# Phase1 Analysis Outputs
+# Additional Result Files
 # =======================
-unique_naive_indications.json
+unique_naive_indications.json               # Large aggregated naive results (122MB)
+approved_drugs_dict.json                    # Generated approved drugs data (1.1MB)
+slurm_job_tracking.json                     # SLURM job status tracking
+*.sqlite                                     # UMLS database files
+_data/                                       # Raw input data directory (if exists)
 
-# Phase2 Analysis Outputs
-# =======================
-phase2_drug_pubmed_refs/
+# Phase 2 AI-Powered Indication Extraction Results  
+# ==================================================
+# Contains final drug-indication datasets from multiple extraction methodologies (330+ MB total)
+phase2_indications_mesh/                     # MeSH-based indications (290MB)
+phase2_indications_llama_naive/              # Knowledge-based indications (15MB)
+phase2_indications_llama_pubmed/             # Evidence-based PubMed indications (9.1MB)
+phase2_indications_llama_drugbank/           # DrugBank AI-extracted indications (5.7MB)
+phase2_drug_pubmed_refs/                     # Legacy directory
 *_phase2_drug_indication_analysis.json
+
+# Future Phase 3+ Results (Analysis and Integration)
+# =================================================
+phase3_*/                                    # Phase 3 analysis results
+phase4_*/                                    # Phase 4 integration results (if created)
+*_analysis_results/                          # General analysis output directories
+*_integration_results/                       # Integration analysis results
 
 # SLURM and HPC Files
 # ==================
@@ -174,6 +191,8 @@ backup/
 *_v[0-9]*
 *.bak
 *.orig
+*.tar.gz                                     # Compressed backup files
+*_backup_*.tar.gz                           # Phase 1 result backups
 
 # Configuration Files with Sensitive Data
 # =======================================

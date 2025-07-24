@@ -304,7 +304,7 @@ function test_processing_status()
     try
         # Load required data
         drugs_dict = load_approved_drugs()
-        output_dir = "drug_pubmed_refs"
+        output_dir = "phase1_drug_pubmed_refs"
         
         # Get processing status
         status = get_processing_status(drugs_dict, output_dir)
@@ -422,7 +422,7 @@ function main_test()
     # 2. Test directories
     println("\n2️⃣ Testing Directories:")
     required_dirs = [
-        ("drug_pubmed_refs", "Output directory for individual drug files"),
+        ("phase1_drug_pubmed_refs", "Output directory for individual drug files"),
         ("slurm_scripts", "SLURM batch scripts directory"),
         ("slurm_outputs", "SLURM job outputs directory")
     ]

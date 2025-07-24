@@ -77,7 +77,7 @@ end
 
 function load_mesh_icd10_mappings(drug_name::String)
     """Load MeSH mappings and convert to ICD-10 using UMLS"""
-    mesh_file = "../../drug_pubmed_refs/$(drug_name).json"
+    mesh_file = "../../phase1_drug_pubmed_refs/$(drug_name).json"
     
     if !isfile(mesh_file)
         return Set{String}(), Set{String}()

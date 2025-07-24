@@ -254,7 +254,7 @@ function process_drug_optimal(drug_name::String)
     start_time = time()
     
     # Define file paths
-    drug_file = "/users/isarkar/sarkarcode/thera/drug_pubmed_refs/$drug_name.json"
+    drug_file = "/users/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs/$drug_name.json"
     output_dir = "/users/isarkar/sarkarcode/thera/phase1_llama_pubmed_extracted_indications"
     output_file = joinpath(output_dir, "$(drug_name)_llama_extracted_indications.json")
     

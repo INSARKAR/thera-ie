@@ -68,15 +68,15 @@ if [ "$MODE_SET" = false ] && [ "$DRUG_NAME" != "Levothyroxine" ]; then
 fi
 
 # Validate drug name (check if file exists)
-DRUG_FILE="$SCRIPT_DIR/drug_pubmed_refs/${DRUG_NAME}.json"
+DRUG_FILE="$SCRIPT_DIR/phase1_drug_pubmed_refs/${DRUG_NAME}.json"
 if [ ! -f "$DRUG_FILE" ]; then
     echo "❌ Error: Drug file not found: $DRUG_FILE"
     echo ""
     echo "Available drugs (first 10):"
-    ls "$SCRIPT_DIR/drug_pubmed_refs/"*.json 2>/dev/null | head -10 | xargs -n 1 basename | sed 's/\.json$//' | sed 's/^/  /'
+    ls "$SCRIPT_DIR/phase1_drug_pubmed_refs/"*.json 2>/dev/null | head -10 | xargs -n 1 basename | sed 's/\.json$//' | sed 's/^/  /'
     echo "  ..."
     echo ""
-    echo "Use 'ls drug_pubmed_refs/' to see all available drugs."
+    echo "Use 'ls phase1_drug_pubmed_refs/' to see all available drugs."
     exit 1
 fi
 

@@ -263,12 +263,14 @@ function load_approved_drugs()
         ".",
         "..",
         "../..",
+        "../../",
         "/oscar/home/isarkar/sarkarcode/thera"
     ]
     
     # Try to load from Julia file first
     for base_path in possible_paths
         jl_file = joinpath(base_path, "approved_drugs_dict.jl")
+        println("Checking for approved_drugs_dict.jl at: $jl_file")
         if isfile(jl_file)
             include(jl_file)
             if @isdefined(APPROVED_DRUGS_DICT)
@@ -300,14 +302,21 @@ Load MeSH T047 disease headings from Julia file.
 """
 function load_mesh_disease_headings(filename::String)
     if !isfile(filename)
-        error("MeSH disease headings file not found: $filename")
+        error("MeSH semantic headings file not found: $filename")
     end
     
     try
         include(filename)
-        return MESH_T047_HEADINGS
+        # Support both old (MESH_T047_HEADINGS) and new (MESH_SEMANTIC_HEADINGS) variable names
+        if @isdefined(MESH_SEMANTIC_HEADINGS)
+            return MESH_SEMANTIC_HEADINGS
+        elseif @isdefined(MESH_T047_HEADINGS)
+            return MESH_T047_HEADINGS
+        else
+            error("Neither MESH_SEMANTIC_HEADINGS nor MESH_T047_HEADINGS found in file")
+        end
     catch e
-        error("Error loading MeSH disease headings: $e")
+        error("Error loading MeSH semantic headings: $e")
     end
 end
 
@@ -1496,24 +1505,24 @@ function main()
         drugs_dict = load_approved_drugs()
         println("✓ Loaded $(length(drugs_dict)) approved drugs")
         
-        # Load MeSH disease headings
+        # Load MeSH medical semantic type headings
         possible_paths = [".", "..", "../..", "/oscar/home/isarkar/sarkarcode/thera"]
         mesh_file = nothing
         for base_path in possible_paths
-            candidate = joinpath(base_path, "mesh_t047_headings.jl")
+            candidate = joinpath(base_path, "mesh_semantic_headings.jl")
             if isfile(candidate)
                 mesh_file = candidate
                 break
             end
         end
         if mesh_file === nothing
-            error("mesh_t047_headings.jl not found! Run mesh_t047_extractor.jl first.")
+            error("mesh_semantic_headings.jl not found! Run mesh_semantic_type_extractor.jl first.")
         end
         disease_headings = load_mesh_disease_headings(mesh_file)
-        println("✓ Loaded $(length(disease_headings)) MeSH T047 disease headings")
+        println("✓ Loaded $(length(disease_headings)) MeSH medical semantic type headings")
         
         # Setup output directory
-        output_dir = "drug_pubmed_refs"
+        output_dir = "phase1_drug_pubmed_refs"
         println("📁 Output directory: $output_dir")
         if !isdir(output_dir)
             mkpath(output_dir)

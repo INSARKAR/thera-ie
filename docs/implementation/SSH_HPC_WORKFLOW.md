@@ -5,7 +5,7 @@
 ├── run_complete_hpc_analysis.sh      # Complete workflow wrapper
 ├── llama_drug_indication_extractor.jl # Core analysis logic
 ├── test_ssh_setup.jl                 # SSH connectivity test
-├── drug_pubmed_refs/                 # Input data directory
+├── phase1_drug_pubmed_refs/                 # Input data directory
 └── llama_pubmed_extracted_indications/      # Output results directory
 
 The HPC setup now includes full SSH automation to run the Llama analysis on allocated GPU nodes. The system automatically:
@@ -76,7 +76,7 @@ julia hpc_setup_and_run.jl           # Full analysis
 ├── run_complete_hpc_analysis.sh      # Complete workflow wrapper
 ├── llama_drug_indication_extractor.jl # Core analysis logic
 ├── test_ssh_setup.jl                 # SSH connectivity test
-├── drug_pubmed_refs/                 # Input data directory
+├── phase1_drug_pubmed_refs/                 # Input data directory
 └── drug_llama_indications/           # Output results directory
 ```
 

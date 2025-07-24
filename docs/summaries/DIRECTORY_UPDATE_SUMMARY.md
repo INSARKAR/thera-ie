@@ -11,7 +11,7 @@ The output directory has been changed from multiple variations to a consistent n
 The project now uses this structure:
 ```
 /users/isarkar/sarkarcode/thera/
-├── drug_pubmed_refs/                     # Input: Drug PubMed reference files
+├── phase1_drug_pubmed_refs/                     # Input: Drug PubMed reference files
 └── llama_pubmed_extracted_indications/   # Output: Llama-extracted indications
 ```
 
@@ -51,4 +51,4 @@ Files in `llama_pubmed_extracted_indications/` will follow this pattern:
 - `analysis_summary.json` - Overall analysis summary
 - `processing_log.txt` - Processing logs
 
-This matches the input structure in `drug_pubmed_refs/` where each drug has its own JSON file.
+This matches the input structure in `phase1_drug_pubmed_refs/` where each drug has its own JSON file.

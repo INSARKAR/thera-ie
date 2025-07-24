@@ -110,7 +110,7 @@ If you encounter issues:
    ```
 
 2. **Missing Publications**:
-   Ensure the drug publication files exist at `/users/isarkar/sarkarcode/thera/drug_pubmed_refs/{DrugName}.json`
+   Ensure the drug publication files exist at `/users/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs/{DrugName}.json`
 
 3. **SLURM Job Failures**:
    Check the job logs in `/users/isarkar/sarkarcode/thera/logs/` for specific error messages

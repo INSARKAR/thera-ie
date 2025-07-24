@@ -2,7 +2,7 @@
 
 julia_version = "1.11.1"
 manifest_format = "2.0"
-project_hash = "e71cd6d8c2530bcc6aa00458e6e065aca9edb7ab"
+project_hash = "b724751c77cbadcce7d40349f87e5d5550b1831c"
 
 [[deps.Artifacts]]
 uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
@@ -28,6 +28,11 @@ deps = ["Serialization", "Sockets"]
 git-tree-sha1 = "d9d26935a0bcffc87d2613ce14c527c99fc543fd"
 uuid = "f0e56b4a-5159-44fe-b623-3e5288b988bb"
 version = "2.5.0"
+
+[[deps.DBInterface]]
+git-tree-sha1 = "a444404b3f94deaa43ca2a58e18153a82695282b"
+uuid = "a10d1c49-ce27-4219-8d33-6db1a4562965"
+version = "2.6.1"
 
 [[deps.Dates]]
 deps = ["Printf"]

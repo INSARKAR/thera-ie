@@ -32,7 +32,7 @@ The system now includes robust GPU session management with automatic timeout han
 ├── run_complete_hpc_analysis.sh     # Updated wrapper (uses v2 script)
 ├── llama_drug_indication_extractor.jl # Core analysis logic
 ├── test_session_management.jl       # Session management testing
-├── drug_pubmed_refs/                # Input: 695 drug files
+├── phase1_drug_pubmed_refs/                # Input: 695 drug files
 └── llama_pubmed_extracted_indications/ # Output: 2 completed, 693 pending
 ```
 

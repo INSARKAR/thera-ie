@@ -137,7 +137,7 @@ LLAMA_SINGLE_DRUG="Acetophenazine" julia llama_drug_indication_extractor.jl
 
 ## Input Data Format
 
-The system expects JSON files in the `drug_pubmed_refs` directory with the following structure:
+The system expects JSON files in the `phase1_drug_pubmed_refs` directory with the following structure:
 
 ```json
 {
