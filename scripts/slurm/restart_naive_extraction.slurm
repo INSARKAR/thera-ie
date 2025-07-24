@@ -21,7 +21,7 @@ echo "GPUs: $CUDA_VISIBLE_DEVICES"
 echo "Start time: $(date)"
 
 # Navigate to project directory
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Check current status
 echo "📊 Current extraction status:"

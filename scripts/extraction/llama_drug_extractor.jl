@@ -26,7 +26,7 @@ const BATCH_SIZE = 20
 const REQUIRE_DRUG_THERAPY_QUALIFIER = true
 
 # File paths
-const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_pubmed.txt"
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/prompts/llm_prompt_pubmed.txt"
 
 # Data structures
 struct Indication

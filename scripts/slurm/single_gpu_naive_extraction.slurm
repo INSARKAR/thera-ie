@@ -27,7 +27,7 @@ echo "Batch Size: $BATCH_SIZE"
 echo "Start time: $(date)"
 
 # Navigate to project directory
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Start Ollama server on single GPU
 echo "🔥 Starting Ollama server..."

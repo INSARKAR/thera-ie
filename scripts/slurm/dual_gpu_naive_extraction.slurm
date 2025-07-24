@@ -135,7 +135,7 @@ fi
 
 # Run the dual GPU coordinator
 echo "Running dual GPU naive extraction..."
-julia /oscar/home/isarkar/sarkarcode/thera/scripts/extraction/dual_gpu_naive_coordinator.jl "$1" "$2"
+julia /oscar/home/isarkar/sarkarcode/thera-ie/scripts/extraction/dual_gpu_naive_coordinator.jl "$1" "$2"
 
 # Cleanup
 echo "Cleaning up..."

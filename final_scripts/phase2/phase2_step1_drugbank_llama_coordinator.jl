@@ -7,9 +7,9 @@
 using Dates
 
 # Configuration
-const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera/generated_dependency_files/approved_drugs_dict.jl"
-const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase2_indications_llama_drugbank"
-const WORKER_SCRIPT = "/oscar/home/isarkar/sarkarcode/thera/scripts/extraction/phase2_step1_drugbank_llama_extractor.jl"
+const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/generated_dependency_files/approved_drugs_dict.jl"
+const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/phase2_indications_llama_drugbank"
+const WORKER_SCRIPT = "/oscar/home/isarkar/sarkarcode/thera-ie/scripts/extraction/phase2_step1_drugbank_llama_extractor.jl"
 
 # GPU Configuration
 const GPU0_PORT = 11434

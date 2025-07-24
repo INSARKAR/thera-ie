@@ -45,7 +45,7 @@ ollama run llama3.2 "test" > /dev/null 2>&1
 
 # Run the naive extraction
 echo "Running naive extraction for $1..."
-julia /oscar/home/isarkar/sarkarcode/thera/scripts/extraction/naive_llama_extractor.jl "$1"
+julia /oscar/home/isarkar/sarkarcode/thera-ie/scripts/extraction/naive_llama_extractor.jl "$1"
 
 # Cleanup
 echo "Cleaning up..."

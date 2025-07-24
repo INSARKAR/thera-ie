@@ -25,9 +25,9 @@ const GPU1_HOST = "http://localhost:11434"
 const GPU2_HOST = "http://localhost:11435"
 
 # File paths
-const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera/approved_drugs_dict.json"
-const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_drugbank.txt"
-const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera/llama_drugbank_extracted_indications"
+const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/approved_drugs_dict.json"
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/prompts/llm_prompt_drugbank.txt"
+const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/llama_drugbank_extracted_indications"
 
 # Data structures
 struct Indication

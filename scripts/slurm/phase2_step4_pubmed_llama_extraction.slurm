@@ -22,7 +22,7 @@ module load julia
 module load ollama
 
 # Set working directory
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Verify required files
 if [[ ! -f "scripts/extraction/phase2_step4_pubmed_llama_extractor.jl" ]]; then

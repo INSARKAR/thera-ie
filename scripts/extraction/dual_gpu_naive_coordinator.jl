@@ -24,7 +24,7 @@ addprocs(2)
 
 # Load required modules on all workers
 @everywhere begin
-    include("/oscar/home/isarkar/sarkarcode/thera/scripts/extraction/naive_llama_extractor.jl")
+    include("/oscar/home/isarkar/sarkarcode/thera-ie/scripts/extraction/naive_llama_extractor.jl")
 end
 
 # Function to process a drug on a specific GPU
@@ -40,7 +40,7 @@ end
     
     try
         # Define output file
-        output_dir = "/oscar/home/isarkar/sarkarcode/thera/llama_naive_extracted_indications"
+        output_dir = "/oscar/home/isarkar/sarkarcode/thera-ie/llama_naive_extracted_indications"
         output_file = joinpath(output_dir, "$(drug_name)_naive_extracted_indications.json")
         
         # Skip if already processed

@@ -47,7 +47,7 @@ ollama run llama3.2 "test" > /dev/null 2>&1
 # Run the batch extraction
 echo "Running batch extraction..."
 echo "Processing drugs $1 to $(($1 + $2 - 1))..."
-julia /oscar/home/isarkar/sarkarcode/thera/scripts/extraction/batch_naive_extractor.jl "$1" "$2"
+julia /oscar/home/isarkar/sarkarcode/thera-ie/scripts/extraction/batch_naive_extractor.jl "$1" "$2"
 
 # Cleanup
 echo "Cleaning up..."

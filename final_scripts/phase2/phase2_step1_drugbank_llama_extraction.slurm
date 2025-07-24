@@ -28,7 +28,7 @@ echo "Start Time: $(date)"
 echo ""
 
 # Change to the correct directory
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Verify required files exist
 if [[ ! -f "scripts/extraction/phase2_step1_drugbank_llama_coordinator.jl" ]]; then

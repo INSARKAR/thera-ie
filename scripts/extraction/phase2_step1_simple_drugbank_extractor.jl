@@ -14,12 +14,12 @@ const CONFIDENCE_THRESHOLD = 0.6
 const OLLAMA_HOST = get(ENV, "OLLAMA_HOST", "http://localhost:11434")
 
 # File paths
-const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera/generated_dependency_files/approved_drugs_dict.jl"
-const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_drugbank.txt"
-const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase2_indications_llama_drugbank"
+const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/generated_dependency_files/approved_drugs_dict.jl"
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/prompts/llm_prompt_drugbank.txt"
+const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/phase2_indications_llama_drugbank"
 
 # Include all the existing DrugBank extractor functions
-include("/oscar/home/isarkar/sarkarcode/thera/scripts/extraction/drugbank_llama_extractor.jl")
+include("/oscar/home/isarkar/sarkarcode/thera-ie/scripts/extraction/drugbank_llama_extractor.jl")
 
 function check_existing_output(drug_name::String)
     """Check if output file already exists for this drug"""

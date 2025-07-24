@@ -19,7 +19,7 @@ using Dates
 # Configuration
 const MODEL_NAME = "llama3.2"
 const CONFIDENCE_THRESHOLD = 0.6
-const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_naive.txt"
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/prompts/llm_prompt_naive.txt"
 
 # Ollama configuration
 # Note: OLLAMA_HOST will be read from environment when needed, not as a constant
@@ -310,7 +310,7 @@ function main()
     
     if result !== nothing
         # Define output file
-        output_dir = "/oscar/home/isarkar/sarkarcode/thera/llama_naive_extracted_indications"
+        output_dir = "/oscar/home/isarkar/sarkarcode/thera-ie/llama_naive_extracted_indications"
         output_file = joinpath(output_dir, "$(drug_name)_naive_extracted_indications.json")
         
         # Save results

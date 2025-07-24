@@ -31,7 +31,7 @@ echo "Start time: $(date)"
 module load julia
 module load ollama
 
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Environment setup
 export JULIA_PROJECT="."

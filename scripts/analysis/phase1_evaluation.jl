@@ -10,7 +10,7 @@ using JSON3
 using Dates
 
 const DB_PATH = "/oscar/data/ursa/umls/2025AA/umls_medical.db"
-const RESULTS_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase1_results"
+const RESULTS_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_results"
 
 # ICD-10 chapter mappings
 const ICD10_CHAPTERS = Dict(
@@ -135,7 +135,7 @@ end
 function load_drugbank_indications(drug_name::String, db)
     """Load and map DrugBank indications"""
     
-    drugbank_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_drugbank_extracted_indications/$(drug_name)_drugbank_extracted_indications.json"
+    drugbank_file = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_llama_drugbank_extracted_indications/$(drug_name)_drugbank_extracted_indications.json"
     
     if !isfile(drugbank_file)
         return []
@@ -194,14 +194,14 @@ end
 function load_mesh_descriptors(drug_name::String, db)
     """Load and map MeSH descriptors"""
     
-    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs/$(drug_name).json"
+    mesh_file = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_drug_pubmed_refs/$(drug_name).json"
     
     if !isfile(mesh_file)
         return []
     end
     
     try
-        include("/oscar/home/isarkar/sarkarcode/thera/mesh_t047_headings.jl")
+        include("/oscar/home/isarkar/sarkarcode/thera-ie/mesh_t047_headings.jl")
         
         data = JSON3.read(read(mesh_file, String))
         
@@ -236,7 +236,7 @@ end
 function load_naive_indications(drug_name::String, db)
     """Load and map Naive LLM indications"""
     
-    naive_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_naive_extracted_indications/$(drug_name)_enhanced_naive_extracted_indications.json"
+    naive_file = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_llama_naive_extracted_indications/$(drug_name)_enhanced_naive_extracted_indications.json"
     
     if !isfile(naive_file)
         return []
@@ -293,7 +293,7 @@ end
 function load_pubmed_llm_indications(drug_name::String, db)
     """Load and map PubMed LLM indications"""
     
-    pubmed_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_pubmed_extracted_indications/$(drug_name)_llama_extracted_indications.json"
+    pubmed_file = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_llama_pubmed_extracted_indications/$(drug_name)_llama_extracted_indications.json"
     
     if !isfile(pubmed_file)
         return []

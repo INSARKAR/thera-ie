@@ -264,7 +264,7 @@ function load_approved_drugs()
         "..",
         "../..",
         "../../",
-        "/oscar/home/isarkar/sarkarcode/thera"
+        "/oscar/home/isarkar/sarkarcode/thera-ie"
     ]
     
     # Try to load from Julia file first
@@ -1506,7 +1506,7 @@ function main()
         println("✓ Loaded $(length(drugs_dict)) approved drugs")
         
         # Load MeSH medical semantic type headings
-        possible_paths = [".", "..", "../..", "/oscar/home/isarkar/sarkarcode/thera"]
+        possible_paths = [".", "..", "../..", "/oscar/home/isarkar/sarkarcode/thera-ie"]
         mesh_file = nothing
         for base_path in possible_paths
             candidate = joinpath(base_path, "mesh_semantic_headings.jl")

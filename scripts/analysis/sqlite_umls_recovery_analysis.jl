@@ -195,7 +195,7 @@ end
 
 function load_drugbank_llm_icd10_mappings_sqlite(drug_name::String, db)
     """Load DrugBank LLM extracted indications and convert to ICD-10 (ground truth)"""
-    drugbank_file = "/oscar/home/isarkar/sarkarcode/thera/llama_drugbank_extracted_indications/$(replace(drug_name, " " => "_"))_drugbank_extracted_indications.json"
+    drugbank_file = "/oscar/home/isarkar/sarkarcode/thera-ie/llama_drugbank_extracted_indications/$(replace(drug_name, " " => "_"))_drugbank_extracted_indications.json"
     
     if !isfile(drugbank_file)
         return Set{String}(), Set{String}()
@@ -238,7 +238,7 @@ end
 
 function load_mesh_icd10_mappings_sqlite(drug_name::String, db)
     """Load MeSH mappings and convert to ICD-10 using SQLite"""
-    mesh_file = "/oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_refs/$(drug_name).json"
+    mesh_file = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_drug_pubmed_refs/$(drug_name).json"
     
     if !isfile(mesh_file)
         return Set{String}(), Set{String}()
@@ -246,7 +246,7 @@ function load_mesh_icd10_mappings_sqlite(drug_name::String, db)
     
     try
         if !@isdefined(MESH_T047_HEADINGS)
-            include("/oscar/home/isarkar/sarkarcode/thera/mesh_t047_headings.jl")
+            include("/oscar/home/isarkar/sarkarcode/thera-ie/mesh_t047_headings.jl")
         end
         
         data = JSON3.read(read(mesh_file, String))
@@ -301,7 +301,7 @@ end
 
 function load_naive_llm_icd10_mappings_sqlite(drug_name::String, db)
     """Load Naive LLM mappings and convert to ICD-10 using SQLite"""
-    naive_file = "/oscar/home/isarkar/sarkarcode/thera/llama_naive_extracted_indications/$(replace(drug_name, " " => "_"))_naive_extracted_indications.json"
+    naive_file = "/oscar/home/isarkar/sarkarcode/thera-ie/llama_naive_extracted_indications/$(replace(drug_name, " " => "_"))_naive_extracted_indications.json"
     
     if !isfile(naive_file)
         return Set{String}(), Set{String}()
@@ -344,7 +344,7 @@ end
 
 function load_pubmed_llm_icd10_mappings_sqlite(drug_name::String, db)
     """Load PubMed LLM mappings and convert to ICD-10 using SQLite"""
-    pubmed_file = "/oscar/home/isarkar/sarkarcode/thera/llama_pubmed_extracted_indications/$(replace(drug_name, " " => "_"))_llama_extracted_indications.json"
+    pubmed_file = "/oscar/home/isarkar/sarkarcode/thera-ie/llama_pubmed_extracted_indications/$(replace(drug_name, " " => "_"))_llama_extracted_indications.json"
     
     if !isfile(pubmed_file)
         return Set{String}(), Set{String}()
@@ -418,7 +418,7 @@ function main()
     println("✅ Database loaded: $(test_query.count) ICD-10 mappings available")
     
     # Load approved drugs
-    include("/oscar/home/isarkar/sarkarcode/thera/approved_drugs_dict.jl")
+    include("/oscar/home/isarkar/sarkarcode/thera-ie/approved_drugs_dict.jl")
     
     results = []
     processed_count = 0
@@ -513,7 +513,7 @@ function main()
     end
     
     # Save results
-    output_file = "/oscar/home/isarkar/sarkarcode/thera/sqlite_umls_icd10_recovery_analysis.csv"
+    output_file = "/oscar/home/isarkar/sarkarcode/thera-ie/sqlite_umls_icd10_recovery_analysis.csv"
     CSV.write(output_file, display_df)
     
     println("\n✅ SQLite UMLS Recovery Analysis Complete!")

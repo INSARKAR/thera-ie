@@ -16,9 +16,9 @@ using Dates
 const MODEL_NAME = "llama3.2"
 const CONFIDENCE_THRESHOLD = 0.6
 const MAX_PUBLICATIONS_PER_MESH = 5
-const INPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_mesh"
-const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase2_indications_llama_pubmed"
-const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_pubmed.txt"
+const INPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_drug_pubmed_mesh"
+const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/phase2_indications_llama_pubmed"
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/prompts/llm_prompt_pubmed.txt"
 
 # Data structures
 struct PubMedIndication

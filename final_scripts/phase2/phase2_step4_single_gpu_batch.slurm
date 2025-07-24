@@ -29,7 +29,7 @@ echo "Start time: $(date)"
 module load julia
 module load ollama
 
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Environment setup
 export JULIA_PROJECT="."
@@ -73,7 +73,7 @@ pkill -f "ollama serve" || true
 # Count successful outputs
 SUCCESS_COUNT=0
 for ((i=BATCH_START; i<=BATCH_END; i++)); do
-    ALL_DRUGS=($(ls /oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_mesh/*.json | sed 's|.*/||' | sed 's|\.json$||' | sort))
+    ALL_DRUGS=($(ls /oscar/home/isarkar/sarkarcode/thera-ie/phase1_drug_pubmed_mesh/*.json | sed 's|.*/||' | sed 's|\.json$||' | sort))
     if [ $i -le ${#ALL_DRUGS[@]} ]; then
         DRUG_NAME=${ALL_DRUGS[$((i-1))]}
         SAFE_NAME=$(echo "$DRUG_NAME" | sed 's/[^a-zA-Z0-9]/_/g')

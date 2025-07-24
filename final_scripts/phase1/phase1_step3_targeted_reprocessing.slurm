@@ -37,7 +37,7 @@ echo "Start Time: $(date)"
 echo ""
 
 # Change to the correct directory
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Verify files exist
 if [[ ! -f "batch_phase1_empty_results_worker.jl" ]]; then

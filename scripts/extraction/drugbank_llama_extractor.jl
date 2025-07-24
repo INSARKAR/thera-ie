@@ -23,9 +23,9 @@ const CONFIDENCE_THRESHOLD = 0.6
 const OLLAMA_HOST = get(ENV, "OLLAMA_HOST", "http://localhost:11434")
 
 # File paths
-const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera/approved_drugs_dict.json"
-const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera/prompts/llm_prompt_drugbank.txt"
-const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera/phase1_llama_drugbank_extracted_indications"
+const APPROVED_DRUGS_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/approved_drugs_dict.json"
+const PROMPT_FILE = "/oscar/home/isarkar/sarkarcode/thera-ie/prompts/llm_prompt_drugbank.txt"
+const OUTPUT_DIR = "/oscar/home/isarkar/sarkarcode/thera-ie/phase1_llama_drugbank_extracted_indications"
 
 # Data structures
 struct Indication

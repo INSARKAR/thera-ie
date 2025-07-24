@@ -12,7 +12,7 @@
 
 # Get drug name from array index
 DRUG_INDEX=$SLURM_ARRAY_TASK_ID
-ALL_DRUGS=($(ls /oscar/home/isarkar/sarkarcode/thera/phase1_drug_pubmed_mesh/*.json | sed 's|.*/||' | sed 's|\.json$||' | sort))
+ALL_DRUGS=($(ls /oscar/home/isarkar/sarkarcode/thera-ie/phase1_drug_pubmed_mesh/*.json | sed 's|.*/||' | sed 's|\.json$||' | sort))
 DRUG_NAME=${ALL_DRUGS[$((DRUG_INDEX-1))]}
 
 echo "=== Phase 2 Step 4: Single Drug Processing ==="
@@ -26,7 +26,7 @@ echo "Start time: $(date)"
 module load julia
 module load ollama
 
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Check if already processed
 OUTPUT_FILE="phase2_indications_llama_pubmed/${DRUG_NAME}_pubmed_llama_indications.json"

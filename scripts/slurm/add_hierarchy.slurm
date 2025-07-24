@@ -18,7 +18,7 @@ echo "Node: $SLURMD_NODENAME"
 echo "Start time: $(date)"
 
 # Navigate to project directory
-cd /oscar/home/isarkar/sarkarcode/thera
+cd /oscar/home/isarkar/sarkarcode/thera-ie
 
 # Run hierarchy addition with parallel processing
 echo "📚 Adding hierarchy with $(nproc) CPUs..."
