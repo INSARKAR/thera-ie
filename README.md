@@ -2,17 +2,18 @@
 
 **THERA** (Therapeutic Hypothesis Extraction and Relationship Analytics) **- IE** (Indication Extraction)
 
-A sophisticated Julia-based system for extracting therapeutic drug-indication relationships from biomedical literature using hybrid AI-powered and traditional MeSH-based approaches, optimized for HPC/SLURM environments.
+A Julia-based system for extracting therapeutic drug-indication relationships from biomedical literature using hybrid AI-powered and traditional MeSH-based approaches. This pipeline is optimized for HPC/SLURM environments.
 
 ## 🎯 Project Overview
 
-THERA-IE integrates multiple methodological approaches to create the most comprehensive drug-indication dataset possible:
+THERA-IE integrates multiple methodological approaches to create a literature-mediated drug-indication dataset:
 
 - **📚 Literature-Based**: Extracts indications from 5M+ PubMed publications
-- **🧠 AI-Powered**: Uses Llama 3.2 for intelligent text analysis and extraction  
 - **🏷️ MeSH-Guided**: Leverages Medical Subject Headings for semantic organization
-- **📊 Multi-Modal**: Combines DrugBank, PubMed, and AI knowledge sources
+- **🧠 AI-Powered**: Uses Llama 3.2 for intelligent text analysis and extraction  
 - **⚡ HPC-Optimized**: Designed for parallel processing on SLURM/GPU systems
+
+The results are benchmarked relative to indications noted in DrugBank. DrugBank is also the source of determining the set of FDA-approved drugs.
 
 ## 🚀 Quick Start
 
