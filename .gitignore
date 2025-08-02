@@ -95,11 +95,7 @@ Desktop.ini
 # Editor and IDE Files
 # ===================
 # VSCode
-.vscode/settings.json
-.vscode/launch.json
-.vscode/tasks.json
-.vscode/c_cpp_properties.json
-.vscode/ipch/
+.vscode/
 
 # Vim
 *.swp
