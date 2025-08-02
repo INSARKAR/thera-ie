@@ -1,0 +1,113 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Gastroesophageal reflux disease (GORD)",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Gastroesophageal reflux disease"
+                },
+                {
+                    "method_term": "Gastrointestinal bleeding",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Upper gastrointestinal bleeding"
+                }
+            ],
+            "total_indications": 6,
+            "recovery_rate": 0.3333333333333333,
+            "unmatched_indications": 4,
+            "matched_indications": 2,
+            "unmatched_terms": [
+                "Peptic ulcer disease",
+                "Zollinger-Ellison syndrome",
+                "Gastrointestinal motility disorders",
+                "Dyspepsia"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Gastroesophageal reflux disease",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Gastroesophageal reflux disease"
+                },
+                {
+                    "method_term": "Gastrointestinal bleeding",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Upper gastrointestinal bleeding"
+                }
+            ],
+            "total_indications": 7,
+            "recovery_rate": 0.2857142857142857,
+            "unmatched_indications": 5,
+            "matched_indications": 2,
+            "unmatched_terms": [
+                "Peptic ulcer",
+                "Gastrointestinal motility disorders",
+                "Gastrointestinal inflammation",
+                "Gastrointestinal pain",
+                "Dyspepsia"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 3,
+        "all_methods_overlap": 0,
+        "knowledge_recovery_rate": 0.3333333333333333,
+        "literature_recovery_rate": 0.2857142857142857,
+        "total_unique_across_all_methods": 16,
+        "unique_to_knowledge": 3
+    },
+    "drug_name": "Omeprazole",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 7,
+        "terms": [
+            "Duodenal ulcer",
+            "Helicobacter pylori infection",
+            "Benign gastric ulcer",
+            "Upper gastrointestinal bleeding",
+            "Gastroesophageal reflux disease",
+            "Erosive esophagitis",
+            "Hypersecretory conditions"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Helicobacter pylori infection",
+            "Upper gastrointestinal bleeding",
+            "Duodenal ulcer",
+            "Benign gastric ulcer",
+            "Hypersecretory conditions",
+            "Erosive esophagitis"
+        ],
+        "knowledge_literature_overlap": [
+            "Gastrointestinal bleeding",
+            "Dyspepsia",
+            "Gastrointestinal motility disorders"
+        ],
+        "drugbank_knowledge_overlap": [
+        ],
+        "all_three_overlap": [
+        ],
+        "unique_knowledge": [
+            "Gastroesophageal reflux disease (GORD)",
+            "Zollinger-Ellison syndrome",
+            "Peptic ulcer disease"
+        ],
+        "total_unique_indications": 16,
+        "unique_literature": [
+            "Peptic ulcer",
+            "Gastrointestinal pain",
+            "Gastrointestinal inflammation"
+        ],
+        "drugbank_literature_overlap": [
+            "Gastroesophageal reflux disease"
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.810"
+}

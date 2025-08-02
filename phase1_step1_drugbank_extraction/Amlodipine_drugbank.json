@@ -1,0 +1,8 @@
+{
+    "drug_name": "Amlodipine",
+    "drugbank_name": "Amlodipine",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Amlodipine may be used alone or in combination with other antihypertensive and antianginal agents for the treatment of the following conditions [FDA label]: • Hypertension • Coronary artery disease • Chronic stable angina • Vasospastic angina (Prinzmetal’s or Variant angina) • Angiographically documented coronary artery disease in patients without heart failure or an ejection fraction < 40%",
+    "extraction_timestamp": "2025-08-01T16:09:25.222",
+    "extraction_method": "drugbank_focused"
+}

@@ -1,0 +1,111 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Metformin has been shown to improve glycemic control and reduce the risk of complications in patients with diabetes mellitus.\n\n**",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19155004",
+                "24007890"
+            ],
+            "evidence": true,
+            "snomed_term": "Diabetes mellitus",
+            "confidence": 0.9,
+            "snomed_code": "04"
+        },
+        {
+            "reasoning": "Metformin has been shown to reduce blood pressure and improve cardiovascular outcomes in patients with hypertension.\n\n**",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19155004",
+                "24007890"
+            ],
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.8,
+            "snomed_code": "10"
+        },
+        {
+            "reasoning": "Metformin has been shown to reduce the frequency and severity of migraine attacks in patients with migraine.\n\n**",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10972579"
+            ],
+            "evidence": true,
+            "snomed_term": "Migraine",
+            "confidence": 0.7,
+            "snomed_code": "03"
+        },
+        {
+            "reasoning": "No clear evidence of metformin's therapeutic effect on postherpetic neuralgia was found in the provided abstracts.\n\n**",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+            ],
+            "evidence": true,
+            "snomed_term": "Postherpetic neuralgia",
+            "confidence": 0.6,
+            "snomed_code": "02"
+        },
+        {
+            "reasoning": "Metformin has been shown to improve glycemic control and reduce the risk of complications in patients with type 2 diabetes.\n\n**",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19155004",
+                "24007890"
+            ],
+            "evidence": true,
+            "snomed_term": "Diabetes mellitus, type 2",
+            "confidence": 0.9,
+            "snomed_code": "04"
+        },
+        {
+            "reasoning": "Metformin has been shown to reduce blood pressure and improve cardiovascular outcomes in patients with secondary hypertension.\n\n**",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19155004",
+                "24007890"
+            ],
+            "evidence": true,
+            "snomed_term": "Hypertension, secondary",
+            "confidence": 0.8,
+            "snomed_code": "10"
+        },
+        {
+            "reasoning": "Metformin has been shown to reduce the frequency and severity of migraine attacks with aura in patients with migraine.\n\nNote that the confidence level is based on the strength of evidence presented in the abstracts, and may vary depending on the specific study design and population studied.",
+            "extracted_at": "2025-08-02T01:36:20.198",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10972579"
+            ],
+            "evidence": true,
+            "snomed_term": "Migraine, with aura",
+            "confidence": 0.7,
+            "snomed_code": "03"
+        }
+    ],
+    "drug_name": "Metformin",
+    "metadata": {
+        "processing_time_seconds": 7.843260049819946,
+        "confirmed_indications": 7,
+        "mesh_descriptors_sampled": 3198,
+        "sampling_strategy": "5_per_mesh_descriptor",
+        "total_abstracts_analyzed": 7487,
+        "confidence_threshold": 0.6,
+        "total_indications_found": 7,
+        "model_used": "llama3.2",
+        "approach": "snomed_pubmed_evidence_based",
+        "confirmation_rate_percent": 100,
+        "processing_timestamp": "2025-08-02T01:36:20.198"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from PubMed abstracts",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "Here are the research findings extracted from the provided PubMed abstracts:\n\n**Research Finding 1**\nSNOMED_CODE: G04.6 (Diabetes mellitus)\nSNOMED_TERM: Diabetes mellitus\nCONFIDENCE: 0.9\nEVIDENCE: YES\nPMIDS: 19155004, 24007890\nREASONING: Metformin has been shown to improve glycemic control and reduce the risk of complications in patients with diabetes mellitus.\n\n**Research Finding 2**\nSNOMED_CODE: K10.0 (Hypertension)\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 19155004, 24007890\nREASONING: Metformin has been shown to reduce blood pressure and improve cardiovascular outcomes in patients with hypertension.\n\n**Research Finding 3**\nSNOMED_CODE: G03.6 (Migraine)\nSNOMED_TERM: Migraine\nCONFIDENCE: 0.7\nEVIDENCE: YES\nPMIDS: 10972579\nREASONING: Metformin has been shown to reduce the frequency and severity of migraine attacks in patients with migraine.\n\n**Research Finding 4**\nSNOMED_CODE: L02.9 (Postherpetic neuralgia)\nSNOMED_TERM: Postherpetic neuralgia\nCONFIDENCE: 0.6\nEVIDENCE: YES\nPMIDS: None found in the provided abstracts\nREASONING: No clear evidence of metformin's therapeutic effect on postherpetic neuralgia was found in the provided abstracts.\n\n**Research Finding 5**\nSNOMED_CODE: G04.7 (Diabetes mellitus, type 2)\nSNOMED_TERM: Diabetes mellitus, type 2\nCONFIDENCE: 0.9\nEVIDENCE: YES\nPMIDS: 19155004, 24007890\nREASONING: Metformin has been shown to improve glycemic control and reduce the risk of complications in patients with type 2 diabetes.\n\n**Research Finding 6**\nSNOMED_CODE: K10.1 (Hypertension, secondary)\nSNOMED_TERM: Hypertension, secondary\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 19155004, 24007890\nREASONING: Metformin has been shown to reduce blood pressure and improve cardiovascular outcomes in patients with secondary hypertension.\n\n**Research Finding 7**\nSNOMED_CODE: G03.5 (Migraine, with aura)\nSNOMED_TERM: Migraine, with aura\nCONFIDENCE: 0.7\nEVIDENCE: YES\nPMIDS: 10972579\nREASONING: Metformin has been shown to reduce the frequency and severity of migraine attacks with aura in patients with migraine.\n\nNote that the confidence level is based on the strength of evidence presented in the abstracts, and may vary depending on the specific study design and population studied."
+    }
+}

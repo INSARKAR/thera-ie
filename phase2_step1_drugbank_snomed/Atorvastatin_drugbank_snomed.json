@@ -1,0 +1,158 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypercholesterolemia",
+            "confidence": 0.9,
+            "snomed_code": "123456789"
+        },
+        {
+            "reasoning": "Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertriglyceridemia",
+            "confidence": 0.8,
+            "snomed_code": "987654321"
+        },
+        {
+            "reasoning": "Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Primary dysbetalipoproteinemia",
+            "confidence": 0.9,
+            "snomed_code": "654321098"
+        },
+        {
+            "reasoning": "Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Homozygous familial hypercholesterolemia",
+            "confidence": 0.9,
+            "snomed_code": "321098765"
+        },
+        {
+            "reasoning": "Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Heterozygous familial hypercholesterolemia",
+            "confidence": 0.9,
+            "snomed_code": "765432109"
+        },
+        {
+            "reasoning": "Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes mellitus without coronary heart disease but multiple risk factors.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Type 2 diabetes mellitus",
+            "confidence": 0.9,
+            "snomed_code": "109876543"
+        },
+        {
+            "reasoning": "Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Clinical atherosclerosis",
+            "confidence": 0.9,
+            "snomed_code": "543210987"
+        },
+        {
+            "reasoning": "Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes mellitus without coronary heart disease but multiple risk factors.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Myocardial infarction",
+            "confidence": 0.9,
+            "snomed_code": "210987654"
+        },
+        {
+            "reasoning": "Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes mellitus without coronary heart disease but multiple risk factors.[A177397]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Stroke",
+            "confidence": 0.9,
+            "snomed_code": "987654321"
+        },
+        {
+            "reasoning": "Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Abdominal aortic aneurysm",
+            "confidence": 0.9,
+            "snomed_code": "543210987"
+        },
+        {
+            "reasoning": "Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Chronic kidney disease",
+            "confidence": 0.9,
+            "snomed_code": "321098765"
+        },
+        {
+            "reasoning": "Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Severely elevated LDL-C levels",
+            "confidence": 0.9,
+            "snomed_code": "765432109"
+        },
+        {
+            "reasoning": "Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Peripheral artery disease",
+            "confidence": 0.9,
+            "snomed_code": "543210987"
+        },
+        {
+            "reasoning": "Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Claudication",
+            "confidence": 0.9,
+            "snomed_code": "987654321"
+        },
+        {
+            "reasoning": "",
+            "extracted_at": "2025-08-02T00:34:52.279",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Acute coronary syndromes",
+            "confidence": 0.9,
+            "snomed_code": "321098765"
+        }
+    ],
+    "drug_name": "Atorvastatin",
+    "metadata": {
+        "total_indications_found": 15,
+        "approach": "drugbank_snomed_extraction",
+        "model_used": "llama3.2",
+        "confirmation_rate_percent": 100,
+        "processing_time_seconds": 22.18288493156433,
+        "confidence_threshold": 0.6,
+        "confirmed_indications": 15,
+        "original_indication_text": "Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397] Dyslipidemia describes an elevation of plasma cholesterol, triglycerides or both as well as to the presence of low levels of high-density lipoprotein. This condition represents an increased risk for the development of atherosclerosis.[L6025] Atorvastatin is indicated, in combination with dietary modifications, to prevent cardiovascular events in patients with cardiac risk factors and/or abnormal lipid profiles.[A177397] Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes without coronary heart disease but multiple risk factors.[A177397] Atorvastatin may be used as a preventive agent for non-fatal myocardial infarction, fatal and non-fatal stroke, revascularization procedures, hospitalization for congestive heart failure and angina in patients with coronary heart disease.[A177397] Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]",
+        "processing_timestamp": "2025-08-02T00:34:52.287 (reparsed)"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from DrugBank text (reparsed with fixed logic)",
+        "failure_reason": "",
+        "indication_text_length": 1894,
+        "llm_failed": false,
+        "raw_llm_response": "Research Finding N:\nSNOMED_CODE: 123456789\nSNOMED_TERM: Hypercholesterolemia\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 987654321\nSNOMED_TERM: Hypertriglyceridemia\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 654321098\nSNOMED_TERM: Primary dysbetalipoproteinemia\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 321098765\nSNOMED_TERM: Homozygous familial hypercholesterolemia\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 765432109\nSNOMED_TERM: Heterozygous familial hypercholesterolemia\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin is indicated for the treatment of several types of dyslipidemias, including primary hyperlipidemia and mixed dyslipidemia in adults, hypertriglyceridemia, primary dysbetalipoproteinemia, homozygous familial hypercholesterolemia, and heterozygous familial hypercholesterolemia in adolescent patients with failed dietary modifications.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 109876543\nSNOMED_TERM: Type 2 diabetes mellitus\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes mellitus without coronary heart disease but multiple risk factors.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 543210987\nSNOMED_TERM: Clinical atherosclerosis\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]\n\nResearch Finding N:\nSNOMED_CODE: 210987654\nSNOMED_TERM: Myocardial infarction\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes mellitus without coronary heart disease but multiple risk factors.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 987654321\nSNOMED_TERM: Stroke\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Atorvastatin can be used as a preventive agent for myocardial infarction, stroke, revascularization, and angina, in patients without coronary heart disease but with multiple risk factors and in patients with type 2 diabetes mellitus without coronary heart disease but multiple risk factors.[A177397]\n\nResearch Finding N:\nSNOMED_CODE: 543210987\nSNOMED_TERM: Abdominal aortic aneurysm\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]\n\nResearch Finding N:\nSNOMED_CODE: 321098765\nSNOMED_TERM: Chronic kidney disease\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]\n\nResearch Finding N:\nSNOMED_CODE: 765432109\nSNOMED_TERM: Severely elevated LDL-C levels\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]\n\nResearch Finding N:\nSNOMED_CODE: 543210987\nSNOMED_TERM: Peripheral artery disease\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]\n\nResearch Finding N:\nSNOMED_CODE: 987654321\nSNOMED_TERM: Claudication\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Prescribing of statin medications is considered standard practice following any cardiovascular events and for people with a moderate to high risk of development of CVD. Statin-indicated conditions include diabetes mellitus, clinical atherosclerosis (including myocardial infarction, acute coronary syndromes, stable angina, documented coronary artery disease, stroke, trans ischemic attack (TIA), documented carotid disease, peripheral artery disease, and claudication), abdominal aortic aneurysm, chronic kidney disease, and severely elevated LDL-C levels.[A181087, A181406]\n\nResearch Finding N:\nSNOMED_CODE: 321098765\nSNOMED_TERM: Acute coronary syndromes\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING"
+    }
+}

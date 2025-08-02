@@ -1,0 +1,8 @@
+{
+    "drug_name": "Metformin",
+    "drugbank_name": "Metformin",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "**Metformin immediate-release formulations** Metformin is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients ≥10 years old with type 2 diabetes mellitus.[L40243] **Metformin extended-release tablet (XR)** The extended-release formulation of metformin is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. Safety in children has not been determined to this date.[L12207] **Metformin combination products** Metformin is a component of a variety of combination products with other anti-diabetic agents. It is indicated, along with diet and exercise, to improve glycemic control in adult patients with type 2 diabetes mellitus in combination with DPP-4 inhibitors ([sitagliptin], [linagliptin], [alogliptin], or [saxagliptin]),[L11479,L40248,L40253,L40258,L40263] in combination with SGLT2 inhibitors ([canagliflozin], [empagliflozin], [ertugliflozin], or [dapagliflozin]),[L11479,L30503,L1134,L13679,L38729] or in combination with [pioglitazone].[L11419]",
+    "extraction_timestamp": "2025-08-01T16:09:25.208",
+    "extraction_method": "drugbank_focused"
+}

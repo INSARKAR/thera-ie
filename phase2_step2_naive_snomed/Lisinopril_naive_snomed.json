@@ -1,0 +1,93 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Lisinopril is indicated for the treatment of hypertension in adults.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.9,
+            "snomed_code": "11740009"
+        },
+        {
+            "reasoning": "This term is not a therapeutic indication, but rather a description of patient population.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": false,
+            "evidence": false,
+            "snomed_term": "Hypertensive patients",
+            "confidence": 0,
+            "snomed_code": "11740010"
+        },
+        {
+            "reasoning": "This term is not a therapeutic indication, but rather a description of patient population.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": false,
+            "evidence": false,
+            "snomed_term": "Diabetic patients",
+            "confidence": 0,
+            "snomed_code": "11650001"
+        },
+        {
+            "reasoning": "Lisinopril may be used to treat postherpetic neuralgia, a complication of shingles.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Postherpetic neuralgia",
+            "confidence": 0.8,
+            "snomed_code": "11740012"
+        },
+        {
+            "reasoning": "Lisinopril is indicated for the treatment of diabetes mellitus in adults with type 2 diabetes.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Diabetes mellitus",
+            "confidence": 0.8,
+            "snomed_code": "11650002"
+        },
+        {
+            "reasoning": "Lisinopril is indicated for the treatment of heart failure in adults.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Heart failure",
+            "confidence": 0.9,
+            "snomed_code": "11740013"
+        },
+        {
+            "reasoning": "Lisinopril may be used to treat hypertension in patients with left ventricular dysfunction.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertensive patients with left ventricular dysfunction",
+            "confidence": 0.8,
+            "snomed_code": "11650003"
+        },
+        {
+            "reasoning": "Lisinopril is indicated for the treatment of acute coronary syndrome in adults.\n\nNote: The confidence level indicates the strength of regulatory approval and clinical evidence for each therapeutic indication. A confidence level ≥0.6 indicates FDA/EMA approved indication.",
+            "extracted_at": "2025-08-02T01:05:23.387",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Acute coronary syndrome",
+            "confidence": 0.9,
+            "snomed_code": "11740014"
+        }
+    ],
+    "drug_name": "Lisinopril",
+    "metadata": {
+        "total_indications_found": 8,
+        "confidence_threshold": 0.6,
+        "model_used": "llama3.2",
+        "confirmation_rate_percent": 75,
+        "processing_time_seconds": 4.7394280433654785,
+        "confirmed_indications": 6,
+        "processing_timestamp": "2025-08-02T01:05:23.387",
+        "approach": "snomed_naive_knowledge_based"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT knowledge-based extraction",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "Research Finding 1:\nSNOMED_CODE: 11740009\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Lisinopril is indicated for the treatment of hypertension in adults.\n\nResearch Finding 2:\nSNOMED_CODE: 11740010\nSNOMED_TERM: Hypertensive patients\nCONFIDENCE: N/A\nEVIDENCE: N/A\nREASONING: This term is not a therapeutic indication, but rather a description of patient population.\n\nResearch Finding 3:\nSNOMED_CODE: 11650001\nSNOMED_TERM: Diabetic patients\nCONFIDENCE: N/A\nEVIDENCE: N/A\nREASONING: This term is not a therapeutic indication, but rather a description of patient population.\n\nResearch Finding 4:\nSNOMED_CODE: 11740012\nSNOMED_TERM: Postherpetic neuralgia\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Lisinopril may be used to treat postherpetic neuralgia, a complication of shingles.\n\nResearch Finding 5:\nSNOMED_CODE: 11650002\nSNOMED_TERM: Diabetes mellitus\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Lisinopril is indicated for the treatment of diabetes mellitus in adults with type 2 diabetes.\n\nResearch Finding 6:\nSNOMED_CODE: 11740013\nSNOMED_TERM: Heart failure\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Lisinopril is indicated for the treatment of heart failure in adults.\n\nResearch Finding 7:\nSNOMED_CODE: 11650003\nSNOMED.Term: Hypertensive patients with left ventricular dysfunction\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Lisinopril may be used to treat hypertension in patients with left ventricular dysfunction.\n\nResearch Finding 8:\nSNOMED_CODE: 11740014\nSNOMED_TERM: Acute coronary syndrome\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: Lisinopril is indicated for the treatment of acute coronary syndrome in adults.\n\nNote: The confidence level indicates the strength of regulatory approval and clinical evidence for each therapeutic indication. A confidence level ≥0.6 indicates FDA/EMA approved indication."
+    }
+}

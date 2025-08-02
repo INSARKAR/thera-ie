@@ -1,0 +1,101 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+            ],
+            "total_indications": 6,
+            "recovery_rate": 0,
+            "unmatched_indications": 6,
+            "matched_indications": 0,
+            "unmatched_terms": [
+                "\"Metabolic syndrome\"",
+                "\"Polycystic ovary syndrome\"",
+                "\"Hyperlipidemia\"",
+                "\"Postprandial hyperglycemia\"",
+                "\"Obesity\"",
+                "\"Hypertriglyceridemia\""
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Diabetes mellitus",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Type 2 diabetes mellitus"
+                },
+                {
+                    "method_term": "Diabetes mellitus, type 2",
+                    "match_type": "word_overlap",
+                    "confidence": 0.6,
+                    "drugbank_term": "Type 2 diabetes mellitus"
+                }
+            ],
+            "total_indications": 7,
+            "recovery_rate": 0.2857142857142857,
+            "unmatched_indications": 5,
+            "matched_indications": 2,
+            "unmatched_terms": [
+                "Hypertension",
+                "Migraine",
+                "Postherpetic neuralgia",
+                "Hypertension, secondary",
+                "Migraine, with aura"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 7,
+        "all_methods_overlap": 0,
+        "knowledge_recovery_rate": 0,
+        "literature_recovery_rate": 0.2857142857142857,
+        "total_unique_across_all_methods": 17,
+        "unique_to_knowledge": 6
+    },
+    "drug_name": "Metformin",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 4,
+        "terms": [
+            "Type 2 diabetes mellitus",
+            "Hypercholesterolemia",
+            "Partial-onset seizures",
+            "Diabetic neuropathy"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Type 2 diabetes mellitus",
+            "Diabetic neuropathy",
+            "Partial-onset seizures",
+            "Hypercholesterolemia"
+        ],
+        "knowledge_literature_overlap": [
+        ],
+        "drugbank_knowledge_overlap": [
+        ],
+        "all_three_overlap": [
+        ],
+        "unique_knowledge": [
+            "\"Hyperlipidemia\"",
+            "\"Metabolic syndrome\"",
+            "\"Polycystic ovary syndrome\"",
+            "\"Hypertriglyceridemia\"",
+            "\"Postprandial hyperglycemia\"",
+            "\"Obesity\""
+        ],
+        "total_unique_indications": 17,
+        "unique_literature": [
+            "Hypertension",
+            "Migraine",
+            "Postherpetic neuralgia",
+            "Hypertension, secondary",
+            "Diabetes mellitus",
+            "Diabetes mellitus, type 2",
+            "Migraine, with aura"
+        ],
+        "drugbank_literature_overlap": [
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.767"
+}

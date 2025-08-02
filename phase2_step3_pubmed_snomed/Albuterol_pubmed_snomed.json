@@ -1,0 +1,124 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Albuterol is effective in treating acute asthma symptoms and improving peak expiratory flow.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": true,
+            "supporting_pmids": [
+                "11064963",
+                "10492312",
+                "23043089"
+            ],
+            "evidence": true,
+            "snomed_term": "Asthma",
+            "confidence": 0.8,
+            "snomed_code": "38612009"
+        },
+        {
+            "reasoning": "Albuterol is effective in reducing symptoms and improving lung function in patients with COPD.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": true,
+            "supporting_pmids": [
+                "23043089",
+                "10492312",
+                "11064963"
+            ],
+            "evidence": true,
+            "snomed_term": "Chronic Obstructive Pulmonary Disease (COPD)",
+            "confidence": 0.7,
+            "snomed_code": "38612010"
+        },
+        {
+            "reasoning": "Albuterol is effective in relieving bronchospasm and improving respiratory function.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10492312",
+                "11064963",
+                "23043089"
+            ],
+            "evidence": true,
+            "snomed_term": "Bronchospasm",
+            "confidence": 0.9,
+            "snomed_code": "38612011"
+        },
+        {
+            "reasoning": "Albuterol is effective in treating asthma exacerbations and improving symptoms.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": true,
+            "supporting_pmids": [
+                "11064963",
+                "10492312",
+                "23043089"
+            ],
+            "evidence": true,
+            "snomed_term": "Asthma Exacerbation",
+            "confidence": 0.8,
+            "snomed_code": "38612012"
+        },
+        {
+            "reasoning": "No evidence found in the provided abstracts to support the use of albuterol for migraine treatment.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": true,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Migraine",
+            "confidence": 0.6,
+            "snomed_code": "38612013"
+        },
+        {
+            "reasoning": "No evidence found in the provided abstracts to support the use of albuterol for postherpetic neuralgia treatment.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": false,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Postherpetic Neuralgia",
+            "confidence": 0.5,
+            "snomed_code": "38612014"
+        },
+        {
+            "reasoning": "No evidence found in the provided abstracts to support the use of albuterol for hypertension treatment.\n\n**",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": false,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Hypertension",
+            "confidence": 0.4,
+            "snomed_code": "38612015"
+        },
+        {
+            "reasoning": "No evidence found in the provided abstracts to support the use of albuterol for diabetes mellitus treatment.\n\nNote that the confidence levels are based on the strength of evidence presented in the abstracts, and may not reflect the overall clinical evidence base.",
+            "extracted_at": "2025-08-02T01:37:30.304",
+            "confirmed": false,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Diabetes Mellitus",
+            "confidence": 0.4,
+            "snomed_code": "38612016"
+        }
+    ],
+    "drug_name": "Albuterol",
+    "metadata": {
+        "processing_time_seconds": 7.926072120666504,
+        "confirmed_indications": 5,
+        "mesh_descriptors_sampled": 1472,
+        "sampling_strategy": "5_per_mesh_descriptor",
+        "total_abstracts_analyzed": 3204,
+        "confidence_threshold": 0.6,
+        "total_indications_found": 8,
+        "model_used": "llama3.2",
+        "approach": "snomed_pubmed_evidence_based",
+        "confirmation_rate_percent": 62.5,
+        "processing_timestamp": "2025-08-02T01:37:30.304"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from PubMed abstracts",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "Here are the extracted research findings:\n\n**Research Finding 1**\nSNOMED_CODE: 38612009\nSNOMED_TERM: Asthma\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 11064963, 10492312, 23043089\nREASONING: Albuterol is effective in treating acute asthma symptoms and improving peak expiratory flow.\n\n**Research Finding 2**\nSNOMED_CODE: 38612010\nSNOMED_TERM: Chronic Obstructive Pulmonary Disease (COPD)\nCONFIDENCE: 0.7\nEVIDENCE: YES\nPMIDS: 23043089, 10492312, 11064963\nREASONING: Albuterol is effective in reducing symptoms and improving lung function in patients with COPD.\n\n**Research Finding 3**\nSNOMED_CODE: 38612011\nSNOMED_TERM: Bronchospasm\nCONFIDENCE: 0.9\nEVIDENCE: YES\nPMIDS: 10492312, 11064963, 23043089\nREASONING: Albuterol is effective in relieving bronchospasm and improving respiratory function.\n\n**Research Finding 4**\nSNOMED_CODE: 38612012\nSNOMED_TERM: Asthma Exacerbation\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 11064963, 10492312, 23043089\nREASONING: Albuterol is effective in treating asthma exacerbations and improving symptoms.\n\n**Research Finding 5**\nSNOMED_CODE: 38612013\nSNOMED_TERM: Migraine\nCONFIDENCE: 0.6\nEVIDENCE: NO\nPMIDS: None\nREASONING: No evidence found in the provided abstracts to support the use of albuterol for migraine treatment.\n\n**Research Finding 6**\nSNOMED_CODE: 38612014\nSNOMED_TERM: Postherpetic Neuralgia\nCONFIDENCE: 0.5\nEVIDENCE: NO\nPMIDS: None\nREASONING: No evidence found in the provided abstracts to support the use of albuterol for postherpetic neuralgia treatment.\n\n**Research Finding 7**\nSNOMED_CODE: 38612015\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.4\nEVIDENCE: NO\nPMIDS: None\nREASONING: No evidence found in the provided abstracts to support the use of albuterol for hypertension treatment.\n\n**Research Finding 8**\nSNOMED_CODE: 38612016\nSNOMED_TERM: Diabetes Mellitus\nCONFIDENCE: 0.4\nEVIDENCE: NO\nPMIDS: None\nREASONING: No evidence found in the provided abstracts to support the use of albuterol for diabetes mellitus treatment.\n\nNote that the confidence levels are based on the strength of evidence presented in the abstracts, and may not reflect the overall clinical evidence base."
+    }
+}

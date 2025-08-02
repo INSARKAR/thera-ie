@@ -1,0 +1,96 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Hypertension",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypertension"
+                }
+            ],
+            "total_indications": 8,
+            "recovery_rate": 0.125,
+            "unmatched_indications": 7,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Hypertensive patients",
+                "Diabetic patients",
+                "Postherpetic neuralgia",
+                "Diabetes mellitus",
+                "Heart failure",
+                "Hypertensive patients with left ventricular dysfunction",
+                "Acute coronary syndrome"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Hypertension",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypertension"
+                }
+            ],
+            "total_indications": 5,
+            "recovery_rate": 0.2,
+            "unmatched_indications": 4,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Diabetes mellitus",
+                "Migraine",
+                "Postherpetic neuralgia",
+                "Angina pectoris"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 2,
+        "all_methods_overlap": 1,
+        "knowledge_recovery_rate": 0.125,
+        "literature_recovery_rate": 0.2,
+        "total_unique_across_all_methods": 11,
+        "unique_to_knowledge": 5
+    },
+    "drug_name": "Lisinopril",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 2,
+        "terms": [
+            "Acute myocardial infarction",
+            "Hypertension"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Acute myocardial infarction"
+        ],
+        "knowledge_literature_overlap": [
+            "Hypertension",
+            "Postherpetic neuralgia",
+            "Diabetes mellitus"
+        ],
+        "drugbank_knowledge_overlap": [
+            "Hypertension"
+        ],
+        "all_three_overlap": [
+            "Hypertension"
+        ],
+        "unique_knowledge": [
+            "Acute coronary syndrome",
+            "Hypertensive patients",
+            "Diabetic patients",
+            "Heart failure",
+            "Hypertensive patients with left ventricular dysfunction"
+        ],
+        "total_unique_indications": 11,
+        "unique_literature": [
+            "Migraine",
+            "Angina pectoris"
+        ],
+        "drugbank_literature_overlap": [
+            "Hypertension"
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.755"
+}

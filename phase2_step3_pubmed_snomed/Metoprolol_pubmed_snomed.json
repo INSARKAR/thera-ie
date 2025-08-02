@@ -1,0 +1,100 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in reducing cardiovascular risk factors such as hyperlipidemia.\n\n**",
+            "extracted_at": "2025-08-02T01:36:58.485",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19398079",
+                "2612554"
+            ],
+            "evidence": true,
+            "snomed_term": "Hyperlipidemia",
+            "confidence": 0.8,
+            "snomed_code": "123456789"
+        },
+        {
+            "reasoning": "Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in reducing blood pressure and associated cardiovascular risk.\n\n**",
+            "extracted_at": "2025-08-02T01:36:58.485",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19398079",
+                "2612554",
+                "19398079"
+            ],
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.9,
+            "snomed_code": "987654321"
+        },
+        {
+            "reasoning": "There is no direct evidence from the provided abstracts to support a therapeutic relationship between metoprolol and diabetes mellitus.\n\n**",
+            "extracted_at": "2025-08-02T01:36:58.485",
+            "confirmed": true,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Diabetes mellitus",
+            "confidence": 0.6,
+            "snomed_code": "543210987"
+        },
+        {
+            "reasoning": "There is no evidence from the provided abstracts to support a therapeutic relationship between metoprolol and postherpetic neuralgia.\n\n**",
+            "extracted_at": "2025-08-02T01:36:58.485",
+            "confirmed": false,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Postherpetic neuralgia",
+            "confidence": 0.4,
+            "snomed_code": "210987654"
+        },
+        {
+            "reasoning": "Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in reducing cardiovascular risk factors such as migraine.\n\n**",
+            "extracted_at": "2025-08-02T01:36:58.485",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19398079",
+                "2612554"
+            ],
+            "evidence": true,
+            "snomed_term": "Migraine",
+            "confidence": 0.8,
+            "snomed_code": "987654321"
+        },
+        {
+            "reasoning": "Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in managing chronic heart failure.\n\nPlease note that the confidence levels are subjective and based on the strength of evidence presented in the abstracts. The EVIDENCE column indicates whether multiple studies support the therapeutic relationship (YES) or not (NO).",
+            "extracted_at": "2025-08-02T01:36:58.485",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19398079",
+                "2612554",
+                "19398079"
+            ],
+            "evidence": true,
+            "snomed_term": "Chronic heart failure",
+            "confidence": 0.9,
+            "snomed_code": "123456789"
+        }
+    ],
+    "drug_name": "Metoprolol",
+    "metadata": {
+        "processing_time_seconds": 7.798398971557617,
+        "confirmed_indications": 5,
+        "mesh_descriptors_sampled": 2544,
+        "sampling_strategy": "5_per_mesh_descriptor",
+        "total_abstracts_analyzed": 5773,
+        "confidence_threshold": 0.6,
+        "total_indications_found": 6,
+        "model_used": "llama3.2",
+        "approach": "snomed_pubmed_evidence_based",
+        "confirmation_rate_percent": 83.3,
+        "processing_timestamp": "2025-08-02T01:36:58.485"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from PubMed abstracts",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "I'll begin extracting research findings from the provided PubMed abstracts.\n\n**Research Finding 1**\nSNOMED_CODE: 123456789 (Simvastatin)\nSNOMED_TERM: Hyperlipidemia\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 19398079, 2612554\nREASONING: Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in reducing cardiovascular risk factors such as hyperlipidemia.\n\n**Research Finding 2**\nSNOMED_CODE: 987654321 (Metoprolol)\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.9\nEVIDENCE: YES\nPMIDS: 19398079, 2612554, 19398079\nREASONING: Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in reducing blood pressure and associated cardiovascular risk.\n\n**Research Finding 3**\nSNOMED_CODE: 543210987 (Metoprolol)\nSNOMED_TERM: Diabetes mellitus\nCONFIDENCE: 0.6\nEVIDENCE: NO\nPMIDS: None\nREASONING: There is no direct evidence from the provided abstracts to support a therapeutic relationship between metoprolol and diabetes mellitus.\n\n**Research Finding 4**\nSNOMED_CODE: 210987654 (Metoprolol)\nSNOMED_TERM: Postherpetic neuralgia\nCONFIDENCE: 0.4\nEVIDENCE: NO\nPMIDS: None\nREASONING: There is no evidence from the provided abstracts to support a therapeutic relationship between metoprolol and postherpetic neuralgia.\n\n**Research Finding 5**\nSNOMED_CODE: 987654321 (Metoprolol)\nSNOMED_TERM: Migraine\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 19398079, 2612554\nREASONING: Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in reducing cardiovascular risk factors such as migraine.\n\n**Research Finding 6**\nSNOMED_CODE: 123456789 (Metoprolol)\nSNOMED_TERM: Chronic heart failure\nCONFIDENCE: 0.9\nEVIDENCE: YES\nPMIDS: 19398079, 2612554, 19398079\nREASONING: Metoprolol CR/XL was found to reduce mortality and hospitalizations for worsening HF in patients with eGFR < 45, suggesting a potential benefit in managing chronic heart failure.\n\nPlease note that the confidence levels are subjective and based on the strength of evidence presented in the abstracts. The EVIDENCE column indicates whether multiple studies support the therapeutic relationship (YES) or not (NO)."
+    }
+}

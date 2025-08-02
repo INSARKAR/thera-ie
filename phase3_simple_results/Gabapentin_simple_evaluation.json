@@ -1,0 +1,79 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+            ],
+            "total_indications": 1,
+            "recovery_rate": 0,
+            "unmatched_indications": 1,
+            "matched_indications": 0,
+            "unmatched_terms": [
+                "Seizure disorder"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Postherpetic neuralgia",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Postherpetic neuralgia"
+                }
+            ],
+            "total_indications": 7,
+            "recovery_rate": 0.14285714285714285,
+            "unmatched_indications": 6,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Restless legs syndrome",
+                "Partial seizures",
+                "Alcohol use disorder",
+                "Migraine",
+                "Small fiber neuropathy",
+                "Acute ischemic stroke"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 6,
+        "all_methods_overlap": 0,
+        "knowledge_recovery_rate": 0,
+        "literature_recovery_rate": 0.14285714285714285,
+        "total_unique_across_all_methods": 8,
+        "unique_to_knowledge": 1
+    },
+    "drug_name": "Gabapentin",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 1,
+        "terms": [
+            "Postherpetic neuralgia"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+        ],
+        "knowledge_literature_overlap": [
+        ],
+        "drugbank_knowledge_overlap": [
+        ],
+        "all_three_overlap": [
+        ],
+        "unique_knowledge": [
+            "Seizure disorder"
+        ],
+        "total_unique_indications": 8,
+        "unique_literature": [
+            "Migraine",
+            "Alcohol use disorder",
+            "Acute ischemic stroke",
+            "Restless legs syndrome",
+            "Partial seizures",
+            "Small fiber neuropathy"
+        ],
+        "drugbank_literature_overlap": [
+            "Postherpetic neuralgia"
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.880"
+}

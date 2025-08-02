@@ -1,0 +1,8 @@
+{
+    "drug_name": "Albuterol",
+    "drugbank_name": "Albuterol",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which bronchospasm is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm.[Label,F3265,F3268]",
+    "extraction_timestamp": "2025-08-01T16:09:25.249",
+    "extraction_method": "drugbank_focused"
+}

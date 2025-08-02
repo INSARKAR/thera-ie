@@ -1,86 +1,50 @@
 # =============================================================================
-# Thera Drug-Indication Analysis Project .gitignore
+# THERA-IE Project .gitignore
 # =============================================================================
 
-# Large Data Directories
-# ====================
-# Phase 1 PubMed Data Extraction Results
-# Contains individual drug analysis files and can become very large (18+ GB total)
-phase1_drug_pubmed_refs/                     # Raw PubMed references (7.9GB)
-phase1_drug_pubmed_mesh/                     # MeSH-organized publications (10GB)
+# Configuration Files with Sensitive Data
+# =======================================
+config/umls_config.json
+*config.env
+*secret*
+*password*
+*token*
+.env
 
-# Generated Analysis Files
-# =======================
-drug_disease_associations.json
-drug_disease_associations.txt
-drug_disease_publications.json
-drug_disease_publications_index.txt
-
-# Extraction Results (potentially large)
+# Large Data Files and Analysis Results  
 # =====================================
-phase1_llama_pubmed_extracted_indications/
-phase1_llama_drugbank_extracted_indications/
-phase1_llama_naive_extracted_indications/
-llama_pubmed_extracted_indications/
-llama_extracted_indications/
-llama_drugbank_extracted_indications/
-llama_naive_extracted_indications/
+# External MeSH data (should be in parent directory)
+_data/
+*_data/
+mesh_data/
+
+# Generated analysis files
+*.sqlite
+*.db
+umls_cache/
+quickumls_venv/
+
+# Large extraction results (keep if needed for research)
 *_extracted_indications/
 extraction_summary.json
 
-# Analysis Output Directories
-# ===========================
-indication_overlap_analysis/
-naive_drugbank_overlap_analysis/
-enhanced_overlap_analysis/
-umls_overlap_analysis/
-umls_cache/
-phase1_results/
-results_phase1/
-
-# Additional Result Files
-# =======================
-unique_naive_indications.json               # Large aggregated naive results (122MB)
-approved_drugs_dict.json                    # Generated approved drugs data (1.1MB)
-slurm_job_tracking.json                     # SLURM job status tracking
-*.sqlite                                     # UMLS database files
-_data/                                       # Raw input data directory (if exists)
-
-# Phase 2 AI-Powered Indication Extraction Results  
-# ==================================================
-# Contains final drug-indication datasets from multiple extraction methodologies (330+ MB total)
-phase2_indications_mesh/                     # MeSH-based indications (290MB)
-phase2_indications_llama_naive/              # Knowledge-based indications (15MB)
-phase2_indications_llama_pubmed/             # Evidence-based PubMed indications (9.1MB)
-phase2_indications_llama_drugbank/           # DrugBank AI-extracted indications (5.7MB)
-phase2_drug_pubmed_refs/                     # Legacy directory
-*_phase2_drug_indication_analysis.json
-
-# Future Phase 3+ Results (Analysis and Integration)
-# =================================================
-phase3_*/                                    # Phase 3 analysis results
-phase4_*/                                    # Phase 4 integration results (if created)
-*_analysis_results/                          # General analysis output directories
-*_integration_results/                       # Integration analysis results
-
-# SLURM and HPC Files
-# ==================
-logs/
-slurm_outputs/
-slurm_orchestrator_logs/
-test_slurm_outputs/
-*.out
-*.err
-
-# Temporary and Test Files
-# =======================
+# Temporary Processing Files
+# =========================
 temp/
-test_output*.log
+logs/
 *.tmp
 *.temp
 *~
-debug_*.jl
-test_*.log
+*.log
+*.out
+*.err
+
+# SLURM and HPC Files
+# ==================
+slurm_outputs/
+slurm_orchestrator_logs/
+test_slurm_outputs/
+slurm_job_tracking.json
 
 # Julia Specific
 # =============
@@ -88,42 +52,28 @@ test_*.log
 *.jl.*.cov
 *.jl.mem
 deps/deps.jl
+LocalPreferences.toml
 
-# Package manager files (keep Manifest.toml for reproducibility)
+# Keep Manifest.toml for reproducibility
 # Manifest.toml
 
-# Compiled Julia files
+# Compiled files
 *.so
 *.dylib
 *.dll
 
-# Python (if any Python scripts are added)
-# ========================================
+# Python Files (for utilities)
+# ============================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
 # Virtual environments
 venv/
 env/
 ENV/
+quickumls_venv/
 
 # OS Generated Files
 # =================
@@ -134,12 +84,8 @@ ENV/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Windows
 $RECYCLE.BIN/
 Desktop.ini
-
-# Linux
 *~
 .fuse_hidden*
 .directory
@@ -153,17 +99,14 @@ Desktop.ini
 .vscode/launch.json
 .vscode/tasks.json
 .vscode/c_cpp_properties.json
-.vscode/launch.json
 .vscode/ipch/
 
 # Vim
 *.swp
 *.swo
-*~
 .netrwhist
 
 # Emacs
-*~
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
@@ -191,17 +134,9 @@ backup/
 *_v[0-9]*
 *.bak
 *.orig
-*.tar.gz                                     # Compressed backup files
-*_backup_*.tar.gz                           # Phase 1 result backups
-
-# Configuration Files with Sensitive Data
-# =======================================
-*config.env
-*secret*
-*password*
-*token*
-.env
-config/umls_config.json
+*.tar.gz
+project_archive/
+__archive/
 
 # Large Model Files
 # ================
@@ -212,29 +147,17 @@ config/umls_config.json
 models/
 ollama_models/
 
-# Documentation Build Files
-# =========================
-docs/build/
-docs/_build/
-site/
-
-# Lock Files
-# ==========
-package-lock.json
-yarn.lock
-Pipfile.lock
-
-# Testing
-# =======
+# Testing and Coverage
+# ===================
 .coverage
 .pytest_cache/
 coverage.xml
 *.cover
 .hypothesis/
 
-# Cleanup and Maintenance Scripts
-cleanup_directory.sh
-cleanup_minimal.sh
-backup_*/
-*.backup
-*.old
+# Development and Cleanup Scripts
+# ===============================
+cleanup_*.sh
+*_temp_*
+debug_*
+test_*.jl

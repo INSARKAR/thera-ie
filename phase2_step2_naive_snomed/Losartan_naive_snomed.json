@@ -1,0 +1,75 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Losartan is indicated for the treatment of hypertension in adults.",
+            "extracted_at": "2025-08-02T01:05:50.817",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.8,
+            "snomed_code": "11640009"
+        },
+        {
+            "reasoning": "Losartan is indicated for the treatment of angina pectoris in adults.",
+            "extracted_at": "2025-08-02T01:05:50.818",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.7,
+            "snomed_code": "11550001"
+        },
+        {
+            "reasoning": "Losartan is indicated for the treatment of hypertensive heart disease in adults.",
+            "extracted_at": "2025-08-02T01:05:50.818",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertensive heart disease",
+            "confidence": 0.8,
+            "snomed_code": "11640009"
+        },
+        {
+            "reasoning": "Losartan is indicated for the treatment of myocardial infarction in adults.",
+            "extracted_at": "2025-08-02T01:05:50.818",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Myocardial infarction",
+            "confidence": 0.7,
+            "snomed_code": "11550001"
+        },
+        {
+            "reasoning": "Losartan is indicated for the treatment of hypertensive urgency in adults.",
+            "extracted_at": "2025-08-02T01:05:50.818",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertensive urgency",
+            "confidence": 0.8,
+            "snomed_code": "11640009"
+        },
+        {
+            "reasoning": "Losartan is indicated for the treatment of coronary artery disease in adults.\n\nNote: The confidence level and evidence rating are based on the assumption that regulatory approval strength and clinical evidence support these indications. However, please consult a medical professional or a reliable medical source for confirmation.",
+            "extracted_at": "2025-08-02T01:05:50.818",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Coronary artery disease",
+            "confidence": 0.7,
+            "snomed_code": "11550001"
+        }
+    ],
+    "drug_name": "Losartan",
+    "metadata": {
+        "total_indications_found": 6,
+        "confidence_threshold": 0.6,
+        "model_used": "llama3.2",
+        "confirmation_rate_percent": 100,
+        "processing_time_seconds": 3.69272780418396,
+        "confirmed_indications": 6,
+        "processing_timestamp": "2025-08-02T01:05:50.818",
+        "approach": "snomed_naive_knowledge_based"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT knowledge-based extraction",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "Research Finding 1:\nSNOMED_CODE: 11640009\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Losartan is indicated for the treatment of hypertension in adults.\n\nResearch Finding 2:\nSNOMED_CODE: 11550001\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: Losartan is indicated for the treatment of angina pectoris in adults.\n\nResearch Finding 3:\nSNOMED_CODE: 11640009\nSNOMED_TERM: Hypertensive heart disease\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Losartan is indicated for the treatment of hypertensive heart disease in adults.\n\nResearch Finding 4:\nSNOMED_CODE: 11550001\nSNOMED_TERM: Myocardial infarction\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: Losartan is indicated for the treatment of myocardial infarction in adults.\n\nResearch Finding 5:\nSNOMED_CODE: 11640009\nSNOMED_TERM: Hypertensive urgency\nCONFIDENCE: 0.8\nEVIDENCE: YES\nREASONING: Losartan is indicated for the treatment of hypertensive urgency in adults.\n\nResearch Finding 6:\nSNOMED_CODE: 11550001\nSNOMED_TERM: Coronary artery disease\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: Losartan is indicated for the treatment of coronary artery disease in adults.\n\nNote: The confidence level and evidence rating are based on the assumption that regulatory approval strength and clinical evidence support these indications. However, please consult a medical professional or a reliable medical source for confirmation."
+    }
+}

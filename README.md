@@ -1,270 +1,208 @@
-# THERA-IE: A System for Knowledge Based Drug Indication Extraction
+# THERA-IE: Therapeutic Indication Extraction System
 
-**THERA** (Therapeutic Hypothesis Extraction and Relationship Analytics) **- IE** (Indication Extraction)
+A system for automated drug indication extraction using multiple approaches: DrugBank-based (ground truth), knowledge-based LLM extraction (naive), and literature-based evidence mining (pubmed).
 
-A Julia-based system for extracting therapeutic drug-indication relationships from biomedical literature using hybrid AI-powered and traditional MeSH-based approaches. This pipeline is optimized for HPC/SLURM environments.
+## Overview
 
-## 🎯 Project Overview
+THERA-IE systematically evaluates three methods for extracting therapeutic indications:
 
-THERA-IE integrates multiple methodological approaches to create a literature-mediated drug-indication dataset:
+1. **DrugBank Method**: Ground truth extraction from DrugBank pharmaceutical database
+2. **Knowledge Method**: Direct LLM-based extraction using pre-trained pharmaceutical knowledge  
+3. **Literature Method**: Evidence-based extraction from PubMed scientific literature
 
-- **📚 Literature-Based**: Extracts indications from 5M+ PubMed publications
-- **🏷️ MeSH-Guided**: Leverages Medical Subject Headings for semantic organization
-- **🧠 AI-Powered**: Uses Llama 3.2 for intelligent text analysis and extraction  
-- **⚡ HPC-Optimized**: Designed for parallel processing on SLURM/GPU systems
+## Key Results
 
-The results are benchmarked relative to indications noted in DrugBank. DrugBank is also the source of determining the set of FDA-approved drugs.
+### Phase 3 Cross-Method Evaluation (Top 10 US Drugs)
 
-## 🚀 Quick Start
+- **Literature method outperforms knowledge method**: 23.8% vs 17.4% average recovery rate
+- **High complementarity**: 91.8% of indications are unique to each method
+- **Processing efficiency**: Knowledge (2.9±0.2 min/drug), Literature (7.9±0.7 min/drug)
+- **Confidence scores**: Knowledge (0.79±0.10), Literature (0.73±0.15)
 
-### Automatic Setup (Recommended)
+### Corpus Statistics
+(as of 2025-08-01)
+- **97,963 publications** identified across 10 target drugs
+- **73,736 publications** retained after filtering (75.3% retention)
+- **9,712 unique MeSH descriptors** analyzed
+- **39.7%** of publications from last 10 years
+
+## Project Structure
+
+```
+thera-ie/
+├── README.md                          # Project overview
+├── DEPLOYMENT_GUIDE.md                # Deployment instructions
+├── THERA-IE_FINAL_RESULTS.md          # Complete results summary
+├── analysis_results/                  # Organized analysis outputs
+├── config/                            # Configuration files
+├── core_scripts/                      # Main extraction & analysis scripts
+├── phase1_step1_drugbank_extraction/  # DrugBank ground truth data
+├── phase2_step1_drugbank_snomed/      # DrugBank method results
+├── phase2_step2_naive_snomed/         # Knowledge method results  
+├── phase2_step3_pubmed_snomed/        # Literature method results
+├── phase3_simple_results/             # Cross-method evaluation
+├── prompts/                           # LLM prompts for each method
+└── utilities/                         # QuickUMLS integration scripts
+```
+
+## Quick Start
+
+### Prerequisites
+
+- Julia 1.11+
+- Python 3.11+ with spaCy
+- Access to UMLS 2025AA database
+- MeSH 2025 data files (place in `../_data/mesh/` directory)
+- Ollama with Llama 3.2 model
+
+### Running Evaluations
+
+1. **Phase 2 Extraction** (all methods):
 ```bash
-# Auto-detect environment and run appropriate setup
-julia final_scripts/phase0/phase0_step5_environment_setup.jl
+# DrugBank method
+julia phase2_step1_top10_drugbank_extractor.jl
+
+# Knowledge method  
+julia phase2_step2_top10_naive_extractor.jl
+
+# Literature method
+julia phase2_step3_top10_pubmed_extractor.jl
 ```
 
-### Manual Setup
+2. **Phase 3 Cross-Method Evaluation**:
 ```bash
-# For local development
-julia final_scripts/phase0/phase0_step6_local_setup.jl
-
-# For HPC/SLURM environments
-julia final_scripts/phase0/phase0_step7_hpc_setup.jl
+julia phase3_simple_string_evaluator.jl
 ```
 
-## ✅ Current Status
-
-| Phase | Component | Status | Results |
-|-------|-----------|--------|---------|
-| **Phase 0** | Foundation Setup | ✅ **COMPLETE** | 2,915 approved drugs, 5,895 MeSH descriptors |
-| **Phase 1** | PubMed Extraction | ✅ **COMPLETE** | 2,623 drugs, 5M+ publications, 54M+ MeSH terms |
-| **Phase 2** | AI Indication Extraction | ✅ **COMPLETE** | 4 methodologies, 2,600+ drugs per method |
-| **Phase 3** | Comparative Analysis | 🎯 **READY** | Integration and validation framework prepared |
-
-### Phase 2 Complete Results:
-- **🏪 DrugBank AI Extraction**: 2,909 drugs with AI-parsed indication text
-- **🏷️ MeSH-Based Analysis**: 2,623 drugs with literature-derived indications  
-- **🧠 Knowledge-Based**: 2,932 drugs with LLM pre-trained knowledge
-- **📖 Evidence-Based**: 2,624 drugs with PMID-supported indications
-
-## 🏗️ Architecture
-
-### Multi-Phase Pipeline
-```
-Phase 0: Foundation        Phase 1: Data Extraction      Phase 2: AI Processing
-┌─────────────────┐       ┌─────────────────┐           ┌─────────────────┐
-│ DrugBank XML    │────→  │ PubMed Search   │────→      │ Llama 3.2       │
-│ MeSH Data       │       │ Publication     │           │ AI Extraction   │
-│ Environment     │       │ Retrieval       │           │ Multi-Method    │
-└─────────────────┘       └─────────────────┘           └─────────────────┘
-        ↓                          ↓                            ↓
-┌─────────────────┐       ┌─────────────────┐           ┌─────────────────┐
-│ 2,915 Drugs     │       │ 5M+ Publications│           │ 4 Indication    │
-│ 5,895 MeSH      │       │ 54M+ MeSH Terms │           │ Datasets        │
-│ Dependencies    │       │ 2,623 Drug Files│           │ Evidence Links  │
-└─────────────────┘       └─────────────────┘           └─────────────────┘
-```
-
-### Hybrid Extraction Methodologies
-
-1. **📊 MeSH-Based** (`phase2_indications_mesh/`)
-   - Traditional approach using MeSH descriptor co-occurrence
-   - High precision, established medical vocabulary
-   - Evidence: Publications with shared MeSH terms
-
-2. **🧠 Knowledge-Based** (`phase2_indications_llama_naive/`) 
-   - AI model's pre-trained pharmaceutical knowledge
-   - Fast, dependency-free extraction
-   - Evidence: LLM training data and medical knowledge
-
-3. **📖 Evidence-Based** (`phase2_indications_llama_pubmed/`)
-   - AI analysis of actual research abstracts
-   - Highest quality, PMID-linked evidence
-   - Evidence: Specific research publications with citations
-
-4. **🏪 DrugBank AI** (`phase2_indications_llama_drugbank/`)
-   - AI parsing of structured drug database text
-   - Comprehensive therapeutic coverage
-   - Evidence: Official drug labeling and documentation
-
-## 📁 Project Structure
-
-```
-thera/
-├── 🎯 final_scripts/              # Complete organized workflow (39 files)
-│   ├── phase0/                    # Foundation setup and data preparation (12 files)
-│   ├── phase1/                    # PubMed extraction and processing (12 files)
-│   ├── phase2/                    # AI-powered indication extraction (14 files)
-│   └── README.md                  # Detailed workflow documentation
-│
-├── 🔧 scripts/                    # Development utilities (58 files)
-│   ├── extraction/                # Extraction tools and utilities
-│   ├── analysis/                  # Analysis and validation scripts
-│   ├── setup/                     # Environment setup utilities
-│   └── slurm/                     # HPC job management scripts
-│
-├── 📊 **Results** (excluded from git)
-│   ├── phase1_drug_pubmed_mesh/   # 10GB: MeSH-organized publications
-│   ├── phase2_indications_*/      # 330MB: Final indication datasets
-│   └── logs/                      # 797MB: Processing logs and outputs
-│
-├── 📖 docs/                       # Comprehensive documentation
-│   ├── usage/                     # User guides and tutorials
-│   ├── implementation/            # Technical implementation details
-│   └── summaries/                 # Project reports and summaries
-│
-├── ⚙️ config/                     # Configuration files
-│   ├── llama_config.jl           # LLM model parameters
-│   ├── hpc_config.env            # HPC environment settings
-│   └── umls_config.json          # Medical terminology settings
-│
-├── 💬 prompts/                    # LLM prompt templates
-│   ├── llm_prompt_pubmed.txt     # Evidence-based extraction
-│   ├── llm_prompt_naive.txt      # Knowledge-based extraction
-│   └── llm_prompt_drugbank.txt   # DrugBank text parsing
-│
-└── 🧪 tests/                      # Validation and testing
-    ├── unit/                      # Unit tests for core functions
-    └── integration/               # End-to-end workflow tests
-```
-
-## 🎯 Key Features
-
-### 🔬 **Comprehensive Coverage**
-- **2,915 FDA-approved drugs** from DrugBank with quality filtering
-- **5M+ publications** analyzed from PubMed's biomedical database
-- **54M+ MeSH descriptors** extracted and semantically organized
-- **4 extraction methodologies** for cross-validation and completeness
-
-### 🚀 **HPC-Optimized Performance**
-- **SLURM job arrays** with intelligent batch processing
-- **GPU acceleration** for AI extraction with Ollama/Llama 3.2
-- **Parallel processing** across multiple compute nodes
-- **Checkpoint recovery** for fault-tolerant long-running jobs
-
-### 🧠 **Advanced AI Integration**
-- **Llama 3.2 LLM** for intelligent text analysis and extraction
-- **Confidence scoring** with threshold filtering for quality assurance
-- **Context-aware parsing** of complex medical and pharmaceutical text
-- **Evidence linking** with PMID citations for traceability
-
-### 📊 **Quality Assurance**
-- **Multi-method validation** across different extraction approaches
-- **MeSH semantic filtering** using medical terminology standards
-- **Comprehensive logging** and progress tracking
-- **Robust error handling** with graceful failure recovery
-
-## 🔬 Scientific Applications
-
-### Research Use Cases
-- **Drug Repositioning**: Identify new therapeutic applications for existing drugs
-- **Indication Discovery**: Find evidence for off-label or emerging uses
-- **Literature Synthesis**: Aggregate evidence across large publication corpora
-- **Comparative Pharmacology**: Analyze therapeutic overlap and distinctions
-
-### Data Science Applications  
-- **Knowledge Graph Construction**: Build drug-indication relationship networks
-- **Machine Learning**: Train models on comprehensive indication datasets
-- **Evidence Ranking**: Score indications by publication support and confidence
-- **Cross-Method Validation**: Compare extraction methodologies for reliability
-
-## 📈 Performance Metrics
-
-| Metric | Phase 1 | Phase 2 | Total |
-|--------|---------|---------|-------|
-| **Drugs Processed** | 2,623 | 2,600+ per method | 10,400+ drug-method combinations |
-| **Publications Analyzed** | 5,013,484 | Selected abstracts | Context-optimized |
-| **Data Generated** | 18GB | 330MB | Structured JSON |
-| **Processing Time** | ~200 CPU hours | ~500 GPU hours | Highly parallelized |
-| **Success Rate** | 100% | 99.9%+ | Robust error handling |
-
-## 🛠️ Requirements
-
-### System Requirements
-- **Julia** 1.8+ with package environment
-- **HPC Environment** with SLURM job scheduling (recommended)
-- **GPU Access** for AI extraction (CUDA-compatible)
-- **Storage** 20GB+ for full dataset processing
-- **Memory** 8GB+ per processing job
-
-### Dependencies
-```julia
-# Core dependencies (automatically installed)
-HTTP.jl      # PubMed API communication
-JSON3.jl     # Structured data processing  
-Dates.jl     # Timestamp and metadata handling
-```
-
-### External Tools
+3. **Generate Analysis Reports**:
 ```bash
-# HPC environment (for AI extraction)
-module load ollama julia
-ollama pull llama3.2
+julia analyze_pubmed_corpus.jl
+julia analyze_cross_method_stats.jl
 ```
 
-## 📖 Documentation
+## Key Scripts
 
-- **[Workflow Guide](final_scripts/README.md)**: Complete step-by-step execution
-- **[Implementation Details](docs/implementation/)**: Technical architecture and design
-- **[Usage Examples](docs/usage/)**: Common use cases and tutorials
-- **[CLAUDE.md](CLAUDE.md)**: Development instructions and guidelines
+### Core Extraction Scripts
+- `phase2_step1_top10_drugbank_extractor.jl` - DrugBank ground truth extraction
+- `phase2_step2_top10_naive_extractor.jl` - Knowledge-based extraction  
+- `phase2_step3_top10_pubmed_extractor.jl` - Literature-based extraction
+- `phase3_simple_string_evaluator.jl` - Cross-method evaluation
 
-## 🎯 Next Steps (Phase 3)
+### Analysis Scripts
+- `analyze_pubmed_corpus.jl` - PubMed corpus statistics
+- `analyze_cross_method_stats.jl` - Cross-method performance analysis
+- `generate_pubmed_mesh_table.jl` - MeSH descriptor analysis
 
-Phase 3 development is ready to begin with comprehensive analysis and integration:
+### Utility Scripts
+- `quickumls_wrapper.py` - UMLS concept mapping interface
+- `reprocess_parsing_fix.jl` - Result validation and correction
 
-1. **Cross-Method Validation**: Compare indication extraction across 4 methodologies
-2. **Evidence Scoring**: Rank indications by publication support and AI confidence  
-3. **Knowledge Integration**: Merge methodologies into unified high-confidence dataset
-4. **Quality Metrics**: Develop comprehensive evaluation framework
-5. **Research Output**: Generate publication-ready drug-indication database
+## Methods
 
-## 📄 Data Sources & Compliance
+### DrugBank Method
+- Extracts confirmed therapeutic indications from DrugBank database
+- Maps to SNOMED CT terminology using UMLS
+- Serves as ground truth for evaluation
 
-- **🏪 DrugBank**: Comprehensive pharmaceutical database (requires free academic account)
-- **📚 PubMed**: NCBI's biomedical literature database (public API with rate limiting)
-- **🏷️ MeSH**: Medical Subject Headings vocabulary (public domain)
-- **🧠 Llama 3.2**: Meta's open-source language model (academic use)
+### Knowledge Method  
+- Uses Llama 3.2 LLM with pharmaceutical knowledge
+- Direct extraction without external data sources
+- Fast processing: 2.9±0.2 minutes per drug
 
-**Usage Compliance**: All data sources are used in accordance with their respective terms of service and academic research policies.
+### Literature Method
+- Samples 5 publications per MeSH descriptor from PubMed corpus
+- LLM extraction with literature evidence
+- Comprehensive processing: 7.9±0.7 minutes per drug
 
-## 📊 Output Data Format
+## Evaluation Metrics
 
-All results follow consistent JSON structure with metadata:
+- **Recovery Rate**: Percentage of ground truth indications identified
+- **Unique Contributions**: Method-specific therapeutic discoveries
+- **Confidence Scores**: Extraction reliability (0-1 scale)
+- **Processing Time**: Computational efficiency
+
+## Key Findings
+
+1. **Complementary Methods**: 91.8% of indications are unique to each method
+2. **Literature Advantage**: Evidence-based approach outperforms knowledge-only
+3. **Scalability**: Both methods suitable for pharmaceutical-scale deployment
+4. **Quality**: High confidence scores across all methods
+
+## Configuration
+
+### UMLS Database
+- Path: `/oscar/data/ursa/umls/2025AA/`
+- Local cache: `umls/umls_medical.db`
+
+### LLM Configuration  
+- Model: Llama 3.2 (via Ollama)
+- Temperature: 0.1 (deterministic extraction)
+- Max tokens: 2000
+
+### SLURM Integration
+- GPU allocation for LLM processing
+- Batch job submission scripts in `slurm_scripts/`
+
+## Output Formats
+
+### Individual Drug Results
 ```json
 {
-  "metadata": {
-    "drug_name": "Drug Name",
-    "extraction_method": "method_type", 
-    "total_indications_found": 0,
-    "confidence_threshold": 0.6,
-    "extracted_at": "2025-07-24T12:00:00"
-  },
-  "indications": [
+  "drug_name": "Atorvastatin",
+  "snomed_indications": [
     {
-      "indication": "Medical Condition",
-      "confidence": 0.85,
-      "evidence": true,
-      "supporting_pmids": ["12345678"],
-      "reasoning": "Evidence description"
+      "snomed_term": "Hypercholesterolemia", 
+      "snomed_code": "13644009",
+      "confidence": 0.95,
+      "supporting_pmids": ["12345678", "87654321"]
     }
-  ]
+  ],
+  "extraction_metadata": {...}
 }
 ```
 
-## 🤝 Contributing
+### Cross-Method Evaluation
+```json
+{
+  "drug_name": "Atorvastatin",
+  "method_evaluation": {
+    "knowledge": {"recovery_rate": 0.50, "matches": [...]},
+    "literature": {"recovery_rate": 0.29, "matches": [...]}
+  },
+  "unique_indications_analysis": {...}
+}
+```
 
-This project uses a clean, organized structure optimized for research collaboration:
+## Citation
 
-1. **Core Workflow**: Use `final_scripts/` for production pipeline execution
-2. **Development**: Add utilities to appropriate `scripts/` subdirectories  
-3. **Documentation**: Update relevant files in `docs/` directory
-4. **Testing**: Add validation scripts to `tests/` directory
+```bibtex
+@misc{thera-ie-2025,
+  title={THERA-IE: A System for Knowledge-Based Drug Indication Extraction},
+  author={THERA-IE Development Team},
+  year={2025},
+  note={Comprehensive evaluation of therapeutic indication extraction methods}
+}
+```
 
-## 📜 License
+## License
 
-This project is designed for academic research and educational purposes. Please ensure compliance with all data source terms of service and institutional research policies.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests and documentation
+5. Submit a pull request
+
+## Support
+
+For questions or issues:
+- See `THERA-IE_FINAL_RESULTS.md` for comprehensive methodology and results
+- Review `DEPLOYMENT_GUIDE.md` for step-by-step deployment instructions
+- Check example outputs in result directories
+- See configuration files in `config/`
 
 ---
-
-**🔬 THERA-IE**: Therapeutic Hypothesis Extraction and Relationship Analytics for comprehensive drug-indication analysis with state-of-the-art AI and traditional literature mining approaches.
+**THERA-IE**: Advancing pharmaceutical knowledge discovery through systematic therapeutic indication extraction. Portions of the code included here was developed or improved using Claude Code Agent (Sonnet 4). This documentation was also partially auto-generated using Claude (Sonnet 4).

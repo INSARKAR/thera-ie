@@ -1,0 +1,114 @@
+================================================================================
+TOP 10 DRUGS SNOMED CT DRUGBANK INDICATION EXTRACTION PROMPT TEMPLATE
+================================================================================
+
+PURPOSE: Extract therapeutic indications directly from DrugBank indication text 
+and map them to standardized SNOMED CT terminology for the top 10 US prescribed drugs.
+
+DRUG: {DRUG_NAME}
+DRUGBANK INDICATION TEXT: {INDICATION_TEXT}
+
+================================================================================
+PROMPT TEMPLATE:
+================================================================================
+
+You are a medical terminology specialist analyzing pharmaceutical data for research purposes. Your task is to read the DrugBank indication text below and extract the specific therapeutic indications mentioned in that text, then map each indication to the appropriate SNOMED CT code.
+
+DRUG NAME: {DRUG_NAME}
+
+DRUGBANK INDICATION TEXT:
+{INDICATION_TEXT}
+
+RESEARCH OBJECTIVE:
+This is a pharmaceutical informatics research study to standardize drug indication terminology using SNOMED CT codes. You are analyzing official DrugBank pharmaceutical reference data to create standardized medical concept mappings.
+
+INSTRUCTIONS:
+1. Read the DrugBank text carefully and identify each SPECIFIC therapeutic medical condition mentioned BY NAME
+2. Extract the EXACT medical condition names as stated in the text - do not generalize or simplify
+3. Focus on SPECIFIC DISEASES, DISORDERS, and MEDICAL CONDITIONS being treated (not patient populations)  
+4. Extract only conditions that are directly named in the text - do not infer, generalize, or add conditions
+5. For each specific condition found, provide the most appropriate SNOMED CT code and term
+6. Maintain the SPECIFICITY of medical conditions - do not convert specific conditions to generic terms
+7. Use real SNOMED CT codes (7-digit numerical identifiers)
+
+SPECIFICITY REQUIREMENTS:
+- Extract: "Postherpetic neuralgia" NOT "Pain disorder" 
+- Extract: "Partial-onset seizures" NOT "Pain disorder"
+- Extract: "Diabetic neuropathy" NOT "Pain disorder"
+- Extract: "Hypercholesterolemia" NOT "hypercholesterolemic patients"
+- Extract: "Hypertension" NOT "hypertensive patients"  
+- Extract: "Type 2 diabetes mellitus" NOT "diabetic patients"
+- Extract: "Major depressive disorder" NOT "depressed patients"
+
+PROHIBITED GENERALIZATIONS:
+- Do NOT convert specific neurological conditions to "Pain disorder"
+- Do NOT convert specific cardiac conditions to "Heart disease"  
+- Do NOT convert specific psychiatric conditions to "Mental disorder"
+- Do NOT extract generic terms when specific conditions are mentioned
+
+OUTPUT FORMAT:
+You must use EXACTLY this format for each therapeutic indication you find in the text:
+
+Research Finding N:
+SNOMED_CODE: [Real SNOMED CT numerical code]
+SNOMED_TERM: [Official SNOMED CT preferred term for the medical condition]
+CONFIDENCE: [0.1-1.0 based on how clearly stated in text]
+EVIDENCE: [YES if explicitly mentioned, NO if implied]
+REASONING: [Quote the specific text that mentions this medical condition]
+
+CRITICAL FORMATTING RULES:
+- Start each finding with "Research Finding N:" (where N is 1, 2, 3, etc.)
+- Use a colon after "Research Finding N"
+- Do NOT number after the colon (e.g., "Research Finding N: 1" is WRONG)
+- Do NOT use dashes or bullets (e.g., "- SNOMED_CODE:" is WRONG)
+- Always use ALL CAPS for field names: SNOMED_CODE, SNOMED_TERM, CONFIDENCE, EVIDENCE, REASONING
+- Each field must be on its own line
+- Use exactly one blank line between findings
+
+CONFIDENCE SCORING:
+- 0.9-1.0: Medical condition explicitly stated as primary indication (e.g., "indicated for treatment of...")
+- 0.7-0.8: Medical condition clearly mentioned as approved use
+- 0.5-0.6: Medical condition mentioned but as secondary or adjunct use
+- 0.3-0.4: Medical condition implied but not directly stated
+- 0.1-0.2: Very weak or unclear medical condition
+
+OUTPUT FORMAT STRUCTURE:
+You must use EXACTLY this format for each therapeutic indication you find:
+
+Research Finding N:
+SNOMED_CODE: [Real numerical SNOMED CT code - look up the correct code]
+SNOMED_TERM: [Exact medical condition name from the text]
+CONFIDENCE: [0.1-1.0 based on clarity in text]
+EVIDENCE: [YES if explicitly mentioned, NO if implied]
+REASONING: [Quote the specific text that mentions this condition]
+
+IMPORTANT RESEARCH GUIDELINES:
+- Only extract SPECIFIC medical conditions actually mentioned BY NAME in the DrugBank text
+- Do not add conditions based on your general knowledge of the drug
+- Do not infer conditions that might be related but aren't mentioned
+- Do not generalize specific conditions to broader categories
+- Quote the exact text that supports each medical condition
+- Use precise SNOMED CT terminology that matches the SPECIFIC medical condition mentioned
+- Do NOT repeat the same medical condition multiple times
+- Each unique SPECIFIC medical condition should appear only once in your response
+- If the same condition is mentioned multiple times in the text, combine them into one finding
+- Focus on SPECIFIC DISEASES and CONDITIONS as named in the text, not patient demographics or populations
+
+CRITICAL SPECIFICITY RULE:
+If the text mentions "postherpetic neuralgia", extract "Postherpetic neuralgia" 
+If the text mentions "partial-onset seizures", extract "Partial seizure"
+If the text mentions "diabetic neuropathy", extract "Diabetic neuropathy"
+If the text mentions "hypercholesterolemia", extract "Hypercholesterolemia"
+Do NOT convert specific conditions to generic terms like "Pain disorder" or other broad categories
+
+Please analyze the DrugBank text above and extract all therapeutic medical conditions mentioned.
+
+================================================================================
+DATABASE STANDARDS:
+================================================================================
+
+SNOMED CT Integration Requirements:
+- Use official SNOMED CT concept identifiers (numerical codes)  
+- Apply SNOMED CT preferred terms for consistency
+- Maintain clinical accuracy in terminology mapping
+- Support healthcare interoperability standards

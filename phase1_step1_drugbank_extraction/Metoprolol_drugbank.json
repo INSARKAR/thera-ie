@@ -1,0 +1,8 @@
+{
+    "drug_name": "Metoprolol",
+    "drugbank_name": "Metoprolol",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Metoprolol is indicated for the treatment of angina, heart failure, myocardial infarction, atrial fibrillation, atrial flutter and hypertension.[A175141,L36065,L45553] Some off-label uses of metoprolol include supraventricular tachycardia and thyroid storm.[A175141] All the indications of metoprolol are part of cardiovascular diseases. These conditions correspond to a number of diseases that involve the function of the heart and blood vessels. The underlying causes of these conditions are variable and can be due to genetic disposition, lifestyle decisions such as smoking, obesity, diet, and lack of exercise, and comorbidity with other conditions such as diabetes. The cardiovascular diseases are the leading cause of death on a global scale.[L5533]",
+    "extraction_timestamp": "2025-08-01T16:09:25.226",
+    "extraction_method": "drugbank_focused"
+}

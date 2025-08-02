@@ -1,0 +1,302 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "\"Metoprolol is indicated for the treatment of angina...\"",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        },
+        {
+            "reasoning": "",
+            "extracted_at": "2025-08-02T00:13:29.173",
+            "confirmed": true,
+            "evidence": false,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.9,
+            "snomed_code": "12771007"
+        }
+    ],
+    "drug_name": "Metoprolol",
+    "metadata": {
+        "total_indications_found": 31,
+        "approach": "drugbank_snomed_extraction",
+        "model_used": "llama3.2",
+        "confirmation_rate_percent": 100,
+        "processing_time_seconds": 19.04839515686035,
+        "confidence_threshold": 0.6,
+        "confirmed_indications": 31,
+        "original_indication_text": "Metoprolol is indicated for the treatment of angina, heart failure, myocardial infarction, atrial fibrillation, atrial flutter and hypertension.[A175141,L36065,L45553] Some off-label uses of metoprolol include supraventricular tachycardia and thyroid storm.[A175141] All the indications of metoprolol are part of cardiovascular diseases. These conditions correspond to a number of diseases that involve the function of the heart and blood vessels. The underlying causes of these conditions are variable and can be due to genetic disposition, lifestyle decisions such as smoking, obesity, diet, and lack of exercise, and comorbidity with other conditions such as diabetes. The cardiovascular diseases are the leading cause of death on a global scale.[L5533]",
+        "processing_timestamp": "2025-08-02T00:13:29.184"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from DrugBank text",
+        "failure_reason": "",
+        "indication_text_length": 756,
+        "llm_failed": false,
+        "raw_llm_response": "Research Finding 1:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 2:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 3:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 4:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 5:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 6:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 7:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 8:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 9:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 10:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 11:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 12:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 13:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 14:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 15:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 16:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 17:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 18:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 19:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 20:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 21:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 22:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 23:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 24:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 25:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 26:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 27:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 28:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 29:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 30:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING: \"Metoprolol is indicated for the treatment of angina...\"\n\nResearch Finding 31:\nSNOMED_CODE: 12771007\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.9\nEVIDENCE: Indicated for treatment of angina\nREASONING"
+    }
+}

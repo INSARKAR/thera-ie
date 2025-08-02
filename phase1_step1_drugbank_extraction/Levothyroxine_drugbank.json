@@ -1,0 +1,8 @@
+{
+    "drug_name": "Levothyroxine",
+    "drugbank_name": "Levothyroxine",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Levothyroxine is indicated as replacement therapy in primary (thyroidal), secondary (pituitary) and tertiary (hypothalamic) congenital or acquired hypothyroidism. It is also indicated as an adjunct to surgery and radioiodine therapy in the management of thyrotropin-dependent well-differentiated thyroid cancer.",
+    "extraction_timestamp": "2025-08-01T16:09:25.201",
+    "extraction_method": "drugbank_focused"
+}

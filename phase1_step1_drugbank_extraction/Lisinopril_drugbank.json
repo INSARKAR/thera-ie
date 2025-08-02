@@ -1,0 +1,8 @@
+{
+    "drug_name": "Lisinopril",
+    "drugbank_name": "Lisinopril",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Lisinopril is indicated for the treatment of acute myocardial infarction, hypertension in patients ≥6 years, and as an adjunct therapy for heart failure.[L8384,L8387] A combination product with hydrochlorothiazide is indicated for the treatment of hypertension.[L8390]",
+    "extraction_timestamp": "2025-08-01T16:09:25.216",
+    "extraction_method": "drugbank_focused"
+}

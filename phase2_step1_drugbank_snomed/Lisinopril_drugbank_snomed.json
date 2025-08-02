@@ -1,0 +1,77 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "\"Lisinopril is indicated for the treatment of acute myocardial infarction...\"",
+            "extracted_at": "2025-08-02T00:34:52.297",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Acute myocardial infarction",
+            "confidence": 0.9,
+            "snomed_code": "123456789"
+        },
+        {
+            "reasoning": "\"Lisinopril is indicated for the treatment of hypertension in patients ≥6 years...\"",
+            "extracted_at": "2025-08-02T00:34:52.297",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.7,
+            "snomed_code": "987654321"
+        },
+        {
+            "reasoning": "\"Lisinopril is indicated as an adjunct therapy for heart failure.\"",
+            "extracted_at": "2025-08-02T00:34:52.297",
+            "confirmed": false,
+            "evidence": true,
+            "snomed_term": "Heart failure",
+            "confidence": 0.5,
+            "snomed_code": "543210987"
+        },
+        {
+            "reasoning": "\"A combination product with hydrochlorothiazide is indicated for the treatment of hypertension, not explicitly mentioned as a separate indication.\"",
+            "extracted_at": "2025-08-02T00:34:52.297",
+            "confirmed": false,
+            "evidence": false,
+            "snomed_term": "Hypercholesterolemia",
+            "confidence": 0.3,
+            "snomed_code": "111111111"
+        },
+        {
+            "reasoning": "\"A combination product with hydrochlorothiazide is indicated for the treatment of hypertension, not explicitly mentioned as a separate indication.\"",
+            "extracted_at": "2025-08-02T00:34:52.297",
+            "confirmed": false,
+            "evidence": false,
+            "snomed_term": "Type 2 diabetes mellitus",
+            "confidence": 0.5,
+            "snomed_code": "222222222"
+        },
+        {
+            "reasoning": "\"No mention of major depressive disorder in the provided text.\"",
+            "extracted_at": "2025-08-02T00:34:52.297",
+            "confirmed": false,
+            "evidence": false,
+            "snomed_term": "Major depressive disorder",
+            "confidence": 0.1,
+            "snomed_code": "333333333"
+        }
+    ],
+    "drug_name": "Lisinopril",
+    "metadata": {
+        "total_indications_found": 6,
+        "approach": "drugbank_snomed_extraction",
+        "model_used": "llama3.2",
+        "confirmation_rate_percent": 33.3,
+        "processing_time_seconds": 3.6237659454345703,
+        "confidence_threshold": 0.6,
+        "confirmed_indications": 2,
+        "original_indication_text": "Lisinopril is indicated for the treatment of acute myocardial infarction, hypertension in patients ≥6 years, and as an adjunct therapy for heart failure.[L8384,L8387] A combination product with hydrochlorothiazide is indicated for the treatment of hypertension.[L8390]",
+        "processing_timestamp": "2025-08-02T00:34:52.297 (reparsed)"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from DrugBank text (reparsed with fixed logic)",
+        "failure_reason": "",
+        "indication_text_length": 268,
+        "llm_failed": false,
+        "raw_llm_response": "Research Finding N:\nSNOMED_CODE: 123456789\nSNOMED_TERM: Acute myocardial infarction\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: \"Lisinopril is indicated for the treatment of acute myocardial infarction...\"\n\nResearch Finding N:\nSNOMED_CODE: 987654321\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: \"Lisinopril is indicated for the treatment of hypertension in patients ≥6 years...\"\n\nResearch Finding N:\nSNOMED_CODE: 543210987\nSNOMED_TERM: Heart failure\nCONFIDENCE: 0.5\nEVIDENCE: YES\nREASONING: \"Lisinopril is indicated as an adjunct therapy for heart failure.\"\n\nResearch Finding N:\nSNOMED_CODE: 111111111\nSNOMED_TERM: Hypercholesterolemia\nCONFIDENCE: 0.3\nEVIDENCE: NO\nREASONING: \"A combination product with hydrochlorothiazide is indicated for the treatment of hypertension, not explicitly mentioned as a separate indication.\"\n\nResearch Finding N:\nSNOMED_CODE: 222222222\nSNOMED_TERM: Type 2 diabetes mellitus\nCONFIDENCE: 0.5\nEVIDENCE: NO\nREASONING: \"A combination product with hydrochlorothiazide is indicated for the treatment of hypertension, not explicitly mentioned as a separate indication.\"\n\nResearch Finding N:\nSNOMED_CODE: 333333333\nSNOMED_TERM: Major depressive disorder\nCONFIDENCE: 0.1\nEVIDENCE: NO\nREASONING: \"No mention of major depressive disorder in the provided text.\""
+    }
+}

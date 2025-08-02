@@ -1,0 +1,99 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Hypothyroidism",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypothyroidism"
+                }
+            ],
+            "total_indications": 8,
+            "recovery_rate": 0.125,
+            "unmatched_indications": 7,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Thyrotoxicosis",
+                "Thyroid nodules",
+                "Thyroiditis",
+                "Goiter",
+                "Hypocalcemia",
+                "Atherosclerosis",
+                "Hypertension"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Hypothyroidism",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypothyroidism"
+                }
+            ],
+            "total_indications": 7,
+            "recovery_rate": 0.14285714285714285,
+            "unmatched_indications": 6,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Hyperthyroidism",
+                "Thyroiditis",
+                "Anxiety Disorder",
+                "Depression",
+                "Migraine",
+                "Postherpetic Neuralgia"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 5,
+        "all_methods_overlap": 1,
+        "knowledge_recovery_rate": 0.125,
+        "literature_recovery_rate": 0.14285714285714285,
+        "total_unique_across_all_methods": 13,
+        "unique_to_knowledge": 6
+    },
+    "drug_name": "Levothyroxine",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 1,
+        "terms": [
+            "Hypothyroidism"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+        ],
+        "knowledge_literature_overlap": [
+            "Thyroiditis",
+            "Hypothyroidism"
+        ],
+        "drugbank_knowledge_overlap": [
+            "Hypothyroidism"
+        ],
+        "all_three_overlap": [
+            "Hypothyroidism"
+        ],
+        "unique_knowledge": [
+            "Hypertension",
+            "Thyroid nodules",
+            "Goiter",
+            "Atherosclerosis",
+            "Hypocalcemia",
+            "Thyrotoxicosis"
+        ],
+        "total_unique_indications": 13,
+        "unique_literature": [
+            "Hyperthyroidism",
+            "Migraine",
+            "Depression",
+            "Postherpetic Neuralgia",
+            "Anxiety Disorder"
+        ],
+        "drugbank_literature_overlap": [
+            "Hypothyroidism"
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.744"
+}

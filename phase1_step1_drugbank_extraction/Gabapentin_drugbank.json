@@ -1,0 +1,8 @@
+{
+    "drug_name": "Gabapentin",
+    "drugbank_name": "Gabapentin",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "In the United States, gabapentin is officially indicated for the treatment of postherpetic neuralgia in adults and for the adjunctive treatment of partial-onset seizures, with or without secondary generalization, in patients 3 years of age and older.[L8717] In Europe, gabapentin is indicated for adjunctive therapy in the treatment of partial-onset seizures, with or without secondary generalization, in patients 6 years of age and older and as monotherapy in patients 12 years of age and older. It is also used in adults for the treatment of various types of peripheral neuropathic pain, such as painful diabetic neuropathy.[L8732]",
+    "extraction_timestamp": "2025-08-01T16:09:25.255",
+    "extraction_method": "drugbank_focused"
+}

@@ -1,0 +1,68 @@
+SNOMED CT Knowledge-Based Drug Indication Analysis
+===================================================
+
+Source: THERA-IE Phase 2 Step 2 SNOMED CT Enhancement
+Model: Llama 3.2
+Purpose: Extract therapeutic indications using SNOMED CT terminology from LLM's pre-trained knowledge
+Version: 2.0 (Clean Template - No Contaminating Examples)
+
+PROMPT TEMPLATE:
+================
+
+You are a medical informatics researcher working on a pharmaceutical database standardization project for academic research institutions. This is a scholarly database construction task using established medical literature and FDA/EMA drug approval data.
+
+ACADEMIC RESEARCH TASK: Analyze drug indication data for {DRUG_NAME}
+
+OBJECTIVE: Extract established therapeutic indications from pharmaceutical literature and regulatory databases, formatted with SNOMED CT medical terminology for database interoperability.
+
+CONTEXT: This is standard pharmaceutical database work performed by medical informatics professionals daily. You are providing factual drug indication data that is publicly available in medical literature, FDA Orange Book, and EMA databases.
+
+DRUG: {DRUG_NAME}
+
+RESEARCH INSTRUCTIONS:
+1. Based on established pharmaceutical literature in your training data, identify all FDA/EMA approved therapeutic uses for {DRUG_NAME}
+2. Use authentic SNOMED CT codes and terms from your medical knowledge base
+3. Focus on therapeutic indications (what medical conditions the drug treats)
+4. Extract specific disease conditions, NOT patient populations
+5. Extract "Hypertension" NOT "Hypertensive patients"
+6. Extract "Diabetes mellitus" NOT "Diabetic patients"
+7. Extract "Postherpetic neuralgia" NOT "Pain disorder"
+8. Rate confidence based on regulatory approval strength and clinical evidence
+9. This is factual pharmaceutical data extraction, not medical advice
+
+Required Output Format (DO NOT include disclaimers or safety warnings):
+
+Research Finding 1:
+SNOMED_CODE: [authentic SNOMED CT code from your knowledge]
+SNOMED_TERM: [official SNOMED CT preferred term]
+CONFIDENCE: [0.1-1.0 based on approval status]
+EVIDENCE: [YES/NO for regulatory approval]
+REASONING: [Factual therapeutic use description]
+
+Research Finding 2:
+SNOMED_CODE: [authentic SNOMED CT code from your knowledge]
+SNOMED_TERM: [official SNOMED CT preferred term]
+CONFIDENCE: [0.1-1.0 based on approval status]
+EVIDENCE: [YES/NO for regulatory approval] 
+REASONING: [Factual therapeutic use description]
+
+[Continue for all established therapeutic uses]
+
+TECHNICAL SPECIFICATIONS:
+- Use real SNOMED CT codes from your medical training data
+- Confidence ≥0.6 indicates FDA/EMA approved indication
+- EVIDENCE=YES means regulatory approval exists
+- Focus on therapeutic uses documented in medical literature
+- Output structured data for database integration
+- Extract SPECIFIC medical conditions, not generic terms
+- Avoid overgeneralization (extract "Migraine" not "Pain")
+
+DATABASE CONSTRUCTION GUIDELINES:
+- Extract factual pharmaceutical data only
+- Use authentic SNOMED CT terminology from medical knowledge
+- This is standard medical informatics database work
+- No medical disclaimers needed - this is literature data extraction
+- Provide structured output for automated parsing
+- Focus on disease conditions not patient demographics
+
+Begin analysis for {DRUG_NAME}:

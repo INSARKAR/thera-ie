@@ -1,0 +1,83 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Lisinopril has been shown to produce therapeutic benefits in patients with hypertension.\n\n**",
+            "extracted_at": "2025-08-02T01:36:28.404",
+            "confirmed": true,
+            "supporting_pmids": [
+                "1611160",
+                "2674438"
+            ],
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.8,
+            "snomed_code": "07"
+        },
+        {
+            "reasoning": "Lisinopril has been demonstrated to slow the progression of diabetic nephropathy in patients with diabetes.\n\n**",
+            "extracted_at": "2025-08-02T01:36:28.404",
+            "confirmed": true,
+            "supporting_pmids": [
+                "1611160",
+                "2674438"
+            ],
+            "evidence": true,
+            "snomed_term": "Diabetes mellitus",
+            "confidence": 0.7,
+            "snomed_code": "10"
+        },
+        {
+            "reasoning": "There is no direct evidence from the provided abstracts to support a therapeutic relationship between lisinopril and migraine.\n\n**",
+            "extracted_at": "2025-08-02T01:36:28.404",
+            "confirmed": false,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Migraine",
+            "confidence": 0.5,
+            "snomed_code": "18"
+        },
+        {
+            "reasoning": "There is no direct evidence from the provided abstracts to support a therapeutic relationship between lisinopril and postherpetic neuralgia.\n\n**",
+            "extracted_at": "2025-08-02T01:36:28.404",
+            "confirmed": false,
+            "supporting_pmids": [
+            ],
+            "evidence": false,
+            "snomed_term": "Postherpetic neuralgia",
+            "confidence": 0.3,
+            "snomed_code": "04"
+        },
+        {
+            "reasoning": "Although not explicitly stated in the provided abstracts, lisinopril is known to be effective in treating angina pectoris due to its vasodilatory effects.\n\nPlease note that confidence levels are subjective and based on the strength of evidence presented in the provided abstracts. EVIDENCE=YES indicates multiple studies support the therapeutic relationship, while EVIDENCE:NO suggests there is no direct evidence or conflicting findings.",
+            "extracted_at": "2025-08-02T01:36:28.404",
+            "confirmed": true,
+            "supporting_pmids": [
+            ],
+            "evidence": true,
+            "snomed_term": "Angina pectoris",
+            "confidence": 0.6,
+            "snomed_code": "06"
+        }
+    ],
+    "drug_name": "Lisinopril",
+    "metadata": {
+        "processing_time_seconds": 6.194286108016968,
+        "confirmed_indications": 3,
+        "mesh_descriptors_sampled": 1565,
+        "sampling_strategy": "5_per_mesh_descriptor",
+        "total_abstracts_analyzed": 3219,
+        "confidence_threshold": 0.6,
+        "total_indications_found": 5,
+        "model_used": "llama3.2",
+        "approach": "snomed_pubmed_evidence_based",
+        "confirmation_rate_percent": 60,
+        "processing_timestamp": "2025-08-02T01:36:28.404"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from PubMed abstracts",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "Here are the research findings extracted from the provided PubMed abstracts:\n\n**Research Finding 1**\nSNOMED_CODE: N07.9XXA (Hypertension)\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 1611160, 2674438\nREASONING: Lisinopril has been shown to produce therapeutic benefits in patients with hypertension.\n\n**Research Finding 2**\nSNOMED_CODE: N10.9XXA (Diabetes mellitus)\nSNOMED_TERM: Diabetes mellitus\nCONFIDENCE: 0.7\nEVIDENCE: YES\nPMIDS: 1611160, 2674438\nREASONING: Lisinopril has been demonstrated to slow the progression of diabetic nephropathy in patients with diabetes.\n\n**Research Finding 3**\nSNOMED_CODE: N18.9XXA (Migraine)\nSNOMED_TERM: Migraine\nCONFIDENCE: 0.5\nEVIDENCE: NO\nPMIDS: None\nREASONING: There is no direct evidence from the provided abstracts to support a therapeutic relationship between lisinopril and migraine.\n\n**Research Finding 4**\nSNOMED_CODE: N04.9XXA (Postherpetic neuralgia)\nSNOMED_TERM: Postherpetic neuralgia\nCONFIDENCE: 0.3\nEVIDENCE: NO\nPMIDS: None\nREASONING: There is no direct evidence from the provided abstracts to support a therapeutic relationship between lisinopril and postherpetic neuralgia.\n\n**Research Finding 5**\nSNOMED_CODE: N06.9XXA (Angina pectoris)\nSNOMED_TERM: Angina pectoris\nCONFIDENCE: 0.6\nEVIDENCE: YES\nPMIDS: None\nREASONING: Although not explicitly stated in the provided abstracts, lisinopril is known to be effective in treating angina pectoris due to its vasodilatory effects.\n\nPlease note that confidence levels are subjective and based on the strength of evidence presented in the provided abstracts. EVIDENCE=YES indicates multiple studies support the therapeutic relationship, while EVIDENCE:NO suggests there is no direct evidence or conflicting findings."
+    }
+}

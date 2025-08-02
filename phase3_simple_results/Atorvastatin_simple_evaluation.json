@@ -1,0 +1,134 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Hypercholesterolemia",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypercholesterolemia"
+                },
+                {
+                    "method_term": "Atherosclerosis",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Clinical atherosclerosis"
+                },
+                {
+                    "method_term": "Hypertriglyceridemia",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypertriglyceridemia"
+                }
+            ],
+            "total_indications": 6,
+            "recovery_rate": 0.5,
+            "unmatched_indications": 3,
+            "matched_indications": 3,
+            "unmatched_terms": [
+                "Hyperlipidemia",
+                "Xanthoma",
+                "Endarteritis"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Diabetes mellitus",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Type 2 diabetes mellitus"
+                },
+                {
+                    "method_term": "Atherosclerosis",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Clinical atherosclerosis"
+                }
+            ],
+            "total_indications": 7,
+            "recovery_rate": 0.2857142857142857,
+            "unmatched_indications": 5,
+            "matched_indications": 2,
+            "unmatched_terms": [
+                "Hypertension",
+                "Postherpetic neuralgia",
+                "Migraine",
+                "Alzheimer's disease",
+                "Hyperlipidemia"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 5,
+        "all_methods_overlap": 0,
+        "knowledge_recovery_rate": 0.5,
+        "literature_recovery_rate": 0.2857142857142857,
+        "total_unique_across_all_methods": 24,
+        "unique_to_knowledge": 2
+    },
+    "drug_name": "Atorvastatin",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 15,
+        "terms": [
+            "Hypercholesterolemia",
+            "Hypertriglyceridemia",
+            "Primary dysbetalipoproteinemia",
+            "Homozygous familial hypercholesterolemia",
+            "Heterozygous familial hypercholesterolemia",
+            "Type 2 diabetes mellitus",
+            "Clinical atherosclerosis",
+            "Myocardial infarction",
+            "Stroke",
+            "Abdominal aortic aneurysm",
+            "Chronic kidney disease",
+            "Severely elevated LDL-C levels",
+            "Peripheral artery disease",
+            "Claudication",
+            "Acute coronary syndromes"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Primary dysbetalipoproteinemia",
+            "Acute coronary syndromes",
+            "Chronic kidney disease",
+            "Severely elevated LDL-C levels",
+            "Homozygous familial hypercholesterolemia",
+            "Myocardial infarction",
+            "Stroke",
+            "Type 2 diabetes mellitus",
+            "Abdominal aortic aneurysm",
+            "Peripheral artery disease",
+            "Clinical atherosclerosis",
+            "Claudication",
+            "Heterozygous familial hypercholesterolemia"
+        ],
+        "knowledge_literature_overlap": [
+            "Hyperlipidemia",
+            "Atherosclerosis"
+        ],
+        "drugbank_knowledge_overlap": [
+            "Hypertriglyceridemia",
+            "Hypercholesterolemia"
+        ],
+        "all_three_overlap": [
+        ],
+        "unique_knowledge": [
+            "Xanthoma",
+            "Endarteritis"
+        ],
+        "total_unique_indications": 24,
+        "unique_literature": [
+            "Hypertension",
+            "Migraine",
+            "Postherpetic neuralgia",
+            "Alzheimer's disease",
+            "Diabetes mellitus"
+        ],
+        "drugbank_literature_overlap": [
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:28.858"
+}

@@ -1,0 +1,93 @@
+{
+    "confidence_analysis": {
+        "pubmed_method": {
+            "values": [
+                0.8,
+                0.7,
+                0.5,
+                0.9,
+                0.8,
+                0.9,
+                0.9,
+                0.9,
+                0.8,
+                0.7
+            ],
+            "count": 69,
+            "mean": 0.7289855072463766,
+            "std": 0.15252911898982588
+        },
+        "naive_method": {
+            "values": [
+                0.9,
+                0.8,
+                0.7,
+                0.9,
+                0.8,
+                0.9,
+                0.9,
+                0.8,
+                0.7,
+                0.6
+            ],
+            "count": 63,
+            "mean": 0.7857142857142856,
+            "std": 0.09976931918526483
+        }
+    },
+    "notable_discoveries": [
+        {
+            "indication": "Hypertension",
+            "confidence": 0.9,
+            "drug": "Amlodipine",
+            "pmid_count": 3
+        },
+        {
+            "indication": "Renal disease",
+            "confidence": 0.8,
+            "drug": "Amlodipine",
+            "pmid_count": 3
+        },
+        {
+            "indication": "Asthma",
+            "confidence": 0.8,
+            "drug": "Albuterol",
+            "pmid_count": 3
+        },
+        {
+            "indication": "Bronchospasm",
+            "confidence": 0.9,
+            "drug": "Albuterol",
+            "pmid_count": 3
+        },
+        {
+            "indication": "Asthma Exacerbation",
+            "confidence": 0.8,
+            "drug": "Albuterol",
+            "pmid_count": 3
+        }
+    ],
+    "processing_times": {
+        "naive_std_minutes": 0.2311805451253294,
+        "pubmed_avg_minutes": 7.93,
+        "naive_avg_minutes": 2.87,
+        "pubmed_std_minutes": 0.6515792780280505
+    },
+    "analysis_date": "2025-08-02T03:36:48.366",
+    "filled_paragraph": "Cross-method analysis revealed complementary discovery patterns, with 8.2% overlap in unique indications between approaches, indicating that the methods identify largely distinct therapeutic opportunities. The average confidence scores for extracted indications were 0.79 ± 0.1 for the Naïve method and 0.73 ± 0.15 for the PubMed method. Notable discoveries included Hypertension for Amlodipine (confidence: 0.9, supported by 3 publications), demonstrating the system's ability to identify clinically plausible therapeutic applications supported by literature evidence. Processing efficiency averaged 2.9 ± 0.2 minutes per drug for the Naïve approach and 7.9 ± 0.7 minutes for the PubMed approach, indicating practical scalability for larger pharmaceutical datasets.\n",
+    "overlap_analysis": {
+        "average_overlap_percentage": 8.224067599067599,
+        "individual_percentages": [
+            8.333333333333332,
+            15.384615384615385,
+            27.27272727272727,
+            0.0,
+            12.5,
+            0.0,
+            18.75,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}

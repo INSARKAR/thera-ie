@@ -1,0 +1,136 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Exercise-induced bronchospasm (SNOMED CT code: 222222222)",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Exercise-induced bronchospasm"
+                },
+                {
+                    "method_term": "Chronic bronchitis (SNOMED CT code: 888888888)",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Chronic bronchitis"
+                }
+            ],
+            "total_indications": 10,
+            "recovery_rate": 0.2,
+            "unmatched_indications": 8,
+            "matched_indications": 2,
+            "unmatched_terms": [
+                "Asthma (SNOMED CT code: 123456789)",
+                "Chronic Obstructive Pulmonary Disease (COPD) (SNOMED CT code: 987654321)",
+                "Bronchospasm (SNOMED CT code: 111111111)",
+                "Acute asthma (SNOMED CT code: 333333333)",
+                "Bronchitis (SNOMED CT code: 444444444)",
+                "Cough (SNOMED CT code: 555555555)",
+                "Wheezing (SNOMED CT code: 666666666)",
+                "Asthma exacerbation (SNOMED CT code: 777777777)"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Asthma",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Bronchial asthma"
+                },
+                {
+                    "method_term": "Bronchospasm",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Exercise-induced bronchospasm"
+                },
+                {
+                    "method_term": "Hypertension",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypertension"
+                },
+                {
+                    "method_term": "Diabetes Mellitus",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Type 2 diabetes mellitus"
+                }
+            ],
+            "total_indications": 8,
+            "recovery_rate": 0.5,
+            "unmatched_indications": 4,
+            "matched_indications": 4,
+            "unmatched_terms": [
+                "Chronic Obstructive Pulmonary Disease (COPD)",
+                "Asthma Exacerbation",
+                "Migraine",
+                "Postherpetic Neuralgia"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 7,
+        "all_methods_overlap": 0,
+        "knowledge_recovery_rate": 0.2,
+        "literature_recovery_rate": 0.5,
+        "total_unique_across_all_methods": 24,
+        "unique_to_knowledge": 10
+    },
+    "drug_name": "Albuterol",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 7,
+        "terms": [
+            "Bronchial asthma",
+            "Chronic bronchitis",
+            "Reversible obstructive airway disease",
+            "Hypercholesterolemia",
+            "Hypertension",
+            "Type 2 diabetes mellitus",
+            "Exercise-induced bronchospasm"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Bronchial asthma",
+            "Type 2 diabetes mellitus",
+            "Chronic bronchitis",
+            "Exercise-induced bronchospasm",
+            "Hypercholesterolemia",
+            "Reversible obstructive airway disease"
+        ],
+        "knowledge_literature_overlap": [
+        ],
+        "drugbank_knowledge_overlap": [
+        ],
+        "all_three_overlap": [
+        ],
+        "unique_knowledge": [
+            "Bronchospasm (SNOMED CT code: 111111111)",
+            "Asthma exacerbation (SNOMED CT code: 777777777)",
+            "Chronic bronchitis (SNOMED CT code: 888888888)",
+            "Acute asthma (SNOMED CT code: 333333333)",
+            "Asthma (SNOMED CT code: 123456789)",
+            "Chronic Obstructive Pulmonary Disease (COPD) (SNOMED CT code: 987654321)",
+            "Bronchitis (SNOMED CT code: 444444444)",
+            "Exercise-induced bronchospasm (SNOMED CT code: 222222222)",
+            "Wheezing (SNOMED CT code: 666666666)",
+            "Cough (SNOMED CT code: 555555555)"
+        ],
+        "total_unique_indications": 24,
+        "unique_literature": [
+            "Migraine",
+            "Asthma Exacerbation",
+            "Postherpetic Neuralgia",
+            "Bronchospasm",
+            "Asthma",
+            "Diabetes Mellitus",
+            "Chronic Obstructive Pulmonary Disease (COPD)"
+        ],
+        "drugbank_literature_overlap": [
+            "Hypertension"
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.794"
+}

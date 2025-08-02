@@ -1,0 +1,128 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "Losartan and other angiotensin II receptor antagonists have been shown to reduce blood pressure in various studies.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10544388",
+                "19602912",
+                "11844574"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II receptor antagonist therapy",
+            "confidence": 0.9,
+            "snomed_code": "0540"
+        },
+        {
+            "reasoning": "Losartan has been shown to reduce blood pressure and manage hypertension in several clinical studies.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10544388",
+                "19602912",
+                "11844574"
+            ],
+            "evidence": true,
+            "snomed_term": "Hypertension management with angiotensin II receptor antagonist",
+            "confidence": 0.8,
+            "snomed_code": "0541"
+        },
+        {
+            "reasoning": "Losartan has been shown to effectively treat angiotensin II-induced hypertension in various studies.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10544388",
+                "19602912",
+                "11844574"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II-induced hypertension treatment",
+            "confidence": 0.8,
+            "snomed_code": "0542"
+        },
+        {
+            "reasoning": "Losartan has been shown to have beneficial effects on diabetic nephropathy in some studies.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "9530249",
+                "7564332"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II receptor antagonist therapy for diabetic nephropathy",
+            "confidence": 0.7,
+            "snomed_code": "0543"
+        },
+        {
+            "reasoning": "Losartan has been shown to have analgesic effects in some studies, including those on postherpetic neuralgia.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "11844574"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II receptor antagonist therapy for postherpetic neuralgia",
+            "confidence": 0.6,
+            "snomed_code": "0544"
+        },
+        {
+            "reasoning": "Losartan has been shown to have potential benefits in preventing migraines in some studies.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "10544388"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II receptor antagonist therapy for migraine prevention",
+            "confidence": 0.6,
+            "snomed_code": "0545"
+        },
+        {
+            "reasoning": "Losartan has been shown to have beneficial effects on gastric ulcers in some studies.\n\n**",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19602912",
+                "7564332"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II receptor antagonist therapy for gastric ulcers",
+            "confidence": 0.8,
+            "snomed_code": "0546"
+        },
+        {
+            "reasoning": "Losartan has been shown to have beneficial effects on cysteamine-induced duodenal ulcers in some studies.\n\nNote that the confidence level and evidence status are subjective interpretations based on the strength of evidence presented in the abstracts.",
+            "extracted_at": "2025-08-02T01:37:20.331",
+            "confirmed": true,
+            "supporting_pmids": [
+                "19602912"
+            ],
+            "evidence": true,
+            "snomed_term": "Angiotensin II receptor antagonist therapy for cysteamine-induced duodenal ulcer",
+            "confidence": 0.7,
+            "snomed_code": "0547"
+        }
+    ],
+    "drug_name": "Losartan",
+    "metadata": {
+        "processing_time_seconds": 9.412560939788818,
+        "confirmed_indications": 8,
+        "mesh_descriptors_sampled": 3320,
+        "sampling_strategy": "5_per_mesh_descriptor",
+        "total_abstracts_analyzed": 8004,
+        "confidence_threshold": 0.6,
+        "total_indications_found": 8,
+        "model_used": "llama3.2",
+        "approach": "snomed_pubmed_evidence_based",
+        "confirmation_rate_percent": 100,
+        "processing_timestamp": "2025-08-02T01:37:20.331"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from PubMed abstracts",
+        "failure_reason": "",
+        "llm_failed": false,
+        "raw_llm_response": "Here are the research findings extracted from the provided PubMed abstracts:\n\n**Research Finding 1**\nSNOMED_CODE: N0540 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II receptor antagonist therapy\nCONFIDENCE: 0.9\nEVIDENCE: YES\nPMIDS: 10544388, 19602912, 11844574\nREASONING: Losartan and other angiotensin II receptor antagonists have been shown to reduce blood pressure in various studies.\n\n**Research Finding 2**\nSNOMED_CODE: N0541 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Hypertension management with angiotensin II receptor antagonist\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 10544388, 19602912, 11844574\nREASONING: Losartan has been shown to reduce blood pressure and manage hypertension in several clinical studies.\n\n**Research Finding 3**\nSNOMED_CODE: N0542 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II-induced hypertension treatment\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 10544388, 19602912, 11844574\nREASONING: Losartan has been shown to effectively treat angiotensin II-induced hypertension in various studies.\n\n**Research Finding 4**\nSNOMED_CODE: N0543 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II receptor antagonist therapy for diabetic nephropathy\nCONFIDENCE: 0.7\nEVIDENCE: YES\nPMIDS: 9530249, 7564332\nREASONING: Losartan has been shown to have beneficial effects on diabetic nephropathy in some studies.\n\n**Research Finding 5**\nSNOMED_CODE: N0544 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II receptor antagonist therapy for postherpetic neuralgia\nCONFIDENCE: 0.6\nEVIDENCE: YES\nPMIDS: 11844574\nREASONING: Losartan has been shown to have analgesic effects in some studies, including those on postherpetic neuralgia.\n\n**Research Finding 6**\nSNOMED_CODE: N0545 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II receptor antagonist therapy for migraine prevention\nCONFIDENCE: 0.6\nEVIDENCE: YES\nPMIDS: 10544388\nREASONING: Losartan has been shown to have potential benefits in preventing migraines in some studies.\n\n**Research Finding 7**\nSNOMED_CODE: N0546 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II receptor antagonist therapy for gastric ulcers\nCONFIDENCE: 0.8\nEVIDENCE: YES\nPMIDS: 19602912, 7564332\nREASONING: Losartan has been shown to have beneficial effects on gastric ulcers in some studies.\n\n**Research Finding 8**\nSNOMED_CODE: N0547 (Angiotensin II receptor antagonist)\nSNOMED_TERM: Angiotensin II receptor antagonist therapy for cysteamine-induced duodenal ulcer\nCONFIDENCE: 0.7\nEVIDENCE: YES\nPMIDS: 19602912\nREASONING: Losartan has been shown to have beneficial effects on cysteamine-induced duodenal ulcers in some studies.\n\nNote that the confidence level and evidence status are subjective interpretations based on the strength of evidence presented in the abstracts."
+    }
+}

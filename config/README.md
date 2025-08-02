@@ -34,25 +34,19 @@ Contains UMLS API configuration including the API key.
    - Navigate to "My Profile" → "Edit Profile"
    - Generate an API key
 
-3. **Configure Thera**
+3. **Configure THERA-IE**
    - Update `umls_config.json` with your API key
-   - Test configuration: `julia scripts/analysis/test_umls_config.jl test`
+   - Configuration is automatically loaded by core scripts
 
 ## Usage
 
-The UMLS configuration is automatically loaded by:
-- `scripts/analysis/umls_terminology_mapper.jl`
-- `scripts/analysis/umls_overlap_analyzer.jl`
+The UMLS configuration is used by:
+- `utilities/quickumls_wrapper.py`
+- Core extraction scripts for terminology mapping
 
-## Testing
+## Configuration Template
 
-```bash
-# Test configuration
-julia scripts/analysis/test_umls_config.jl test
-
-# Create sample configuration
-julia scripts/analysis/test_umls_config.jl sample
-```
+Create `umls_config.json` in this directory with your UMLS credentials and preferred settings.
 
 ## API Key Security
 

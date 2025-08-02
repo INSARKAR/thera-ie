@@ -1,0 +1,717 @@
+MeSH to SNOMED CT Mapping Report
+Generated: 2025-07-29T19:23:08.662
+==================================================
+
+MAPPING STATISTICS:
+Total MeSH descriptors: 5628
+Direct mappings: 4042
+Hierarchical mappings: 893
+Unmapped descriptors: 693
+Overall mapping rate: 87.69%
+
+UNMAPPED DESCRIPTORS:
+Abdominal Injuries
+Abnormalities, Multiple
+Abortion, Incomplete
+Accessory Atrioventricular Bundle
+Accessory Nerve Diseases
+Accidents, Aviation
+Accommodation, Ocular
+Acquired Hyperostosis Syndrome
+Active Transport, Cell Nucleus
+Acute Pain
+Adamantinoma
+Adenocarcinoma of Lung
+Adenocarcinoma, Bronchiolo-Alveolar
+Adenocarcinoma, Follicular
+Adenoma, Liver Cell
+Adenoma, Pleomorphic
+Adenoviridae Infections
+Adrenal Insufficiency
+Adrenocortical Adenoma
+Adrenocortical Hyperfunction
+Aggression
+Aging, Premature
+Airway Remodeling
+Airway Resistance
+Alcoholism
+Amelogenesis
+Anemia, Myelophthisic
+Anetoderma
+Aneurysm, False
+Angiolymphoid Hyperplasia with Eosinophilia
+Anterior Wall Myocardial Infarction
+Anthrax
+Antibody-Dependent Cell Cytotoxicity
+Anxiety, Separation
+Aortic Dissection
+Aortic Stenosis, Subvalvular
+Aortic Valve Disease
+Ape Diseases
+Aphasia, Conduction
+Appetite
+Arterial Pressure
+Arteriovenous Malformations
+Arterivirus Infections
+Arthrogryposis
+Asymmetric Cell Division
+Atrial Function, Left
+Atrial Function, Right
+Atrophy
+Autocrine Communication
+Autoimmunity
+Autonomic Nervous System Diseases
+Autophagic Cell Death
+Axon Guidance
+Bacterial Adhesion
+Bacterial Translocation
+Balanitis Xerotica Obliterans
+Barth Syndrome
+Bartter Syndrome
+Bicuspid Aortic Valve Disease
+Bifidobacteriales Infections
+Biotransformation
+Blast Crisis
+Blister
+Blood Bactericidal Activity
+Blood Loss, Surgical
+Blood-Brain Barrier
+Bluetongue
+Body Temperature Regulation
+Bone Diseases, Metabolic
+Branchioma
+Breast Neoplasms
+Bronchial Spasm
+Bronchogenic Cyst
+Brucellosis, Bovine
+Brugada Syndrome
+Burns
+Bystander Effect
+CADASIL
+COVID-19
+Calcium Signaling
+Callosities
+Capillary Fragility
+Capsule Opacification
+Carbon Tetrachloride Poisoning
+Carcinoma, Basal Cell
+Carcinoma, Brown-Pearce
+Carcinoma, Ductal, Breast
+Carcinoma, Hepatocellular
+Carcinoma, Islet Cell
+Carcinoma, Papillary, Follicular
+Cardiac Conduction System Disease
+Carotid Body Tumor
+Carrier State
+Case Reports as Topic
+Castleman Disease
+Catastrophic Illness
+Cell Compartmentation
+Cell Competition
+Cell Cycle Checkpoints
+Cell Death
+Cell Death Reversal
+Cell Dedifferentiation
+Cell Degranulation
+Cell Differentiation
+Cell Enlargement
+Cell Fusion
+Cell Growth Processes
+Cell Hypoxia
+Cell Nucleus Division
+Cell Physiological Phenomena
+Cell Plasticity
+Cell Proliferation
+Cell Self Renewal
+Cell Survival
+Cell Transdifferentiation
+Cellular Reprogramming
+Central Nervous System Diseases
+Central Tolerance
+Cerebral Hemorrhage, Traumatic
+Chalazion
+Chancre
+Chaperone-Mediated Autophagy
+Chemoautotrophic Growth
+Chondrocalcinosis
+Choristoma
+Chromosome Disorders
+Chromosome Duplication
+Chromosome Fragility
+Chromosome Positioning
+Chromothripsis
+Churg-Strauss Syndrome
+Circadian Clocks
+Cleft Lip
+Clubfoot
+Cogan Syndrome
+Cognitive Dysfunction
+Colic
+Coloboma
+Coma
+Combat Disorders
+Communication Disorders
+Compulsive Behavior
+Constriction, Pathologic
+Contact Inhibition
+Contraindications
+Corneal Injuries
+Coronary Disease
+Coronary Vasospasm
+Costello Syndrome
+Coxa Vara
+Creutzfeldt-Jakob Syndrome
+Cryptogenic Organizing Pneumonia
+DNA Breaks, Double-Stranded
+DNA Breaks, Single-Stranded
+Dandruff
+Darier Disease
+De Lange Syndrome
+Death
+Delay Discounting
+Delusional Parasitosis
+Dengue
+Dental Enamel Permeability
+Dentin Permeability
+Dentinogenesis
+Dentofacial Deformities
+Depression
+Depression, Chemical
+Desmoid Tumors
+Diabetes Complications
+Diabetes Insipidus, Neurogenic
+Diabetes Mellitus, Type 1
+Diabetes Mellitus, Type 2
+Diabetic Coma
+Diapause, Insect
+Diastema
+Dietary Exposure
+Digestive System Abnormalities
+Digestive System Diseases
+Dilatation, Pathologic
+Diphtheria
+Disease Transmission, Infectious
+Diseases in Twins
+Distal Myopathies
+Disulfidptosis
+Diverticulosis, Colonic
+Diverticulum, Colon
+Drinking
+Drug Hypersensitivity
+Drug-Related Side Effects and Adverse Reactions
+Dry Socket
+Dust Mite Allergy
+Dysentery, Amebic
+Dyskinesias
+Dystonic Disorders
+Early Warning Score
+Ectodermal Dysplasia 1, Anhidrotic
+Eczema, Dyshidrotic
+Edema Disease of Swine
+Egg Hypersensitivity
+Elder Nutritional Physiological Phenomena
+Electric Injuries
+Embolism, Fat
+Embryo Implantation
+Embryonic Induction
+Emphysema
+Empyema, Subdural
+Encephalitis, Herpes Simplex
+Encephalocele
+Encopresis
+Endodermal Sinus Tumor
+Endoplasmic Reticulum Stress
+Endothelial-Mesenchymal Transition
+Entosis
+Epidermal Cyst
+Epithelial-Mesenchymal Transition
+Erysipeloid
+Erythrocyte Aggregation
+Esophageal Spasm, Diffuse
+Esophageal Squamous Cell Carcinoma
+Esthesioneuroblastoma, Olfactory
+Euphoria
+Evoked Potentials, Auditory, Brain Stem
+Evoked Potentials, Visual
+Exhalation
+Exocytosis
+Extranodal Extension
+Eye Diseases
+Factor V Deficiency
+Factor XI Deficiency
+Factor XIII Deficiency
+Fasciculation
+Ferroptosis
+Fetofetal Transfusion
+Fibrous Dysplasia of Bone
+Fissure in Ano
+Fistula
+Fluorosis, Dental
+Food Deprivation
+Food Hypersensitivity
+Food Intolerance
+Forced Expiratory Volume
+Fractional Flow Reserve, Myocardial
+Fractures, Bone
+Fractures, Cartilage
+Fractures, Spontaneous
+Freemartinism
+Fructose Intolerance
+Fucosidosis
+Funnel Chest
+G1 Phase Cell Cycle Checkpoints
+G2 Phase Cell Cycle Checkpoints
+Gallbladder Diseases
+Gallbladder Emptying
+Gamma Rhythm
+Ganglion Cysts
+Gastric Absorption
+Gastroesophageal Reflux
+Gastrointestinal Transit
+Genu Valgum
+Giant Cell Tumor of Tendon Sheath
+Glomerulosclerosis, Focal Segmental
+Glossopharyngeal Nerve Diseases
+Glucose Intolerance
+Glucosephosphate Dehydrogenase Deficiency
+Glycosuria, Renal
+Goat Diseases
+Graft Survival
+Growth and Development
+Haemonchiasis
+Hand-Foot Syndrome
+Haploinsufficiency
+Hearing Loss
+Hearing Loss, Sensorineural
+Heart Arrest
+Heart Rupture
+Heart Septal Defects
+Heart Septal Defects, Atrial
+Heart Septal Defects, Ventricular
+Heavy Metal Poisoning
+Hemadsorption
+Hemangioma, Capillary
+Hematocele
+Hematologic Diseases
+Hematometra
+Hematopoiesis, Extramedullary
+Hemobilia
+Hemolysis
+Hemostasis
+Hemostatic Disorders
+Hepatitis D
+Hepatitis, Autoimmune
+Hepatobiliary Elimination
+Hernia, Abdominal
+Herpes Genitalis
+Herpes Simplex
+Herpes Zoster
+Hip Dysplasia, Canine
+Histiocytosis, Sinus
+Hormesis
+Hot Flashes
+Hyaline Fibromatosis Syndrome
+Hyper-IgM Immunodeficiency Syndrome
+Hyperammonemia
+Hyperekplexia
+Hyperhidrosis
+Hyperkinesis
+Hyperlipoproteinemia Type II
+Hyperphosphatemia
+Hypertelorism
+Hypertension
+Hypertension, Pregnancy-Induced
+Hypoglossal Nerve Diseases
+Hypopigmentation
+Hypothermia
+Ichthyosis, Lamellar
+Idiopathic Hypersomnia
+IgA Deficiency
+IgA Vasculitis
+IgG Deficiency
+Immune Reconstitution
+Immune System Exhaustion
+Immunoblastic Lymphadenopathy
+Immunogenic Cell Death
+Immunoglobulin Light-chain Amyloidosis
+Inactivation, Metabolic
+Incest
+Incontinentia Pigmenti
+Infant Nutritional Physiological Phenomena
+Infant, Newborn, Diseases
+Infectious Disease Transmission, Patient-to-Professional
+Infectious Disease Transmission, Professional-to-Patient
+Infectious Disease Transmission, Vertical
+Inflammatory Breast Neoplasms
+Influenza, Human
+Infratentorial Neoplasms
+Inhalation
+Inhalation Exposure
+Intestinal Elimination
+Intraabdominal Infections
+Intraocular Pressure
+Ischemic Contracture
+Jaundice
+Jaw, Edentulous, Partially
+Job Syndrome
+Joint Diseases
+Joint Dislocations
+Ketosis
+Klatskin Tumor
+Korsakoff Syndrome
+Kyphosis
+Labor, Obstetric
+Labyrinth Diseases
+Lameness, Animal
+Laryngismus
+Laryngocele
+Latex Hypersensitivity
+Lead Poisoning, Nervous System, Adult
+Lead Poisoning, Nervous System, Childhood
+Lecithin Cholesterol Acyltransferase Deficiency
+Legg-Calve-Perthes Disease
+Leiomyoma
+Leukemia L1210
+Leukemia L5178
+Leukemia P388
+Leukemia, Lymphocytic, Chronic, B-Cell
+Leukemia, Megakaryoblastic, Acute
+Leukemia, Myelogenous, Chronic, BCR-ABL Positive
+Leukemia, Myeloid, Acute
+Leukocyte Rolling
+Lipidoses
+Lipodystrophy, Congenital Generalized
+Livedoid Vasculopathy
+Liver Circulation
+Liver Cirrhosis, Biliary
+Long-Term Potentiation
+Long-Term Synaptic Depression
+Lupus Erythematosus, Discoid
+Lymphoma, B-Cell, Marginal Zone
+Lymphoma, Large-Cell, Anaplastic
+Lymphopoiesis
+Lynch Syndrome II
+Macroautophagy
+Macular Edema
+Malignant Catarrh
+Malignant Hyperthermia
+Malocclusion, Angle Class I
+Malocclusion, Angle Class III
+Mammary Neoplasms, Animal
+Mammary Neoplasms, Experimental
+Mania
+Mastication
+Mastitis, Bovine
+Mastocytoma
+Maternal Exposure
+Maternal Nutritional Physiological Phenomena
+Megalencephaly
+Meibomitis
+Melanoma, Cutaneous Malignant
+Membrane Potential, Mitochondrial
+Meningocele
+Mesenteric Ischemia
+Metabolic Detoxication, Phase I
+Metabolic Detoxication, Phase II
+Metabolic Syndrome
+Microautophagy
+Microsatellite Instability
+Microscopic Polyangiitis
+Microsporidiosis
+Microtrauma, Physical
+Microvascular Rarefaction
+Migraine without Aura
+Milk Hypersensitivity
+Miniature Postsynaptic Potentials
+Miosis
+Mitochondrial Transmembrane Permeability-Driven Necrosis
+Mitochondrial Turnover
+Mitophagy
+Mitral Valve Prolapse
+Mixed Tumor, Mesodermal
+Motor Skills
+Mpox, Monkeypox
+Mucocele
+Mucositis
+Muscle Neoplasms
+Muscle Relaxation
+Muscular Diseases
+Musculoskeletal Abnormalities
+Myeloproliferative Disorders
+Myotonia
+Narcotic-Related Disorders
+Nasal Absorption
+Nasal Obstruction
+Nasal Septal Perforation
+Necroptosis
+Neglected Diseases
+Neonatal Sepsis
+Neoplasm Seeding
+Neoplasms, Adipose Tissue
+Nerve Sheath Neoplasms
+Nervous System Diseases
+Nervous System Malformations
+Neural Conduction
+Neurodegenerative Diseases
+Neurofibrillary Tangles
+Neuronal Outgrowth
+Neurovascular Coupling
+Nevus, Pigmented
+Nevus, Sebaceous of Jadassohn
+Night Blindness
+Nitrogen Fixation
+Nitrosative Stress
+Nocturnal Enuresis
+Nystagmus, Pathologic
+Nystagmus, Physiologic
+OEIS Complex
+Ocular Absorption
+Oculomotor Nerve Diseases
+Oncogene Fusion
+Ophthalmia Neonatorum
+Optic Atrophy, Autosomal Dominant
+Optic Nerve Diseases
+Oral Mucosal Absorption
+Organ Specificity
+Ornithine Carbamoyltransferase Deficiency Disease
+Osseointegration
+Osteoarthritis
+Osteochondroma
+Osteomalacia
+Osteonecrosis
+Osteopoikilosis
+Osteosarcoma, Juxtacortical
+Ostertagiasis
+Otitis
+Oviparity
+Oviposition
+Ovoviviparity
+Pallor
+Pancreatitis, Acute Necrotizing
+Pantothenate Kinase-Associated Neurodegeneration
+Papillomavirus Infections
+Paracrine Communication
+Paranasal Sinus Diseases
+Paranoid Disorders
+Paraphilic Disorders
+Paraptosis
+Parasympathomimetics
+Paronychia
+Parthanatos
+Parthenogenesis
+Parturient Paresis
+Parturition
+Parvoviridae Infections
+Paternal Exposure
+Peak Expiratory Flow Rate
+Peanut Hypersensitivity
+Pectus Carinatum
+Penile Induration
+Periapical Abscess
+Peripheral Tolerance
+Peritoneal Absorption
+Peste-des-Petits-Ruminants
+Phantom Limb
+Phobic Disorders
+Phosphenes
+Phototaxis
+Phytoplasma Disease
+Pica
+Pilonidal Sinus
+Pinealoma
+Pituitary ACTH Hypersecretion
+Placenta Diseases
+Placental Circulation
+Plant Breeding
+Plant Necrosis and Chlorosis
+Plant Root Nodulation
+Plant Senescence
+Plant Tumors
+Pleasure
+Pleural Effusion
+Pneumonia, Pneumococcal
+Pneumonia, Pneumocystis
+Polycystic Kidney, Autosomal Recessive
+Polymorphic Catecholaminergic Ventricular Tachycardia
+Porphyria, Erythropoietic
+Post-Lyme Disease Syndrome
+Postoperative Cognitive Complications
+Pre-Excitation Syndromes
+Pre-Excitation, Mahaim-Type
+Prediabetic State
+Pressure Ulcer
+Primary Dysautonomias
+Primary Immunodeficiency Diseases
+Primary Ovarian Insufficiency
+Prolapse
+Pseudopregnancy
+Psychogenic Nonepileptic Seizures
+Psychological Trauma
+Pterygium
+Pulmonary Atelectasis
+Pulmonary Atresia
+Pulmonary Circulation
+Pulmonary Diffusing Capacity
+Pulmonary Disease, Chronic Obstructive
+Pulmonary Elimination
+Pulmonary Heart Disease
+Pulmonary Subvalvular Stenosis
+Pulmonary Veno-Occlusive Disease
+Pulse
+Purpura, Thrombocytopenic, Idiopathic
+Pyelectasis
+Quorum Sensing
+Rabies
+Radiation Fibrosis Syndrome
+Radiodermatitis
+Ranula
+Recovery of Function
+Rectal Absorption
+Reflex
+Reflex, Pupillary
+Regional Blood Flow
+Reinjuries
+Renal Blood Flow, Effective
+Renal Insufficiency, Chronic
+Respiratory Physiological Phenomena
+Respiratory System Abnormalities
+Respiratory Tract Absorption
+Rheumatic Diseases
+Rhinitis, Allergic
+Rhinitis, Allergic, Seasonal
+Rumination, Digestive
+S Phase Cell Cycle Checkpoints
+ST Elevation Myocardial Infarction
+Sadness
+Salivary Elimination
+Salivary Gland Calculi
+Salivation
+Sarcoma 37
+Sarcoma, Clear Cell
+Sarcoma, Yoshida
+Scabies
+Schistosomiasis haematobia
+Schizotypal Personality Disorder
+Scoliosis
+Seizures, Febrile
+Senescence-Associated Secretory Phenotype
+Sensation
+Septate Uterus
+Sertoli Cell-Only Syndrome
+Sex Cord-Gonadal Stromal Tumors
+Sexual Arousal
+Sexual Dysfunction, Physiological
+Sexual Dysfunctions, Psychological
+Shellfish Hypersensitivity
+Shift Work Schedule
+Shwachman-Diamond Syndrome
+Sialic Acid Storage Disease
+Skin Abnormalities
+Skin Diseases
+Sleep Latency
+Sleepiness
+Smell
+Smoldering Multiple Myeloma
+Solitary Kidney
+Spasms, Infantile
+Spinal Cord Regeneration
+Spinal Curvatures
+Spinal Dysraphism
+Splanchnic Circulation
+Sports Nutritional Physiological Phenomena
+Stomach Ulcer
+Striae Distensae
+Stroke
+Subcutaneous Absorption
+Substance Abuse, Intravenous
+Substance Abuse, Oral
+Sudden Infant Death
+Synostosis
+T-Cell Exhaustion
+Tachycardia, Sinoatrial Nodal Reentry
+Taste
+Telomere Homeostasis
+Tension-Type Headache
+Th1-Th2 Balance
+Thyroid Cancer, Papillary
+Tick Bites
+Tics
+Tissue Survival
+Tooth Eruption
+Tooth Exfoliation
+Tooth Permeability
+Touch
+Tourette Syndrome
+Toxemia
+Transcellular Cell Migration
+Transient Tachypnea of the Newborn
+Trichuriasis
+Trigeminal Nerve Diseases
+Trinucleotide Repeat Expansion
+Triploidy
+Trogocytosis
+Tumor Hypoxia
+Tungiasis
+Twinning, Monozygotic
+Tyrosinemias
+Ultrafiltration
+Unconsciousness
+Undiagnosed Diseases
+Univentricular Heart
+Up-Regulation
+Ureaplasma Infections
+Ureteral Diseases
+Urethral Stricture
+Urinary Bladder Calculi
+Urinary Bladder Neck Obstruction
+Urinary Bladder Neoplasms
+Urinary Bladder, Overactive
+Urinary Fistula
+Urinary Incontinence, Urge
+Urinary Tract Physiological Phenomena
+Urogenital Neoplasms
+Uterine Cervical Diseases
+Uterine Cervical Dysplasia
+Uterine Cervical Erosion
+Uterine Inversion
+Vaginal Absorption
+Vaginismus
+Vagus Nerve Diseases
+Varicose Veins
+Vascular Capacitance
+Vascular Malformations
+Vasoconstriction
+Venereal Tumors, Veterinary
+Venous Pressure
+Ventricular Premature Complexes
+Ventricular Pressure
+Ventricular Remodeling
+Vestibular Evoked Myogenic Potentials
+Virilism
+Virus Activation
+Virus Latency
+Virus Replication
+Vision, Ocular
+Viviparity, Nonmammalian
+Walker-Warburg Syndrome
+Warburg Effect, Oncologic
+Weight-Bearing
+Wet Macular Degeneration
+Whooping Cough
+Wilms Tumor
+X-Linked Intellectual Disability
+Yellow Nail Syndrome
+Zygomatic Fractures
+von Hippel-Lindau Disease
+
+SAMPLE MAPPINGS:
+Crush Injuries → 125665001 | Crushing injury (direct)
+Specific Learning Disorder → 27206009 | Agraphia (hierarchical)
+Nutrition Disorders → 2492009 | Nutritional disorder (direct)
+Tympanic Membrane Perforation → 60442001 | Perforation of tympanic membrane (direct)
+Heavy Metal Poisoning, Nervous System → 767146004 | Toxic effect of arsenic and/or arsenic compound (hierarchical)
+Osteoma → 302858007 | Osteoma (direct)
+Tuberculosis → 56717001 | Tuberculosis (direct)
+Infant Death → 240297000 | Infant death (direct)
+Coffin-Lowry Syndrome → 15182000 | Coffin-Lowry syndrome (direct)
+Mucolipidoses → 70528007 | Mucolipidosis (direct)

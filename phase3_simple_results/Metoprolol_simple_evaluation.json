@@ -1,0 +1,92 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Angina pectoris (SNOMED CT 987654)",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Angina pectoris"
+                }
+            ],
+            "total_indications": 8,
+            "recovery_rate": 0.125,
+            "unmatched_indications": 7,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Hypertension (SNOMED CT 123456)",
+                "Myocardial infarction (SNOMED CT 543210)",
+                "Postherpetic neuralgia (SNOMED CT 111234)",
+                "Atrial fibrillation (SNOMED CT 222334)",
+                "Heart failure (SNOMED CT 333445)",
+                "Hypertensive emergencies (SNOMED CT 444567)",
+                "Coronary artery disease (SNOMED CT 555678)"
+            ]
+        },
+        "literature": {
+            "matches": [
+            ],
+            "total_indications": 6,
+            "recovery_rate": 0,
+            "unmatched_indications": 6,
+            "matched_indications": 0,
+            "unmatched_terms": [
+                "Hyperlipidemia",
+                "Hypertension",
+                "Diabetes mellitus",
+                "Postherpetic neuralgia",
+                "Migraine",
+                "Chronic heart failure"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 6,
+        "all_methods_overlap": 0,
+        "knowledge_recovery_rate": 0.125,
+        "literature_recovery_rate": 0,
+        "total_unique_across_all_methods": 15,
+        "unique_to_knowledge": 8
+    },
+    "drug_name": "Metoprolol",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 1,
+        "terms": [
+            "Angina pectoris"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Angina pectoris"
+        ],
+        "knowledge_literature_overlap": [
+        ],
+        "drugbank_knowledge_overlap": [
+        ],
+        "all_three_overlap": [
+        ],
+        "unique_knowledge": [
+            "Hypertension (SNOMED CT 123456)",
+            "Myocardial infarction (SNOMED CT 543210)",
+            "Heart failure (SNOMED CT 333445)",
+            "Postherpetic neuralgia (SNOMED CT 111234)",
+            "Coronary artery disease (SNOMED CT 555678)",
+            "Hypertensive emergencies (SNOMED CT 444567)",
+            "Atrial fibrillation (SNOMED CT 222334)",
+            "Angina pectoris (SNOMED CT 987654)"
+        ],
+        "total_unique_indications": 15,
+        "unique_literature": [
+            "Hypertension",
+            "Hyperlipidemia",
+            "Migraine",
+            "Postherpetic neuralgia",
+            "Chronic heart failure",
+            "Diabetes mellitus"
+        ],
+        "drugbank_literature_overlap": [
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:11:54.310"
+}

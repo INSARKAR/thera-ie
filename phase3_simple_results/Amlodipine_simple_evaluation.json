@@ -1,0 +1,110 @@
+{
+    "method_evaluation": {
+        "knowledge": {
+            "matches": [
+                {
+                    "method_term": "Hypertension",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypertension"
+                }
+            ],
+            "total_indications": 6,
+            "recovery_rate": 0.16666666666666666,
+            "unmatched_indications": 5,
+            "matched_indications": 1,
+            "unmatched_terms": [
+                "Angina pectoris",
+                "Diabetic foot ulcers",
+                "Postherpetic neuralgia",
+                "Hypertriglyceridemia",
+                "Ischemic heart disease"
+            ]
+        },
+        "literature": {
+            "matches": [
+                {
+                    "method_term": "Hypertension",
+                    "match_type": "exact",
+                    "confidence": 1,
+                    "drugbank_term": "Hypertension"
+                },
+                {
+                    "method_term": "Diabetes mellitus",
+                    "match_type": "contains",
+                    "confidence": 0.8,
+                    "drugbank_term": "Type 2 diabetes mellitus"
+                }
+            ],
+            "total_indications": 7,
+            "recovery_rate": 0.2857142857142857,
+            "unmatched_indications": 5,
+            "matched_indications": 2,
+            "unmatched_terms": [
+                "Postherpetic neuralgia",
+                "Migraine",
+                "Contrast-induced nephropathy",
+                "Renal disease",
+                "Angiotensin II type I receptor blockers"
+            ]
+        }
+    },
+    "summary": {
+        "unique_to_literature": 5,
+        "all_methods_overlap": 1,
+        "knowledge_recovery_rate": 0.16666666666666666,
+        "literature_recovery_rate": 0.2857142857142857,
+        "total_unique_across_all_methods": 16,
+        "unique_to_knowledge": 4
+    },
+    "drug_name": "Amlodipine",
+    "evaluation_method": "simple_string_matching",
+    "drugbank_ground_truth": {
+        "count": 6,
+        "terms": [
+            "Hypertension",
+            "Coronary artery disease",
+            "Chronic stable angina",
+            "Vasospastic angina (Prinzmetal’s or Variant angina)",
+            "Angiographically documented coronary artery disease in patients without heart failure or an ejection fraction < 40%",
+            "Type 2 diabetes mellitus"
+        ]
+    },
+    "unique_indications_analysis": {
+        "unique_drugbank": [
+            "Chronic stable angina",
+            "Angiographically documented coronary artery disease in patients without heart failure or an ejection fraction < 40%",
+            "Coronary artery disease",
+            "Vasospastic angina (Prinzmetal’s or Variant angina)",
+            "Type 2 diabetes mellitus"
+        ],
+        "knowledge_literature_overlap": [
+            "Hypertension",
+            "Postherpetic neuralgia"
+        ],
+        "drugbank_knowledge_overlap": [
+            "Hypertension"
+        ],
+        "all_three_overlap": [
+            "Hypertension"
+        ],
+        "unique_knowledge": [
+            "Ischemic heart disease",
+            "Angina pectoris",
+            "Hypertriglyceridemia",
+            "Diabetic foot ulcers"
+        ],
+        "total_unique_indications": 16,
+        "unique_literature": [
+            "Contrast-induced nephropathy",
+            "Migraine",
+            "Angiotensin II type I receptor blockers",
+            "Diabetes mellitus",
+            "Renal disease"
+        ],
+        "drugbank_literature_overlap": [
+            "Hypertension"
+        ]
+    },
+    "evaluation_date": "2025-08-02T03:01:30.778"
+}

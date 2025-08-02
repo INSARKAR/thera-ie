@@ -1,0 +1,8 @@
+{
+    "drug_name": "Omeprazole",
+    "drugbank_name": "Omeprazole",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Omeprazole, according to the FDA label [FDA label] is a proton pump inhibitor (PPI) used for the following purposes: • Treatment of active duodenal ulcer in adults • Eradication of Helicobacter pylori to reduce the risk of duodenal ulcer recurrence in adults • Treatment of active benign gastric ulcer in adults • Reduction of risk of upper gastrointestinal (GI) bleeding in critically ill adult patients. • Treatment of symptomatic gastroesophageal reflux disease (GERD) in patients 1 year of age and older • Treatment of erosive esophagitis (EE) due to acid-mediated GERD in patients 1 month of age and older • Maintenance of healing of EE due to acid-mediated GERD in patients 1 year of age and older • Pathologic hypersecretory conditions in adults",
+    "extraction_timestamp": "2025-08-01T16:09:25.235",
+    "extraction_method": "drugbank_focused"
+}

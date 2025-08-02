@@ -1,0 +1,65 @@
+THERA-IE Phase 3: Simple String-Based Evaluation Summary
+============================================================
+Generated: 2025-08-02T03:12:07.346
+
+OVERALL STATISTICS:
+- Total drugs evaluated: 10
+- Average knowledge recovery rate: 17.4%
+- Average literature recovery rate: 23.8%
+- Best knowledge method drug: Atorvastatin
+- Best literature method drug: Albuterol
+- Total unique knowledge indications: 50
+- Total unique literature indications: 54
+- Total overlapping (all methods): 3
+
+PER-DRUG RESULTS:
+Albuterol:
+  Knowledge: 20.0% recovery, 10 unique
+  Literature: 50.0% recovery, 7 unique
+  All methods overlap: 0
+
+Amlodipine:
+  Knowledge: 16.7% recovery, 4 unique
+  Literature: 28.6% recovery, 5 unique
+  All methods overlap: 1
+
+Atorvastatin:
+  Knowledge: 50.0% recovery, 2 unique
+  Literature: 28.6% recovery, 5 unique
+  All methods overlap: 0
+
+Gabapentin:
+  Knowledge: 0.0% recovery, 1 unique
+  Literature: 14.3% recovery, 6 unique
+  All methods overlap: 0
+
+Levothyroxine:
+  Knowledge: 12.5% recovery, 6 unique
+  Literature: 14.3% recovery, 5 unique
+  All methods overlap: 1
+
+Lisinopril:
+  Knowledge: 12.5% recovery, 5 unique
+  Literature: 20.0% recovery, 2 unique
+  All methods overlap: 1
+
+Losartan:
+  Knowledge: 16.7% recovery, 5 unique
+  Literature: 25.0% recovery, 8 unique
+  All methods overlap: 0
+
+Metformin:
+  Knowledge: 0.0% recovery, 6 unique
+  Literature: 28.6% recovery, 7 unique
+  All methods overlap: 0
+
+Metoprolol:
+  Knowledge: 12.5% recovery, 8 unique
+  Literature: 0.0% recovery, 6 unique
+  All methods overlap: 0
+
+Omeprazole:
+  Knowledge: 33.3% recovery, 3 unique
+  Literature: 28.6% recovery, 3 unique
+  All methods overlap: 0
+

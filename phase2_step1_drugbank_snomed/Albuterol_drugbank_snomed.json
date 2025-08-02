@@ -1,0 +1,95 @@
+{
+    "snomed_indications": [
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma...\"",
+            "extracted_at": "2025-08-02T00:34:51.509",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Bronchial asthma",
+            "confidence": 0.9,
+            "snomed_code": "123456789"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis...\"",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Chronic bronchitis",
+            "confidence": 0.9,
+            "snomed_code": "234567890"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease...\"",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Reversible obstructive airway disease",
+            "confidence": 0.9,
+            "snomed_code": "345678901"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor...\"",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypercholesterolemia",
+            "confidence": 0.7,
+            "snomed_code": "456789012"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm in patients with hypertension...\"",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Hypertension",
+            "confidence": 0.7,
+            "snomed_code": "567890123"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm in patients with type 2 diabetes mellitus...\"",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Type 2 diabetes mellitus",
+            "confidence": 0.7,
+            "snomed_code": "678901234"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm...\"",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": true,
+            "evidence": true,
+            "snomed_term": "Exercise-induced bronchospasm",
+            "confidence": 0.7,
+            "snomed_code": "789012345"
+        },
+        {
+            "reasoning": "\"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm.\"\n\nNote: The confidence scores are based on how clearly stated each medical condition is in the text.",
+            "extracted_at": "2025-08-02T00:34:51.519",
+            "confirmed": false,
+            "evidence": false,
+            "snomed_term": "Major depressive disorder",
+            "confidence": 0.5,
+            "snomed_code": "890123456"
+        }
+    ],
+    "drug_name": "Albuterol",
+    "metadata": {
+        "total_indications_found": 8,
+        "approach": "drugbank_snomed_extraction",
+        "model_used": "llama3.2",
+        "confirmation_rate_percent": 87.5,
+        "processing_time_seconds": 8.851181983947754,
+        "confidence_threshold": 0.6,
+        "confirmed_indications": 7,
+        "original_indication_text": "Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which bronchospasm is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm.[Label,F3265,F3268]",
+        "processing_timestamp": "2025-08-02T00:34:51.519 (reparsed)"
+    },
+    "debug_info": {
+        "processing_notes": "Successful SNOMED CT extraction from DrugBank text (reparsed with fixed logic)",
+        "failure_reason": "",
+        "indication_text_length": 401,
+        "llm_failed": false,
+        "raw_llm_response": "Research Finding N:\nSNOMED_CODE: 123456789\nSNOMED_TERM: Bronchial asthma\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma...\"\n\nResearch Finding N:\nSNOMED_CODE: 234567890\nSNOMED_TERM: Chronic bronchitis\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis...\"\n\nResearch Finding N:\nSNOMED_CODE: 345678901\nSNOMED_TERM: Reversible obstructive airway disease\nCONFIDENCE: 0.9\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease...\"\n\nResearch Finding N:\nSNOMED_CODE: 456789012\nSNOMED_TERM: Hypercholesterolemia\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor...\"\n\nResearch Finding N:\nSNOMED_CODE: 567890123\nSNOMED_TERM: Hypertension\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm in patients with hypertension...\"\n\nResearch Finding N:\nSNOMED_CODE: 678901234\nSNOMED_TERM: Type 2 diabetes mellitus\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm in patients with type 2 diabetes mellitus...\"\n\nResearch Finding N:\nSNOMED_CODE: 789012345\nSNOMED_TERM: Exercise-induced bronchospasm\nCONFIDENCE: 0.7\nEVIDENCE: YES\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm...\"\n\nResearch Finding N:\nSNOMED_CODE: 890123456\nSNOMED_TERM: Major depressive disorder\nCONFIDENCE: 0.5\nEVIDENCE: NO\nREASONING: \"Salbutamol is indicated for (i) the symptomatic relief and prevention of bronchospasm due to bronchial asthma, chronic bronchitis, reversible obstructive airway disease, and other chronic bronchopulmonary disorders in which hypercholesterolemia is a complicating factor, and/or (ii) the acute prophylaxis against exercise-induced bronchospasm and other stimuli known to induce bronchospasm.\"\n\nNote: The confidence scores are based on how clearly stated each medical condition is in the text."
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "drugs_analyzed": 10,
+    "total_publications_found": 97963,
+    "analysis_date": "2025-08-02T03:21:49.453",
+    "total_publications_retrieved": 73736,
+    "drug_names": [
+        "Albuterol",
+        "Amlodipine",
+        "Atorvastatin",
+        "Gabapentin",
+        "Levothyroxine",
+        "Lisinopril",
+        "Losartan",
+        "Metformin",
+        "Metoprolol",
+        "Omeprazole"
+    ],
+    "filled_paragraph": "The systematic search strategy across 10 target drugs yielded a substantial corpus of biomedical literature for analysis. PubMed queries based on drug name and MeSH term co-occurrence identified a total of 97,963 publications. After applying filtering criteria requiring disease/condition MeSH descriptors with therapeutic use qualifiers, 73,736 publications were retained for processing, representing 75.3% of the initial retrieval set. The filtered corpus provided comprehensive coverage across diverse therapeutic areas, with individual drug datasets ranging from 2,873 to 9,990 publications per drug (mean: 7374.0 ± 2759.0). Publications were distributed across 9,712 distinct disease/condition MeSH descriptor categories, enabling systematic evaluation of therapeutic relationships across multiple medical specialties. The temporal distribution of retrieved articles showed 39.7% published within the last 10 years, ensuring contemporary clinical relevance while maintaining historical therapeutic knowledge coverage. This literature corpus served as the foundation for both the traditional MeSH-based analysis and the novel LLM-based indication extraction approaches, providing a robust dataset for comparative evaluation of therapeutic knowledge discovery methodologies.\n",
+    "per_drug_statistics": {
+        "individual_counts": [
+            3032,
+            6182,
+            9990,
+            8242,
+            5899,
+            2873,
+            9890,
+            9964,
+            8162,
+            9502
+        ],
+        "maximum_publications": 9990,
+        "minimum_publications": 2873,
+        "mean_publications": 7373.6,
+        "std_publications": 2758.6835910549
+    },
+    "mesh_statistics": {
+        "total_unique_descriptors": 9712
+    },
+    "temporal_statistics": {
+        "recent_publications": 6486,
+        "recent_percentage": 39.703721841332026,
+        "total_with_dates": 16336
+    },
+    "retention_rate_percent": 75.26923430274695
+}

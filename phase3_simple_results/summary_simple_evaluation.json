@@ -1,0 +1,1165 @@
+{
+    "overall_statistics": {
+        "avg_literature_recovery": 0.23785714285714282,
+        "best_knowledge_drug": "Atorvastatin",
+        "best_literature_drug": "Albuterol",
+        "total_drugs_evaluated": 10,
+        "total_unique_literature": 54,
+        "total_unique_knowledge": 50,
+        "avg_knowledge_recovery": 0.17416666666666666,
+        "total_overlapping_all_methods": 3
+    },
+    "evaluation_method": "simple_string_matching",
+    "evaluation_date": "2025-08-02T03:12:05.784",
+    "per_drug_summary": [
+        {
+            "literature_recovery": 0.5,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0.2,
+            "unique_knowledge": 10,
+            "drug": "Albuterol",
+            "unique_literature": 7
+        },
+        {
+            "literature_recovery": 0.2857142857142857,
+            "overlap_all_methods": 1,
+            "knowledge_recovery": 0.16666666666666666,
+            "unique_knowledge": 4,
+            "drug": "Amlodipine",
+            "unique_literature": 5
+        },
+        {
+            "literature_recovery": 0.2857142857142857,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0.5,
+            "unique_knowledge": 2,
+            "drug": "Atorvastatin",
+            "unique_literature": 5
+        },
+        {
+            "literature_recovery": 0.14285714285714285,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0,
+            "unique_knowledge": 1,
+            "drug": "Gabapentin",
+            "unique_literature": 6
+        },
+        {
+            "literature_recovery": 0.14285714285714285,
+            "overlap_all_methods": 1,
+            "knowledge_recovery": 0.125,
+            "unique_knowledge": 6,
+            "drug": "Levothyroxine",
+            "unique_literature": 5
+        },
+        {
+            "literature_recovery": 0.2,
+            "overlap_all_methods": 1,
+            "knowledge_recovery": 0.125,
+            "unique_knowledge": 5,
+            "drug": "Lisinopril",
+            "unique_literature": 2
+        },
+        {
+            "literature_recovery": 0.25,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0.16666666666666666,
+            "unique_knowledge": 5,
+            "drug": "Losartan",
+            "unique_literature": 8
+        },
+        {
+            "literature_recovery": 0.2857142857142857,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0,
+            "unique_knowledge": 6,
+            "drug": "Metformin",
+            "unique_literature": 7
+        },
+        {
+            "literature_recovery": 0,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0.125,
+            "unique_knowledge": 8,
+            "drug": "Metoprolol",
+            "unique_literature": 6
+        },
+        {
+            "literature_recovery": 0.2857142857142857,
+            "overlap_all_methods": 0,
+            "knowledge_recovery": 0.3333333333333333,
+            "unique_knowledge": 3,
+            "drug": "Omeprazole",
+            "unique_literature": 3
+        }
+    ],
+    "detailed_results": [
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Exercise-induced bronchospasm (SNOMED CT code: 222222222)",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Exercise-induced bronchospasm"
+                        },
+                        {
+                            "method_term": "Chronic bronchitis (SNOMED CT code: 888888888)",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Chronic bronchitis"
+                        }
+                    ],
+                    "total_indications": 10,
+                    "recovery_rate": 0.2,
+                    "unmatched_indications": 8,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Asthma (SNOMED CT code: 123456789)",
+                        "Chronic Obstructive Pulmonary Disease (COPD) (SNOMED CT code: 987654321)",
+                        "Bronchospasm (SNOMED CT code: 111111111)",
+                        "Acute asthma (SNOMED CT code: 333333333)",
+                        "Bronchitis (SNOMED CT code: 444444444)",
+                        "Cough (SNOMED CT code: 555555555)",
+                        "Wheezing (SNOMED CT code: 666666666)",
+                        "Asthma exacerbation (SNOMED CT code: 777777777)"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Asthma",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Bronchial asthma"
+                        },
+                        {
+                            "method_term": "Bronchospasm",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Exercise-induced bronchospasm"
+                        },
+                        {
+                            "method_term": "Hypertension",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertension"
+                        },
+                        {
+                            "method_term": "Diabetes Mellitus",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Type 2 diabetes mellitus"
+                        }
+                    ],
+                    "total_indications": 8,
+                    "recovery_rate": 0.5,
+                    "unmatched_indications": 4,
+                    "matched_indications": 4,
+                    "unmatched_terms": [
+                        "Chronic Obstructive Pulmonary Disease (COPD)",
+                        "Asthma Exacerbation",
+                        "Migraine",
+                        "Postherpetic Neuralgia"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 7,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0.2,
+                "literature_recovery_rate": 0.5,
+                "total_unique_across_all_methods": 24,
+                "unique_to_knowledge": 10
+            },
+            "drug_name": "Albuterol",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 7,
+                "terms": [
+                    "Bronchial asthma",
+                    "Chronic bronchitis",
+                    "Reversible obstructive airway disease",
+                    "Hypercholesterolemia",
+                    "Hypertension",
+                    "Type 2 diabetes mellitus",
+                    "Exercise-induced bronchospasm"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Bronchial asthma",
+                    "Type 2 diabetes mellitus",
+                    "Chronic bronchitis",
+                    "Exercise-induced bronchospasm",
+                    "Hypercholesterolemia",
+                    "Reversible obstructive airway disease"
+                ],
+                "knowledge_literature_overlap": [
+                ],
+                "drugbank_knowledge_overlap": [
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "Bronchospasm (SNOMED CT code: 111111111)",
+                    "Asthma exacerbation (SNOMED CT code: 777777777)",
+                    "Chronic bronchitis (SNOMED CT code: 888888888)",
+                    "Acute asthma (SNOMED CT code: 333333333)",
+                    "Asthma (SNOMED CT code: 123456789)",
+                    "Chronic Obstructive Pulmonary Disease (COPD) (SNOMED CT code: 987654321)",
+                    "Bronchitis (SNOMED CT code: 444444444)",
+                    "Exercise-induced bronchospasm (SNOMED CT code: 222222222)",
+                    "Wheezing (SNOMED CT code: 666666666)",
+                    "Cough (SNOMED CT code: 555555555)"
+                ],
+                "total_unique_indications": 24,
+                "unique_literature": [
+                    "Migraine",
+                    "Asthma Exacerbation",
+                    "Postherpetic Neuralgia",
+                    "Bronchospasm",
+                    "Asthma",
+                    "Diabetes Mellitus",
+                    "Chronic Obstructive Pulmonary Disease (COPD)"
+                ],
+                "drugbank_literature_overlap": [
+                    "Hypertension"
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.794"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Hypertension",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertension"
+                        }
+                    ],
+                    "total_indications": 6,
+                    "recovery_rate": 0.16666666666666666,
+                    "unmatched_indications": 5,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Angina pectoris",
+                        "Diabetic foot ulcers",
+                        "Postherpetic neuralgia",
+                        "Hypertriglyceridemia",
+                        "Ischemic heart disease"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Hypertension",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertension"
+                        },
+                        {
+                            "method_term": "Diabetes mellitus",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Type 2 diabetes mellitus"
+                        }
+                    ],
+                    "total_indications": 7,
+                    "recovery_rate": 0.2857142857142857,
+                    "unmatched_indications": 5,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Postherpetic neuralgia",
+                        "Migraine",
+                        "Contrast-induced nephropathy",
+                        "Renal disease",
+                        "Angiotensin II type I receptor blockers"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 5,
+                "all_methods_overlap": 1,
+                "knowledge_recovery_rate": 0.16666666666666666,
+                "literature_recovery_rate": 0.2857142857142857,
+                "total_unique_across_all_methods": 16,
+                "unique_to_knowledge": 4
+            },
+            "drug_name": "Amlodipine",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 6,
+                "terms": [
+                    "Hypertension",
+                    "Coronary artery disease",
+                    "Chronic stable angina",
+                    "Vasospastic angina (Prinzmetal’s or Variant angina)",
+                    "Angiographically documented coronary artery disease in patients without heart failure or an ejection fraction < 40%",
+                    "Type 2 diabetes mellitus"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Chronic stable angina",
+                    "Angiographically documented coronary artery disease in patients without heart failure or an ejection fraction < 40%",
+                    "Coronary artery disease",
+                    "Vasospastic angina (Prinzmetal’s or Variant angina)",
+                    "Type 2 diabetes mellitus"
+                ],
+                "knowledge_literature_overlap": [
+                    "Hypertension",
+                    "Postherpetic neuralgia"
+                ],
+                "drugbank_knowledge_overlap": [
+                    "Hypertension"
+                ],
+                "all_three_overlap": [
+                    "Hypertension"
+                ],
+                "unique_knowledge": [
+                    "Ischemic heart disease",
+                    "Angina pectoris",
+                    "Hypertriglyceridemia",
+                    "Diabetic foot ulcers"
+                ],
+                "total_unique_indications": 16,
+                "unique_literature": [
+                    "Contrast-induced nephropathy",
+                    "Migraine",
+                    "Angiotensin II type I receptor blockers",
+                    "Diabetes mellitus",
+                    "Renal disease"
+                ],
+                "drugbank_literature_overlap": [
+                    "Hypertension"
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.778"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Hypercholesterolemia",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypercholesterolemia"
+                        },
+                        {
+                            "method_term": "Atherosclerosis",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Clinical atherosclerosis"
+                        },
+                        {
+                            "method_term": "Hypertriglyceridemia",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertriglyceridemia"
+                        }
+                    ],
+                    "total_indications": 6,
+                    "recovery_rate": 0.5,
+                    "unmatched_indications": 3,
+                    "matched_indications": 3,
+                    "unmatched_terms": [
+                        "Hyperlipidemia",
+                        "Xanthoma",
+                        "Endarteritis"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Diabetes mellitus",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Type 2 diabetes mellitus"
+                        },
+                        {
+                            "method_term": "Atherosclerosis",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Clinical atherosclerosis"
+                        }
+                    ],
+                    "total_indications": 7,
+                    "recovery_rate": 0.2857142857142857,
+                    "unmatched_indications": 5,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Hypertension",
+                        "Postherpetic neuralgia",
+                        "Migraine",
+                        "Alzheimer's disease",
+                        "Hyperlipidemia"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 5,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0.5,
+                "literature_recovery_rate": 0.2857142857142857,
+                "total_unique_across_all_methods": 24,
+                "unique_to_knowledge": 2
+            },
+            "drug_name": "Atorvastatin",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 15,
+                "terms": [
+                    "Hypercholesterolemia",
+                    "Hypertriglyceridemia",
+                    "Primary dysbetalipoproteinemia",
+                    "Homozygous familial hypercholesterolemia",
+                    "Heterozygous familial hypercholesterolemia",
+                    "Type 2 diabetes mellitus",
+                    "Clinical atherosclerosis",
+                    "Myocardial infarction",
+                    "Stroke",
+                    "Abdominal aortic aneurysm",
+                    "Chronic kidney disease",
+                    "Severely elevated LDL-C levels",
+                    "Peripheral artery disease",
+                    "Claudication",
+                    "Acute coronary syndromes"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Primary dysbetalipoproteinemia",
+                    "Acute coronary syndromes",
+                    "Chronic kidney disease",
+                    "Severely elevated LDL-C levels",
+                    "Homozygous familial hypercholesterolemia",
+                    "Myocardial infarction",
+                    "Stroke",
+                    "Type 2 diabetes mellitus",
+                    "Abdominal aortic aneurysm",
+                    "Peripheral artery disease",
+                    "Clinical atherosclerosis",
+                    "Claudication",
+                    "Heterozygous familial hypercholesterolemia"
+                ],
+                "knowledge_literature_overlap": [
+                    "Hyperlipidemia",
+                    "Atherosclerosis"
+                ],
+                "drugbank_knowledge_overlap": [
+                    "Hypertriglyceridemia",
+                    "Hypercholesterolemia"
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "Xanthoma",
+                    "Endarteritis"
+                ],
+                "total_unique_indications": 24,
+                "unique_literature": [
+                    "Hypertension",
+                    "Migraine",
+                    "Postherpetic neuralgia",
+                    "Alzheimer's disease",
+                    "Diabetes mellitus"
+                ],
+                "drugbank_literature_overlap": [
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:28.858"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                    ],
+                    "total_indications": 1,
+                    "recovery_rate": 0,
+                    "unmatched_indications": 1,
+                    "matched_indications": 0,
+                    "unmatched_terms": [
+                        "Seizure disorder"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Postherpetic neuralgia",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Postherpetic neuralgia"
+                        }
+                    ],
+                    "total_indications": 7,
+                    "recovery_rate": 0.14285714285714285,
+                    "unmatched_indications": 6,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Restless legs syndrome",
+                        "Partial seizures",
+                        "Alcohol use disorder",
+                        "Migraine",
+                        "Small fiber neuropathy",
+                        "Acute ischemic stroke"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 6,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0,
+                "literature_recovery_rate": 0.14285714285714285,
+                "total_unique_across_all_methods": 8,
+                "unique_to_knowledge": 1
+            },
+            "drug_name": "Gabapentin",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 1,
+                "terms": [
+                    "Postherpetic neuralgia"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                ],
+                "knowledge_literature_overlap": [
+                ],
+                "drugbank_knowledge_overlap": [
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "Seizure disorder"
+                ],
+                "total_unique_indications": 8,
+                "unique_literature": [
+                    "Migraine",
+                    "Alcohol use disorder",
+                    "Acute ischemic stroke",
+                    "Restless legs syndrome",
+                    "Partial seizures",
+                    "Small fiber neuropathy"
+                ],
+                "drugbank_literature_overlap": [
+                    "Postherpetic neuralgia"
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.880"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Hypothyroidism",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypothyroidism"
+                        }
+                    ],
+                    "total_indications": 8,
+                    "recovery_rate": 0.125,
+                    "unmatched_indications": 7,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Thyrotoxicosis",
+                        "Thyroid nodules",
+                        "Thyroiditis",
+                        "Goiter",
+                        "Hypocalcemia",
+                        "Atherosclerosis",
+                        "Hypertension"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Hypothyroidism",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypothyroidism"
+                        }
+                    ],
+                    "total_indications": 7,
+                    "recovery_rate": 0.14285714285714285,
+                    "unmatched_indications": 6,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Hyperthyroidism",
+                        "Thyroiditis",
+                        "Anxiety Disorder",
+                        "Depression",
+                        "Migraine",
+                        "Postherpetic Neuralgia"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 5,
+                "all_methods_overlap": 1,
+                "knowledge_recovery_rate": 0.125,
+                "literature_recovery_rate": 0.14285714285714285,
+                "total_unique_across_all_methods": 13,
+                "unique_to_knowledge": 6
+            },
+            "drug_name": "Levothyroxine",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 1,
+                "terms": [
+                    "Hypothyroidism"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                ],
+                "knowledge_literature_overlap": [
+                    "Thyroiditis",
+                    "Hypothyroidism"
+                ],
+                "drugbank_knowledge_overlap": [
+                    "Hypothyroidism"
+                ],
+                "all_three_overlap": [
+                    "Hypothyroidism"
+                ],
+                "unique_knowledge": [
+                    "Hypertension",
+                    "Thyroid nodules",
+                    "Goiter",
+                    "Atherosclerosis",
+                    "Hypocalcemia",
+                    "Thyrotoxicosis"
+                ],
+                "total_unique_indications": 13,
+                "unique_literature": [
+                    "Hyperthyroidism",
+                    "Migraine",
+                    "Depression",
+                    "Postherpetic Neuralgia",
+                    "Anxiety Disorder"
+                ],
+                "drugbank_literature_overlap": [
+                    "Hypothyroidism"
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.744"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Hypertension",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertension"
+                        }
+                    ],
+                    "total_indications": 8,
+                    "recovery_rate": 0.125,
+                    "unmatched_indications": 7,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Hypertensive patients",
+                        "Diabetic patients",
+                        "Postherpetic neuralgia",
+                        "Diabetes mellitus",
+                        "Heart failure",
+                        "Hypertensive patients with left ventricular dysfunction",
+                        "Acute coronary syndrome"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Hypertension",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertension"
+                        }
+                    ],
+                    "total_indications": 5,
+                    "recovery_rate": 0.2,
+                    "unmatched_indications": 4,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Diabetes mellitus",
+                        "Migraine",
+                        "Postherpetic neuralgia",
+                        "Angina pectoris"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 2,
+                "all_methods_overlap": 1,
+                "knowledge_recovery_rate": 0.125,
+                "literature_recovery_rate": 0.2,
+                "total_unique_across_all_methods": 11,
+                "unique_to_knowledge": 5
+            },
+            "drug_name": "Lisinopril",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 2,
+                "terms": [
+                    "Acute myocardial infarction",
+                    "Hypertension"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Acute myocardial infarction"
+                ],
+                "knowledge_literature_overlap": [
+                    "Hypertension",
+                    "Postherpetic neuralgia",
+                    "Diabetes mellitus"
+                ],
+                "drugbank_knowledge_overlap": [
+                    "Hypertension"
+                ],
+                "all_three_overlap": [
+                    "Hypertension"
+                ],
+                "unique_knowledge": [
+                    "Acute coronary syndrome",
+                    "Hypertensive patients",
+                    "Diabetic patients",
+                    "Heart failure",
+                    "Hypertensive patients with left ventricular dysfunction"
+                ],
+                "total_unique_indications": 11,
+                "unique_literature": [
+                    "Migraine",
+                    "Angina pectoris"
+                ],
+                "drugbank_literature_overlap": [
+                    "Hypertension"
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.755"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Hypertension",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Hypertension"
+                        }
+                    ],
+                    "total_indications": 6,
+                    "recovery_rate": 0.16666666666666666,
+                    "unmatched_indications": 5,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Angina pectoris",
+                        "Hypertensive heart disease",
+                        "Myocardial infarction",
+                        "Hypertensive urgency",
+                        "Coronary artery disease"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Hypertension management with angiotensin II receptor antagonist",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Hypertension"
+                        },
+                        {
+                            "method_term": "Angiotensin II-induced hypertension treatment",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Hypertension"
+                        }
+                    ],
+                    "total_indications": 8,
+                    "recovery_rate": 0.25,
+                    "unmatched_indications": 6,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Angiotensin II receptor antagonist therapy",
+                        "Angiotensin II receptor antagonist therapy for diabetic nephropathy",
+                        "Angiotensin II receptor antagonist therapy for postherpetic neuralgia",
+                        "Angiotensin II receptor antagonist therapy for migraine prevention",
+                        "Angiotensin II receptor antagonist therapy for gastric ulcers",
+                        "Angiotensin II receptor antagonist therapy for cysteamine-induced duodenal ulcer"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 8,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0.16666666666666666,
+                "literature_recovery_rate": 0.25,
+                "total_unique_across_all_methods": 17,
+                "unique_to_knowledge": 5
+            },
+            "drug_name": "Losartan",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 4,
+                "terms": [
+                    "Hypertension",
+                    "Type 2 diabetes mellitus",
+                    "Diabetic neuropathy",
+                    "Hypercholesterolemia"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Type 2 diabetes mellitus",
+                    "Diabetic neuropathy",
+                    "Hypercholesterolemia"
+                ],
+                "knowledge_literature_overlap": [
+                ],
+                "drugbank_knowledge_overlap": [
+                    "Hypertension"
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "Myocardial infarction",
+                    "Coronary artery disease",
+                    "Angina pectoris",
+                    "Hypertensive heart disease",
+                    "Hypertensive urgency"
+                ],
+                "total_unique_indications": 17,
+                "unique_literature": [
+                    "Angiotensin II receptor antagonist therapy for postherpetic neuralgia",
+                    "Angiotensin II receptor antagonist therapy for cysteamine-induced duodenal ulcer",
+                    "Angiotensin II receptor antagonist therapy",
+                    "Hypertension management with angiotensin II receptor antagonist",
+                    "Angiotensin II-induced hypertension treatment",
+                    "Angiotensin II receptor antagonist therapy for diabetic nephropathy",
+                    "Angiotensin II receptor antagonist therapy for gastric ulcers",
+                    "Angiotensin II receptor antagonist therapy for migraine prevention"
+                ],
+                "drugbank_literature_overlap": [
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.867"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                    ],
+                    "total_indications": 6,
+                    "recovery_rate": 0,
+                    "unmatched_indications": 6,
+                    "matched_indications": 0,
+                    "unmatched_terms": [
+                        "\"Metabolic syndrome\"",
+                        "\"Polycystic ovary syndrome\"",
+                        "\"Hyperlipidemia\"",
+                        "\"Postprandial hyperglycemia\"",
+                        "\"Obesity\"",
+                        "\"Hypertriglyceridemia\""
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Diabetes mellitus",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Type 2 diabetes mellitus"
+                        },
+                        {
+                            "method_term": "Diabetes mellitus, type 2",
+                            "match_type": "word_overlap",
+                            "confidence": 0.6,
+                            "drugbank_term": "Type 2 diabetes mellitus"
+                        }
+                    ],
+                    "total_indications": 7,
+                    "recovery_rate": 0.2857142857142857,
+                    "unmatched_indications": 5,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Hypertension",
+                        "Migraine",
+                        "Postherpetic neuralgia",
+                        "Hypertension, secondary",
+                        "Migraine, with aura"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 7,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0,
+                "literature_recovery_rate": 0.2857142857142857,
+                "total_unique_across_all_methods": 17,
+                "unique_to_knowledge": 6
+            },
+            "drug_name": "Metformin",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 4,
+                "terms": [
+                    "Type 2 diabetes mellitus",
+                    "Hypercholesterolemia",
+                    "Partial-onset seizures",
+                    "Diabetic neuropathy"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Type 2 diabetes mellitus",
+                    "Diabetic neuropathy",
+                    "Partial-onset seizures",
+                    "Hypercholesterolemia"
+                ],
+                "knowledge_literature_overlap": [
+                ],
+                "drugbank_knowledge_overlap": [
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "\"Hyperlipidemia\"",
+                    "\"Metabolic syndrome\"",
+                    "\"Polycystic ovary syndrome\"",
+                    "\"Hypertriglyceridemia\"",
+                    "\"Postprandial hyperglycemia\"",
+                    "\"Obesity\""
+                ],
+                "total_unique_indications": 17,
+                "unique_literature": [
+                    "Hypertension",
+                    "Migraine",
+                    "Postherpetic neuralgia",
+                    "Hypertension, secondary",
+                    "Diabetes mellitus",
+                    "Diabetes mellitus, type 2",
+                    "Migraine, with aura"
+                ],
+                "drugbank_literature_overlap": [
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.767"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Angina pectoris (SNOMED CT 987654)",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Angina pectoris"
+                        }
+                    ],
+                    "total_indications": 8,
+                    "recovery_rate": 0.125,
+                    "unmatched_indications": 7,
+                    "matched_indications": 1,
+                    "unmatched_terms": [
+                        "Hypertension (SNOMED CT 123456)",
+                        "Myocardial infarction (SNOMED CT 543210)",
+                        "Postherpetic neuralgia (SNOMED CT 111234)",
+                        "Atrial fibrillation (SNOMED CT 222334)",
+                        "Heart failure (SNOMED CT 333445)",
+                        "Hypertensive emergencies (SNOMED CT 444567)",
+                        "Coronary artery disease (SNOMED CT 555678)"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                    ],
+                    "total_indications": 6,
+                    "recovery_rate": 0,
+                    "unmatched_indications": 6,
+                    "matched_indications": 0,
+                    "unmatched_terms": [
+                        "Hyperlipidemia",
+                        "Hypertension",
+                        "Diabetes mellitus",
+                        "Postherpetic neuralgia",
+                        "Migraine",
+                        "Chronic heart failure"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 6,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0.125,
+                "literature_recovery_rate": 0,
+                "total_unique_across_all_methods": 15,
+                "unique_to_knowledge": 8
+            },
+            "drug_name": "Metoprolol",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 1,
+                "terms": [
+                    "Angina pectoris"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Angina pectoris"
+                ],
+                "knowledge_literature_overlap": [
+                ],
+                "drugbank_knowledge_overlap": [
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "Hypertension (SNOMED CT 123456)",
+                    "Myocardial infarction (SNOMED CT 543210)",
+                    "Heart failure (SNOMED CT 333445)",
+                    "Postherpetic neuralgia (SNOMED CT 111234)",
+                    "Coronary artery disease (SNOMED CT 555678)",
+                    "Hypertensive emergencies (SNOMED CT 444567)",
+                    "Atrial fibrillation (SNOMED CT 222334)",
+                    "Angina pectoris (SNOMED CT 987654)"
+                ],
+                "total_unique_indications": 15,
+                "unique_literature": [
+                    "Hypertension",
+                    "Hyperlipidemia",
+                    "Migraine",
+                    "Postherpetic neuralgia",
+                    "Chronic heart failure",
+                    "Diabetes mellitus"
+                ],
+                "drugbank_literature_overlap": [
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:11:54.310"
+        },
+        {
+            "method_evaluation": {
+                "knowledge": {
+                    "matches": [
+                        {
+                            "method_term": "Gastroesophageal reflux disease (GORD)",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Gastroesophageal reflux disease"
+                        },
+                        {
+                            "method_term": "Gastrointestinal bleeding",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Upper gastrointestinal bleeding"
+                        }
+                    ],
+                    "total_indications": 6,
+                    "recovery_rate": 0.3333333333333333,
+                    "unmatched_indications": 4,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Peptic ulcer disease",
+                        "Zollinger-Ellison syndrome",
+                        "Gastrointestinal motility disorders",
+                        "Dyspepsia"
+                    ]
+                },
+                "literature": {
+                    "matches": [
+                        {
+                            "method_term": "Gastroesophageal reflux disease",
+                            "match_type": "exact",
+                            "confidence": 1,
+                            "drugbank_term": "Gastroesophageal reflux disease"
+                        },
+                        {
+                            "method_term": "Gastrointestinal bleeding",
+                            "match_type": "contains",
+                            "confidence": 0.8,
+                            "drugbank_term": "Upper gastrointestinal bleeding"
+                        }
+                    ],
+                    "total_indications": 7,
+                    "recovery_rate": 0.2857142857142857,
+                    "unmatched_indications": 5,
+                    "matched_indications": 2,
+                    "unmatched_terms": [
+                        "Peptic ulcer",
+                        "Gastrointestinal motility disorders",
+                        "Gastrointestinal inflammation",
+                        "Gastrointestinal pain",
+                        "Dyspepsia"
+                    ]
+                }
+            },
+            "summary": {
+                "unique_to_literature": 3,
+                "all_methods_overlap": 0,
+                "knowledge_recovery_rate": 0.3333333333333333,
+                "literature_recovery_rate": 0.2857142857142857,
+                "total_unique_across_all_methods": 16,
+                "unique_to_knowledge": 3
+            },
+            "drug_name": "Omeprazole",
+            "evaluation_method": "simple_string_matching",
+            "drugbank_ground_truth": {
+                "count": 7,
+                "terms": [
+                    "Duodenal ulcer",
+                    "Helicobacter pylori infection",
+                    "Benign gastric ulcer",
+                    "Upper gastrointestinal bleeding",
+                    "Gastroesophageal reflux disease",
+                    "Erosive esophagitis",
+                    "Hypersecretory conditions"
+                ]
+            },
+            "unique_indications_analysis": {
+                "unique_drugbank": [
+                    "Helicobacter pylori infection",
+                    "Upper gastrointestinal bleeding",
+                    "Duodenal ulcer",
+                    "Benign gastric ulcer",
+                    "Hypersecretory conditions",
+                    "Erosive esophagitis"
+                ],
+                "knowledge_literature_overlap": [
+                    "Gastrointestinal bleeding",
+                    "Dyspepsia",
+                    "Gastrointestinal motility disorders"
+                ],
+                "drugbank_knowledge_overlap": [
+                ],
+                "all_three_overlap": [
+                ],
+                "unique_knowledge": [
+                    "Gastroesophageal reflux disease (GORD)",
+                    "Zollinger-Ellison syndrome",
+                    "Peptic ulcer disease"
+                ],
+                "total_unique_indications": 16,
+                "unique_literature": [
+                    "Peptic ulcer",
+                    "Gastrointestinal pain",
+                    "Gastrointestinal inflammation"
+                ],
+                "drugbank_literature_overlap": [
+                    "Gastroesophageal reflux disease"
+                ]
+            },
+            "evaluation_date": "2025-08-02T03:01:30.810"
+        }
+    ]
+}

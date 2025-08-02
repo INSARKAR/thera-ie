@@ -1,0 +1,38 @@
+# THERA-IE Core Files Inventory
+
+## Essential Scripts (11 files)
+1. core_scripts/extraction/phase2_step1_top10_drugbank_extractor.jl
+2. core_scripts/extraction/phase2_step2_top10_naive_extractor.jl  
+3. core_scripts/extraction/phase2_step3_top10_pubmed_extractor.jl
+4. core_scripts/evaluation/phase3_simple_string_evaluator.jl
+5. core_scripts/analysis/analyze_pubmed_corpus.jl
+6. core_scripts/analysis/analyze_cross_method_stats.jl
+7. core_scripts/analysis/generate_pubmed_mesh_table.jl
+8. core_scripts/analysis/generate_summary.jl
+9. utilities/quickumls_wrapper.py
+10. utilities/install_quickumls.py
+11. top_10_drugs_us.txt
+
+## Essential Data (5 directories, 52 files)
+1. phase1_step1_drugbank_extraction/ (10 files, ground truth data)
+2. phase2_step1_drugbank_snomed/ (10 files, DrugBank method results)
+3. phase2_step2_naive_snomed/ (10 files, Knowledge method results)  
+4. phase2_step3_pubmed_snomed/ (10 files, Literature method results)
+5. phase3_simple_results/ (11 files, evaluation results)
+
+## Configuration & Support (4 directories)
+1. config/ (system configuration)
+2. prompts/ (3 LLM prompt files)  
+3. analysis_results/ (organized analysis outputs)
+4. utilities/ (2 QuickUMLS integration scripts)
+
+## Documentation (4 files)
+1. README.md (project overview)
+2. THERA-IE_FINAL_RESULTS.md (complete results)
+3. DEPLOYMENT_GUIDE.md (deployment instructions)
+4. DIRECTORY_STRUCTURE.md (this structure)
+
+## External Dependencies
+- ../_data/mesh/ (MeSH 2025 data files)
+
+Total core package: 68 files organized in clean directory structure

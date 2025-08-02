@@ -1,0 +1,8 @@
+{
+    "drug_name": "Losartan",
+    "drugbank_name": "Losartan",
+    "source": "DrugBank approved drugs database",
+    "drugbank_indication": "Losartan is indicated to treat hypertension in patients older than 6 years, reduce the risk of stroke in patients with hypertension and left ventricular hypertrophy (though this benefit may not extend to patients with African heritage), and to treat diabetic nephropathy with elevated serum creatinine and proteinuria in patients with type 2 diabetes and hypertension.[L7423] Losartan with hydrochlorothiazide is indicated to treat hypertension and to reduce the risk of stroke in patients with hypertension and left ventricular hypertrophy (though this benefit may not extend to patients with African heritage).[L7426,L45663]",
+    "extraction_timestamp": "2025-08-01T16:09:25.242",
+    "extraction_method": "drugbank_focused"
+}
